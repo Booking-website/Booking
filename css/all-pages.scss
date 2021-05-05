@@ -1,0 +1,22 @@
+@import "./main-vars.scss";
+
+:root{
+  background-color: $background_color;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  font-size: $body_font-size;
+  overflow-x: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+h1 h2, h3, h4, h5, h6, p{
+  margin: 0;
+}
+.container{
+  width: 80%;
+  margin: 0 auto;
+}

@@ -1,0 +1,227 @@
+@import "./main-vars.scss";
+@import "./nav-footer.scss";
+@import "./all-pages.scss";
+
+// Main
+.main{
+  div{
+    display: block;
+  }
+  .container{
+
+  }
+  .info{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-gap: 0;
+    padding: 40px;
+    background-color: #f2f2f2;
+    height: 100vh;
+    &__left{
+      padding: 20px;
+
+    }
+    &__right{
+      padding: 20px;
+      .wrap{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .card{
+        width: 500px;
+        height: 300px;
+        position: relative;
+        perspective: 1000px;
+      }
+      .front, .back{
+        position: absolute;
+        width: 36vw;
+        height: 18vw;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s ease-out;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      .front{
+        background-color: #ccc;
+        transform: rotateY(0deg);
+        div{
+          margin-bottom: 15px;
+        }
+        a{
+          padding: 10px;
+          position: absolute;
+          right: 20px;
+          bottom: 20px;
+          text-decoration: none;
+          color: #000;
+          &:hover{
+            transform: scale3d(.97, .97, .97);
+          }
+        }
+        form{
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+          }
+          .card-number{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+            input{
+              width: 90%;
+            }
+          }
+          .card-date{
+            display: grid;
+            grid-template-columns: 100px 70px 12px 70px;
+            align-items: center;
+            input{
+              // max-width: 100px;
+              // max-height: 30px;
+            }
+            .valid{
+              margin-right: 10px;
+              text-transform: uppercase;
+              font-size: 2vw;
+            }
+            span{
+              text-align: center;
+            }
+          }
+          .name-surname{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+          }
+        }
+      }
+      .back{
+        background-color: #ccc;
+        transform: rotateY(180deg);
+        a{
+          padding: 10px;
+          position: absolute;
+          right: 20px;
+          bottom: 20px;
+          text-decoration: none;
+          color: #000;
+        }
+        form{
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+          }
+          .card-cvv{
+
+          }
+        }
+      }
+    }
+    &__profile-photo{
+      text-align: center;
+      img{
+        width: 100%;
+      }
+    }
+    &__profile-info{
+      padding: 20px;
+      .name-surname{
+        margin-bottom: 20px;
+      }
+      .login{
+        margin-bottom: 20px;
+      }
+      .number{
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+// .main{
+//   .breakline{
+//     display: grid;
+//     grid-template-columns: minmax(10%, 20%) auto;
+//     color: rgb(130, 130, 130);
+//     hr{
+//       height: 2px;
+//       background-color: rgb(130, 130, 130);
+//       border: 1px solid black;
+//     }
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1440px) {
+  .header{
+    // height: 340px;
+    // background-size: auto;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .nav{
+    &-left{
+      .logo{
+        // width: 14vw;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .main{
+    div{
+
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  body{
+    font-size: 3.5vw;
+  }
+  .nav{
+    .container{
+      display: block;
+      .nav-left{
+        align-items: center;
+        .logo{
+          max-height: 50px;
+          object-fit: contain;
+        }
+      }
+      .menu{
+        text-align: center;
+        padding: 10px;
+      }
+    }
+    &-left{
+      .logo{
+        width: auto;
+      }
+    }
+  }
+  .container{
+    width: 85vw;
+  }
+}

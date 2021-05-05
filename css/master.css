@@ -1,0 +1,544 @@
+.nav {
+  background-color: #8c785a;
+  padding: 5px 0;
+}
+.nav .container {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: minmax(20px, 100px);
+}
+.nav-left {
+  text-align: center;
+  height: 100%;
+}
+.nav-left img {
+  width: 100px;
+  height: 100px;
+}
+.nav-left img:hover {
+  transform: scale3d(0.9, 0.9, 0.9);
+}
+.nav-right {
+  justify-self: end;
+}
+.nav-right .menu-open {
+  display: grid;
+  grid-gap: 4vw;
+  grid-template-columns: repeat(5, 1fr);
+}
+.nav-right .menu-open-item {
+  text-align: center;
+}
+.nav-right .menu-open-item:hover {
+  transform: scale3d(0.95, 0.95, 0.95);
+}
+.nav-right .menu-open-item a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer {
+  padding: 50px 0;
+}
+.footer .goTop {
+  text-align: center;
+  align-items: center;
+  padding: 20px 0;
+}
+.footer .goTop button {
+  font-size: 1.8vw;
+  background-color: transparent;
+  border: none;
+  padding: 20px 60px;
+}
+.footer .goTop button:hover {
+  color: #d6a0ce;
+}
+.footer .goTop button:focus {
+  outline: none;
+}
+.footer .links {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-around;
+}
+.footer .links a {
+  font-size: 1.5vw;
+  text-decoration: none;
+  color: #000;
+}
+.footer .links a:hover {
+  text-decoration: underline;
+}
+.footer .legal {
+  padding: 30px 0;
+  text-align: center;
+}
+
+:root {
+  background-color: #f2f2f2;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  font-size: 1.6vw;
+  overflow-x: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+h1 h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header {
+  background: url(../img/bg-main.jpg) no-repeat top center/cover;
+  padding: 40px 0;
+  text-align: center;
+}
+.header .flights {
+  background-color: white;
+  border-radius: 10px;
+}
+.header .flights .container {
+  width: 95%;
+  padding: 20px 10px;
+}
+.header .flights .container .flight {
+  padding: 5px;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 11fr;
+  border-bottom: 2px solid #217ac9;
+}
+.header .flights .container img {
+  justify-self: center;
+  width: 3.5vw;
+  object-fit: contain;
+}
+.header .flights .container h2 {
+  text-align: left;
+  font-size: 2vw;
+  margin-bottom: 2px;
+}
+.header .flights .container:nth-child(2) {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.header .flights .container .ways {
+  display: grid;
+  grid-gap: 5vw;
+  grid-template-columns: repeat(2, 1fr);
+}
+.header .flights .container .ways div {
+  padding: 5px;
+  border-radius: 10px;
+}
+.header .flights .container .ways a {
+  color: #0d5ab9;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.header .flights .roundtrip form {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr) repeat(2, 1fr);
+  grid-gap: 2vw;
+}
+.header .flights .roundtrip form select, .header .flights .roundtrip form input {
+  min-height: 35px;
+  padding: 5px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.header .flights .roundtrip form input {
+  min-width: 130px;
+}
+.header .flights .roundtrip button {
+  cursor: pointer;
+  margin-top: 15px;
+  text-align: center;
+  background-color: #005aeb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 40px;
+}
+.header .flights .one-way {
+  display: none;
+}
+.header .flights .one-way form {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr) 1fr;
+  grid-gap: 2vw;
+}
+.header .flights .one-way form select, .header .flights .one-way form input {
+  padding: 5px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+}
+.header .flights .one-way form select {
+  cursor: pointer;
+}
+.header .flights .one-way form input {
+  min-width: 130px;
+  cursor: pointer;
+}
+.header .flights .one-way button {
+  cursor: pointer;
+  margin-top: 15px;
+  text-align: center;
+  background-color: #005aeb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 40px;
+}
+.header .flights .multi-city {
+  display: none;
+}
+.header .flights .multi-city p {
+  font-size: 1vw;
+  text-align: left;
+  margin: 40px 0 10px;
+}
+.header .flights .multi-city form {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr) 1fr;
+  grid-gap: 2vw;
+}
+.header .flights .multi-city form select, .header .flights .multi-city form input {
+  padding: 5px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+}
+.header .flights .multi-city form select {
+  cursor: pointer;
+}
+.header .flights .multi-city form input {
+  min-width: 130px;
+  cursor: pointer;
+}
+.header .flights .multi-city button {
+  cursor: pointer;
+  margin-top: 15px;
+  text-align: center;
+  background-color: #005aeb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 40px;
+}
+
+.main {
+  padding: 50px 0;
+}
+.main div {
+  display: grid;
+  grid-gap: 30px;
+}
+.main div .part1, .main div .part2, .main div .part3, .main div .part4, .main div .part5 {
+  display: grid;
+  grid-gap: 30px;
+  grid-auto-rows: 30vw;
+}
+.main div .card1, .main div .card2, .main div .card3, .main div .card {
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+}
+.main div .card1 a, .main div .card2 a, .main div .card3 a, .main div .card a {
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+  display: grid;
+  grid-template-rows: 70% 30%;
+}
+.main div .top {
+  color: white;
+  text-shadow: 0 0 3px black;
+  padding-left: 10px;
+  align-content: flex-end;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.main div .bottom {
+  align-items: center;
+  padding: 0 5px;
+  line-height: 130%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.main div .part1 .card1, .main div .part1 .card2, .main div .part1 .card3, .main div .part1 .card, .main div .part2 .card1, .main div .part2 .card2, .main div .part2 .card3, .main div .part2 .card, .main div .part3 .card1, .main div .part3 .card2, .main div .part3 .card3, .main div .part3 .card, .main div .part4 .card1, .main div .part4 .card2, .main div .part4 .card3, .main div .part4 .card {
+  transition: all 0.5s ease-out;
+  perspective: 1000px;
+}
+.main div .part1 .card1:hover, .main div .part1 .card2:hover, .main div .part1 .card3:hover, .main div .part1 .card:hover, .main div .part2 .card1:hover, .main div .part2 .card2:hover, .main div .part2 .card3:hover, .main div .part2 .card:hover, .main div .part3 .card1:hover, .main div .part3 .card2:hover, .main div .part3 .card3:hover, .main div .part3 .card:hover, .main div .part4 .card1:hover, .main div .part4 .card2:hover, .main div .part4 .card3:hover, .main div .part4 .card:hover {
+  transform: scale3d(0.95, 0.95, 0.95);
+}
+.main div .part1, .main div .part2, .main div .part4 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.main div .part3, .main div .part5 {
+  grid-template-columns: 1fr;
+}
+.main div .part1 {
+  grid-template-areas: "p1_card1 p1_card2 p1_card3";
+}
+.main div .part1 .card1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: p1_card1;
+}
+.main div .part1 .card1 .top {
+  background: url("../img/beach.jpg") no-repeat center top/cover;
+}
+.main div .part1 .card2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: p1_card2;
+}
+.main div .part1 .card2 .top {
+  background: url("../img/travel-world.jpg") no-repeat center top/cover;
+}
+.main div .part1 .card3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: p1_card3;
+}
+.main div .part1 .card3 .top {
+  background: url("../img/only-boat.jpg") no-repeat center top/cover;
+}
+.main div .part2 {
+  grid-template-areas: "p2_card1 p2_card1 p2_card2" "p2_card1 p2_card1 p2_card3";
+}
+.main div .part2 .card1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: p2_card1;
+}
+.main div .part2 .card1 a {
+  grid-template-rows: 100%;
+}
+.main div .part2 .card1 a .top {
+  border-radius: 10px;
+}
+.main div .part2 .card1 .top {
+  background: url("../img/norway.jpg") no-repeat center top/cover;
+}
+.main div .part2 .card2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: p2_card2;
+}
+.main div .part2 .card2 .top {
+  background: url("../img/stock.jpg") no-repeat center top/cover;
+}
+.main div .part2 .card3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+  grid-area: p2_card3;
+}
+.main div .part2 .card3 .top {
+  background: url("../img/plane-man.jpg") no-repeat center top/cover;
+}
+.main div .part3 {
+  grid-template-areas: "p3_card";
+}
+.main div .part3 .card {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: p3_card;
+}
+.main div .part3 .card .top {
+  background: url("../img/long.jpg") no-repeat center top/cover;
+}
+.main div .part4 {
+  grid-template-areas: "p4_card1 p4_card2 p4_card3";
+}
+.main div .part4 .card1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: p4_card1;
+}
+.main div .part4 .card1 .top {
+  background: url("../img/alone.jpg") no-repeat center top/cover;
+}
+.main div .part4 .card2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: p4_card2;
+}
+.main div .part4 .card2 .top {
+  background: url("../img/sand-travel.jpg") no-repeat center top/cover;
+}
+.main div .part4 .card3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: p4_card3;
+}
+.main div .part4 .card3 .top {
+  background: url("../img/happy.jpg") no-repeat center top/cover;
+}
+.main div .part5 {
+  grid-gap: 0;
+  grid-template-rows: auto;
+}
+.main div .part5 .card {
+  grid-gap: 0;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  grid-template-columns: 33.33% 66.67%;
+}
+.main div .part5 .card .left {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: url(../img/booking-by-phone.jpg) no-repeat center top/cover;
+}
+.main div .part5 .card .right {
+  padding: 40px;
+  grid-template-columns: 3fr 1fr;
+}
+.main div .part5 .card .right .text {
+  display: block;
+}
+.main div .part5 .card .right .qr_img {
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+}
+.main div .part5 .card .right .qr_img img {
+  width: 50px;
+  height: 50px;
+}
+
+@media screen and (max-width: 1024px) {
+  .header .flights div .flights-form form {
+    grid-gap: 1vw;
+    grid-template-columns: 1fr 1fr;
+  }
+  .header .flights div .multi-city p {
+    font-size: 2.5vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main div {
+    grid-gap: 30px;
+  }
+  .main div .part1, .main div .part2, .main div .part4 {
+    grid-template-columns: 1fr;
+  }
+  .main div .part1 {
+    grid-template-areas: "p1_card1" "p1_card2" "p1_card3";
+  }
+  .main div .part2 {
+    grid-template-areas: "p2_card1" "p2_card2" "p2_card3";
+  }
+  .main div .part4 {
+    grid-template-areas: "p4_card1" "p4_card2" "p4_card3";
+  }
+  .main div .part1 .card1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .main div .part1 .card2 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .main div .part1 .card3 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .main div .part2 .card1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  .main div .part2 .card2 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .main div .part2 .card3 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .main div .part4 .card1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .main div .part4 .card2 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .main div .part4 .card3 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+}
+@media screen and (max-width: 425px) {
+  body {
+    font-size: 2vw;
+  }
+
+  .nav .container {
+    display: block;
+  }
+  .nav .container .nav-left {
+    align-items: center;
+  }
+  .nav .container .nav-left .logo {
+    max-height: 50px;
+    object-fit: contain;
+  }
+  .nav .container .menu {
+    text-align: center;
+    padding: 10px;
+  }
+  .nav-left .logo {
+    width: auto;
+  }
+
+  .container {
+    width: 85vw;
+  }
+
+  .header .flights .container h2 {
+    font-size: 4vw;
+    text-align: center;
+  }
+  .header .flights .container .flight {
+    border-bottom: 1px solid #217ac9;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(auto, 30px);
+  }
+  .header .flights .container .flight img {
+    display: none;
+  }
+  .header .flights .container .ways {
+    display: block;
+  }
+  .header .flights .container .ways a {
+    margin: 5px 0;
+  }
+  .header .flights .container .flights-form form {
+    grid-template-columns: 1fr;
+  }
+  .header .flights .container .multi-city p {
+    font-size: 3vw;
+  }
+}

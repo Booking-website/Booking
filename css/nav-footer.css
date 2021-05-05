@@ -1,0 +1,77 @@
+.nav {
+  background-color: #e66464;
+  padding: 5px 0;
+}
+.nav .container {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: minmax(20px, 100px);
+}
+.nav-left {
+  text-align: center;
+  height: 100%;
+}
+.nav-left img {
+  width: 100px;
+  height: 100px;
+}
+.nav-left img:hover {
+  transform: scale3d(0.9, 0.9, 0.9);
+}
+.nav-right {
+  justify-self: end;
+}
+.nav-right .menu-open {
+  display: grid;
+  grid-gap: 4vw;
+  grid-template-columns: repeat(5, 1fr);
+}
+.nav-right .menu-open-item {
+  text-align: center;
+}
+.nav-right .menu-open-item:hover {
+  transform: scale3d(0.95, 0.95, 0.95);
+}
+.nav-right .menu-open-item a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer {
+  padding: 50px 0;
+}
+.footer .goTop {
+  text-align: center;
+  align-items: center;
+  padding: 20px 0;
+}
+.footer .goTop button {
+  font-size: 1.8vw;
+  background-color: transparent;
+  border: none;
+  padding: 20px 60px;
+}
+.footer .goTop button:hover {
+  color: #d6a0ce;
+}
+.footer .goTop button:focus {
+  outline: none;
+}
+.footer .links {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-around;
+}
+.footer .links a {
+  font-size: 1.5vw;
+  text-decoration: none;
+  color: #000;
+}
+.footer .links a:hover {
+  text-decoration: underline;
+}
+.footer .legal {
+  padding: 30px 0;
+  text-align: center;
+}

@@ -1,0 +1,139 @@
+@import "./main-vars.scss";
+@import "./nav-footer.scss";
+@import "./all-pages.scss";
+
+body{
+  background: url("../img/plane-wing.jpg") no-repeat center top / cover;
+}
+
+//Main
+.main{
+  margin: auto;
+  height: 80vh;
+  .container{
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, .6);
+    border-radius: 5px;
+    padding: 20px 30px;
+  }
+  form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: minmax(10px, 20px);
+    grid-row-gap: minmax(10px, 20px);
+    button{
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      &:hover{
+        transform: scale3d(.97, .97, .97);
+      }
+    }
+    *{
+      margin: 0 auto;
+    }
+    input{
+      min-height: 20px;
+    }
+    input, button, div{
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    input, div{
+      width: 90%;
+    }
+    h1{
+      margin: 20px 0;
+        text-align: center;
+    }
+    &>.button{
+      grid-template-columns: 1fr;
+    }
+  }
+
+}
+
+// // Header
+// .header{
+//   padding: 40px 0 0 40px;
+//   a{
+//     padding: 20px;
+//     background-color: rgb(255, 255, 255);
+//     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+//   }
+// }
+
+//
+// //Header
+// .header{
+//   padding: 40px 0;
+//   padding-left: 40px;
+//   a{
+//     padding: 20px;
+//     background-color: rgb(21, 135, 150);
+//     border: 2px solid rgb(0, 0, 0);
+//     border-radius: 10px;
+//     text-decoration: none;
+//     color: rgb(0, 0, 0);
+//   }
+// }
+//
+// //Main
+// .main{
+//   height: 60vh;
+//   padding-top: 20vh;
+//   .container{
+//     padding: 20px;
+//     border: 2px solid rgb(0, 0, 0);
+//     border-radius: 10px;
+//     text-align: center;
+//     background-color: rgb(21, 135, 150);
+//     input:not([type="radio"]){
+//       margin: 2vw 0;
+//       display: block;
+//       width: 100%;
+//       font-size: 3vw;
+//     }
+//   }
+// }
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+  .nav{
+    &-left{
+      .logo{
+        width: 14vw;
+      }
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .nav{
+    .container{
+      display: block;
+      .nav-left{
+        align-items: center;
+        .logo{
+          object-fit: contain;
+        }
+      }
+      .menu{
+        text-align: center;
+      }
+    }
+  }
+  .main{
+    .container{
+      form{
+        div{
+          grid-template-columns: 1fr 5fr;
+          grid-gap: 10px;
+        }
+      }
+    }
+  }
+}
