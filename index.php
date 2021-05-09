@@ -17,47 +17,56 @@
        </div>
        <div class="container">
          <div class="ways" id="ways">
-           <div><a class="active" id="roundtrip"><h3>Roundtrip</h3></a></div>
+           <!-- <div><a class="active" id="roundtrip"><h3>Roundtrip</h3></a></div> -->
            <div><a id="one_way"><h3>One-way</h3></a></div>
            <!-- <div><a id="multi_city"><h3>Multi-city</h3></a></div> -->
          </div>
          <div class="flights-form">
-           <div class="roundtrip">
-             <form action="">
-               <select class="" name="">
+           <!-- <div class="roundtrip">
+             <form action="./includes/booking.search.php" method="post">
+               <select class="" name="from_city">
                  <option value="">-Select-</option>
-                 <option value="">Option1</option>
-                 <option value="">Option2</option>
-                 <option value="">Option3</option>
+                 <option value="nur-sultan">Nur-Sultan</option>
+                 <option value="almaty">Almaty</option>
+                 <option value="taraz">Taraz</option>
                </select>
-               <select class="" name="">
+               <select class="" name="to_city">
                  <option value="">-Select-</option>
-                 <option value="">Option1</option>
-                 <option value="">Option2</option>
-                 <option value="">Option3</option>
+                 <option value="nur-sultan">Nur-Sultan</option>
+                 <option value="almaty">Almaty</option>
+                 <option value="taraz">Taraz</option>
                </select>
-               <input type="date" id="date-from" min="2000-01-01">
-               <input type="date" id="date-to" min="2000-01-01">
+               <input type="date" id="date-from" name="from_date" min="2000-01-01">
+               <input type="date" id="date-to" name="to_date" min="2000-01-01">
              </form>
              <button type="button" name="search">Search</button>
-           </div>
+           </div> -->
            <div class="one-way">
-             <form action="">
-               <select class="" name="">
+             <form action="available.flights.php" method="post">
+               <select class="" name="from_city">
                  <option value="">-Select-</option>
-                 <option value="">Option1</option>
-                 <option value="">Option2</option>
-                 <option value="">Option3</option>
+                 <option value="nur-sultan">Nur-Sultan</option>
+                 <option value="almaty">Almaty</option>
+                 <option value="taraz">Taraz</option>
                </select>
-               <select class="" name="">
+               <select class="" name="to_city">
                  <option value="">-Select-</option>
-                 <option value="">Option1</option>
-                 <option value="">Option2</option>
-                 <option value="">Option3</option>
+                 <option value="nur-sultan">Nur-Sultan</option>
+                 <option value="almaty">Almaty</option>
+                 <option value="taraz">Taraz</option>
                </select>
-               <input type="date" id="date-from" min="2000-01-01">
+               <input type="date" name="from_date" min="2000-01-01">
+               <select class="" name="class">
+                 <option value="economy">
+                   economy
+                 </option>
+                 <option value="business">
+                   business
+                 </option>
+               </select>
+                <button type="submit" name="search">Search</button>
              </form>
-             <button type="button" name="search">Search</button>
+
            </div>
            <!-- <div class="multi-city">
              <p>First place</p>

@@ -19,13 +19,24 @@
           </div> -->
           <div class="info__profile-info">
             <h3 class="name-surname">
-              Name Surname
-            </h3>
-            <h3 class="login">
-              <a href="mailto:Lorem@example.com">Lorem@example.com</a>
-            </h3>
-            <h3 class="number">
-              <a href="tel:+77777777777" type="tel">+77777777777</a>
+              <?php
+              include_once './includes/dbh.inc.php';
+              $query="SELECT count(*), fname, lname, email, phoneNumber FROM users WHERE userID=?";
+        			$stmt=mysqli_prepare($conn,$query);
+        			mysqli_stmt_bind_param($stmt,"s",$_SESSION['userid']);
+        			mysqli_stmt_execute($stmt);
+        			mysqli_stmt_bind_result($stmt,$cnt,$fname,$lname,$email,$phoneNumber);
+        			mysqli_stmt_fetch($stmt);
+        			if($cnt==1)
+        			{
+        				echo "<h4 style='padding-left: 20px;'> NAME: ".$fname."</h4><br>";
+                echo "<h4 style='padding-left: 20px;'> LAST NAME: ".$lname."</h4><br>";
+                echo "<h4 style='padding-left: 20px;'> EMAIL: ".$email."</h4><br>";
+                echo "<h4 style='padding-left: 20px;'> PHONE NUMBER: ".$phoneNumber."</h4><br>";
+        			}
+        			mysqli_stmt_close($stmt);
+        			mysqli_close($conn);
+              ?>
             </h3>
           </div>
         </div>
@@ -64,11 +75,35 @@
             </div>
           </div>
         </div>
+        <h3>AVAILABLE ACTIONS:</h3>
+        <table cellpadding="5">
+    			<tr>
+    				<td><a href="index.php"><i class="fa fa-plane" aria-hidden="true"></i> Book Flight Tickets</a>
+    				</td>
+    			</tr>
+    			<tr>
+    				<td><a href="view.booked.tickets.php"><i class="fa fa-plane" aria-hidden="true"></i> View Booked Flight Tickets</a>
+    				</td>
+    			</tr>
+    			<tr>
+    				<td><a href="cancel.booked.tickets.php"><i class="fa fa-plane" aria-hidden="true"></i> Cancel Booked Flight Tickets</a>
+    				</td>
+    			</tr>
+    		</table>
       </div>
     </div>
   </main>
 
 
+		<!--Following data fields were empty!
+			...
+
+			ADD VIEW FLIGHT DETAILS AND VIEW JETS/ASSETS DETAILS for ADMIN
+			PREDEFINED LOCATION WHEN BOOKING TICKETS
+
+		-->
+	</body>
+</html>
 <?php
   include_once 'footer.php';
  ?>

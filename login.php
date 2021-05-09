@@ -13,7 +13,6 @@
       <input type="text" name="login" placeholder="Email/Phone number">
       <input type="password" name="pwd" placeholder="Password">
       <button type="submit" name="submit">Log In</button>
-      <button type="submit" name="submit">Log In with GMail</button>
     </form>
     <?php
       if (isset($_GET["error"])) {
