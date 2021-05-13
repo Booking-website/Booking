@@ -1,5 +1,40 @@
+// All
 $background_color: #f2f2f2;
-$nav__link_col: #fff;
 $body_font-size: 1.6vw;
+$scale-animation: scale3d(.9, .9, .9);
+
+// Navbar
+$nav__bcc: rgb(140, 120, 90);
+$nav__link_col: #fff;
+// Logo
+$logo_width: 100px;
+$logo_height: 100px;
+
+// Main
+// One-way
+$one-way__gtc: repeat(2, 2fr) 1fr 1fr;
 $index__ways_color: #0d5ab9;
 $index__ways_bcc-color: #d7e7f2;
+$one-way__g-gap: 2vw;
+
+// Footer
+
+@mixin border__radius($width:1px, $style:solid, $color:#000, $rad:5px){
+  border: $width $style $color;
+  border-radius: $rad;
+}
+
+@mixin bcc__c($bcc:transparent, $color:rgb(0,0,0)){
+  background-color: $bcc;
+  color: $color;
+}
+
+@mixin bcc__radius($bcc:transparent, $rad:5px){
+  background-color: $bcc;
+  border-radius: $rad;
+}
+
+@mixin width__height($width, $height){
+  width: $width;
+  height: $height;
+}

@@ -21,8 +21,8 @@
            <div><a id="one_way"><h3>One-way</h3></a></div>
            <!-- <div><a id="multi_city"><h3>Multi-city</h3></a></div> -->
          </div>
-         <div class="flights-form">
-           <!-- <div class="roundtrip">
+         <!-- <div class="flights-form">
+           <div class="roundtrip">
              <form action="./includes/booking.search.php" method="post">
                <select class="" name="from_city">
                  <option value="">-Select-</option>
@@ -56,7 +56,7 @@
                  <option value="taraz">Taraz</option>
                </select>
                <input type="date" name="from_date" min="2000-01-01">
-               <select class="" name="class">
+               <select class="one-way__flight-class" name="class">
                  <option value="economy">
                    economy
                  </option>

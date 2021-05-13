@@ -63,7 +63,7 @@
           text-decoration: none;
           color: #000;
           &:hover{
-            transform: scale3d(.97, .97, .97);
+            transform: $scale-animation;
           }
         }
         form{

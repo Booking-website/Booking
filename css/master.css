@@ -31,7 +31,7 @@
   text-align: center;
 }
 .nav-right .menu-open-item:hover {
-  transform: scale3d(0.95, 0.95, 0.95);
+  transform: scale3d(0.9, 0.9, 0.9);
 }
 .nav-right .menu-open-item a {
   text-decoration: none;
@@ -181,12 +181,12 @@ h1 h2, h3, h4, h5, h6, p {
 .header .flights .one-way form {
   margin-top: 40px;
   display: grid;
-  grid-template-columns: repeat(2, 2fr) 1fr;
+  grid-template-columns: repeat(2, 2fr) 1fr 1fr;
   grid-gap: 2vw;
 }
 .header .flights .one-way form select, .header .flights .one-way form input {
   padding: 5px 10px;
-  border: 1px solid rgba(0, 0, 0, 0.8);
+  border: rgba(0, 0, 0, 0.8) solid #000;
   border-radius: 5px;
 }
 .header .flights .one-way form select {
@@ -197,46 +197,11 @@ h1 h2, h3, h4, h5, h6, p {
   cursor: pointer;
 }
 .header .flights .one-way button {
+  background-color: #005aeb;
+  color: white;
   cursor: pointer;
   margin-top: 15px;
   text-align: center;
-  background-color: #005aeb;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  padding: 10px 40px;
-}
-.header .flights .multi-city {
-  display: none;
-}
-.header .flights .multi-city p {
-  font-size: 1vw;
-  text-align: left;
-  margin: 40px 0 10px;
-}
-.header .flights .multi-city form {
-  display: grid;
-  grid-template-columns: repeat(2, 2fr) 1fr;
-  grid-gap: 2vw;
-}
-.header .flights .multi-city form select, .header .flights .multi-city form input {
-  padding: 5px 10px;
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  border-radius: 5px;
-}
-.header .flights .multi-city form select {
-  cursor: pointer;
-}
-.header .flights .multi-city form input {
-  min-width: 130px;
-  cursor: pointer;
-}
-.header .flights .multi-city button {
-  cursor: pointer;
-  margin-top: 15px;
-  text-align: center;
-  background-color: #005aeb;
-  color: white;
   border: none;
   border-radius: 10px;
   padding: 10px 40px;
@@ -255,18 +220,22 @@ h1 h2, h3, h4, h5, h6, p {
   grid-auto-rows: 30vw;
 }
 .main div .card1, .main div .card2, .main div .card3, .main div .card {
+  border: 1px solid #000;
   border-radius: 10px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
 }
 .main div .card1 a, .main div .card2 a, .main div .card3 a, .main div .card a {
+  border: 1px solid #000;
   border-radius: 10px;
+  background-color: transparent;
+  color: #000;
   text-decoration: none;
-  color: black;
   display: grid;
   grid-template-rows: 70% 30%;
 }
 .main div .top {
-  color: white;
+  background-color: transparent;
+  color: #fff;
   text-shadow: 0 0 3px black;
   padding-left: 10px;
   align-content: flex-end;
@@ -274,19 +243,20 @@ h1 h2, h3, h4, h5, h6, p {
   border-top-right-radius: 10px;
 }
 .main div .bottom {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
   align-items: center;
   padding: 0 5px;
   line-height: 130%;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.9);
 }
 .main div .part1 .card1, .main div .part1 .card2, .main div .part1 .card3, .main div .part1 .card, .main div .part2 .card1, .main div .part2 .card2, .main div .part2 .card3, .main div .part2 .card, .main div .part3 .card1, .main div .part3 .card2, .main div .part3 .card3, .main div .part3 .card, .main div .part4 .card1, .main div .part4 .card2, .main div .part4 .card3, .main div .part4 .card {
   transition: all 0.5s ease-out;
   perspective: 1000px;
 }
 .main div .part1 .card1:hover, .main div .part1 .card2:hover, .main div .part1 .card3:hover, .main div .part1 .card:hover, .main div .part2 .card1:hover, .main div .part2 .card2:hover, .main div .part2 .card3:hover, .main div .part2 .card:hover, .main div .part3 .card1:hover, .main div .part3 .card2:hover, .main div .part3 .card3:hover, .main div .part3 .card:hover, .main div .part4 .card1:hover, .main div .part4 .card2:hover, .main div .part4 .card3:hover, .main div .part4 .card:hover {
-  transform: scale3d(0.95, 0.95, 0.95);
+  transform: scale3d(0.9, 0.9, 0.9);
 }
 .main div .part1, .main div .part2, .main div .part4 {
   grid-template-columns: repeat(3, 1fr);

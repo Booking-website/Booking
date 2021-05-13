@@ -31,7 +31,7 @@
   text-align: center;
 }
 .nav-right .menu-open-item:hover {
-  transform: scale3d(0.95, 0.95, 0.95);
+  transform: scale3d(0.9, 0.9, 0.9);
 }
 .nav-right .menu-open-item a {
   text-decoration: none;
@@ -159,7 +159,7 @@ h1 h2, h3, h4, h5, h6, p {
   color: #000;
 }
 .main .info__right .front a:hover {
-  transform: scale3d(0.97, 0.97, 0.97);
+  transform: scale3d(0.9, 0.9, 0.9);
 }
 .main .info__right .front form input::-webkit-outer-spin-button,
 .main .info__right .front form input::-webkit-inner-spin-button {

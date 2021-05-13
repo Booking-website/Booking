@@ -26,7 +26,7 @@ body{
       border: none;
       cursor: pointer;
       &:hover{
-        transform: scale3d(.97, .97, .97);
+        transform: $scale-animation;
       }
     }
     *{

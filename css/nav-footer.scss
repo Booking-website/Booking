@@ -2,8 +2,7 @@
 
 //NAVBAR
 .nav{
-  // background: url("../img/clouds-panoram.jpg") no-repeat center / cover;
-  background-color: rgb(140, 120, 90);
+  background-color: $nav__bcc;
   padding: 5px 0;
   .container{
     align-items: center;
@@ -18,10 +17,10 @@
 
     }
     img{
-      width: 100px;
-      height: 100px;
+      width: $logo_width;
+      height: $logo_height;
       &:hover{
-        transform: scale3d(.9, .9, .9);
+        transform: $scale-animation;
       }
     }
   }
@@ -35,7 +34,7 @@
         &-item{
           text-align: center;
           &:hover{
-            transform: scale3d(.95, .95, .95);
+            transform: $scale-animation;
           }
           a{
             text-decoration: none;

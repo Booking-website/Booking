@@ -9,8 +9,7 @@
   padding: 40px 0;
   text-align: center;
   .flights{
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
+    @include bcc__radius(rgb(255,255,255), 10px);
     .container{
       width: 95%;
       padding: 20px 10px;
@@ -85,12 +84,11 @@
       form{
         margin-top: 40px;
         display: grid;
-        grid-template-columns: repeat(2, 2fr) 1fr;
-        grid-gap: 2vw;
+        grid-template-columns: $one-way__gtc;
+        grid-gap: $one-way__g-gap;
         select, input{
           padding: 5px 10px;
-          border: 1px solid rgba(0, 0, 0, 0.8);
-          border-radius: 5px;
+          @include border__radius(rgba(0,0,0,0.8));
         }
         select{
           cursor: pointer;
@@ -101,46 +99,10 @@
         }
       }
       button{
+        @include bcc__c(#005aeb, rgb(255, 255, 255));
         cursor: pointer;
         margin-top: 15px;
         text-align: center;
-        background-color: #005aeb;
-        color: rgb(255, 255, 255);
-        border: none;
-        border-radius: 10px;
-        padding: 10px 40px;
-      }
-    }
-    .multi-city{
-      display: none;
-      p{
-        font-size: 1vw;
-        text-align: left;
-        margin: 40px 0 10px;
-      }
-      form{
-        display: grid;
-        grid-template-columns: repeat(2, 2fr) 1fr;
-        grid-gap: 2vw;
-        select, input{
-          padding: 5px 10px;
-          border: 1px solid rgba(0, 0, 0, 0.8);
-          border-radius: 5px;
-        }
-        select{
-          cursor: pointer;
-        }
-        input{
-          min-width: 130px;
-          cursor: pointer;
-        }
-      }
-      button{
-        cursor: pointer;
-        margin-top: 15px;
-        text-align: center;
-        background-color: #005aeb;
-        color: rgb(255, 255, 255);
         border: none;
         border-radius: 10px;
         padding: 10px 40px;
@@ -162,18 +124,18 @@
       grid-auto-rows: 30vw;
     }
     .card1, .card2, .card3, .card{
-      border-radius: 10px;
+      @include border__radius($rad: 10px);
       box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
       a{
-        border-radius: 10px;
+        @include border__radius($rad: 10px);
+        @include bcc__c($color: #000);
         text-decoration: none;
-        color: rgb(0, 0, 0);
         display: grid;
         grid-template-rows: 70% 30%;
       }
     }
     .top{
-      color: rgb(255, 255, 255);
+      @include bcc__c($color: #fff);
       text-shadow: 0 0 3px rgb(0, 0, 0);
       padding-left: 10px;
       align-content: flex-end;
@@ -181,12 +143,12 @@
       border-top-right-radius: 10px;
     }
     .bottom{
+      @include bcc__c($bcc:rgba(255, 255, 255, 0.9));
       align-items: center;
       padding: 0 5px;
       line-height: 130%;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
-      background-color: rgba(255, 255, 255, 0.9);
     }
     .part1, .part2, .part3, .part4{
       .card1, .card2, .card3, .card{
@@ -194,7 +156,7 @@
         perspective: 1000px;
       }
       .card1:hover, .card2:hover, .card3:hover, .card:hover{
-        transform: scale3d(.95, .95, .95);
+        transform: $scale-animation;
       }
     }
     .part1, .part2, .part4{
