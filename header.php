@@ -11,6 +11,9 @@ session_start();
 
   <!-- Style -->
   <link rel="stylesheet" href="./css/flexable.css">
+
+  <!-- Icon -->
+  <link rel="icon" href="./img/logo.png" type="image/png" sizes="16x16">
 </head>
 <body>
   <nav class="nav" id="nav">

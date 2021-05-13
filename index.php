@@ -2,6 +2,7 @@
      include_once 'header.php';
  ?>
 <head>
+  <!-- Style -->
   <link rel="stylesheet" href="./css/master.css">
   <!-- meta icon -->
   <title>My Avia Website</title>
