@@ -17,7 +17,6 @@
       <input type="password" name="pwd" placeholder="Password">
       <input type="password" name="pwdrepeat" placeholder="Repeat password">
       <button type="submit" name="submit">Register now</button>
-      <button type="button" name="from_google">Register with Gmail</button>
     </form>
     <?php
       if (isset($_GET["error"])) {

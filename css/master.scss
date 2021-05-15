@@ -9,7 +9,7 @@
   padding: 40px 0;
   text-align: center;
   .flights{
-    @include bcc__radius(rgb(255,255,255), 10px);
+    @include bcc__radius($header__flights-bcc, 10px);
     .container{
       width: 95%;
       padding: 20px 10px;
@@ -28,7 +28,6 @@
       h2{
         text-align: left;
         font-size: 2vw;
-        margin-bottom: 2px;
       }
       &:nth-child(2){
         border-top-left-radius: 0px;
@@ -37,74 +36,72 @@
         border-bottom-right-radius: 5px;
       }
       .ways{
-        display: grid;
-        grid-gap: 5vw;
-        grid-template-columns: repeat(2, 1fr);
         div{
+          width: auto;
+          text-align: center;
           padding: 5px;
           border-radius: 10px;
+          // .h3:hover{
+          //   transform: $scale-animation;
+          // }
         }
         a{
+          @include border__radius(0, solid, transparent, 15px);
+          background-color: $index__ways_bcc-color;
           color: $index__ways_color;
           padding: 10px 20px;
-          cursor: pointer;
+          font-weight: normal;
         }
       }
     }
-    .roundtrip{
-      form{
-        margin-top: 40px;
-        display: grid;
-        grid-template-columns: repeat(2, 2fr) repeat(2, 1fr);
-        grid-gap: 2vw;
-        select, input{
-          min-height: 35px;
-          padding: 5px 10px;
-          border: 1px solid rgba(0, 0, 0, 0.8);
-          border-radius: 5px;
-          cursor: pointer;
-        }
-        input{
-          min-width: 130px;
-        }
-      }
-      button{
-        cursor: pointer;
-        margin-top: 15px;
-        text-align: center;
-        background-color: #005aeb;
-        color: rgb(255, 255, 255);
-        border: none;
-        border-radius: 10px;
-        padding: 10px 40px;
-      }
-    }
+    // .roundtrip{
+    //   form{
+    //     margin-top: 40px;
+    //     display: grid;
+    //     grid-template-columns: repeat(2, 2fr) repeat(2, 1fr);
+    //     grid-gap: 2vw;
+    //     select, input{
+    //       min-height: 35px;
+    //       padding: 5px 10px;
+    //       border: 1px solid rgba(0, 0, 0, 0.8);
+    //       border-radius: 5px;
+    //       cursor: pointer;
+    //     }
+    //     input{
+    //       min-width: 130px;
+    //     }
+    //   }
+    //   button{
+    //     cursor: pointer;
+    //     margin-top: 15px;
+    //     text-align: center;
+    //     background-color: #005aeb;
+    //     color: rgb(255, 255, 255);
+    //     border: none;
+    //     border-radius: 10px;
+    //     padding: 10px 40px;
+    //   }
+    // }
     .one-way{
-      display: none;
+      transition: all 1s ease;
       form{
         margin-top: 40px;
+        margin-bottom: 20px;
         display: grid;
         grid-template-columns: $one-way__gtc;
         grid-gap: $one-way__g-gap;
         select, input{
-          padding: 5px 10px;
-          @include border__radius(rgba(0,0,0,0.8));
+
         }
         select{
-          cursor: pointer;
+
         }
         input{
-          min-width: 130px;
-          cursor: pointer;
+
         }
       }
       button{
-        @include bcc__c(#005aeb, rgb(255, 255, 255));
-        cursor: pointer;
-        text-align: center;
-        border: none;
-        border-radius: 10px;
-        padding: 10px 40px;
+
       }
     }
   }
@@ -123,10 +120,10 @@
       grid-auto-rows: 30vw;
     }
     .card1, .card2, .card3, .card{
-      @include border__radius($rad: 10px);
-      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+      @include border__radius(0, solid, transparent, $rad: 10px);
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
       a{
-        @include border__radius($rad: 10px);
+        @include border__radius($width: 0, $rad: 10px);
         @include bcc__c($color: #000);
         text-decoration: none;
         display: grid;
@@ -140,11 +137,14 @@
       align-content: flex-end;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
+      h3{
+        line-height: 200%;
+      }
     }
     .bottom{
       @include bcc__c($bcc:rgba(255, 255, 255, 0.9));
       align-items: center;
-      padding: 0 5px;
+      padding: 0 5%;
       line-height: 130%;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
@@ -309,7 +309,7 @@
   }
   .header{
     .flights div{
-      .flights-form form{
+      .one-way form{
         grid-gap: 1vw;
         grid-template-columns: 1fr 1fr;
       }
@@ -425,13 +425,8 @@
             margin: 5px 0;
           }
         }
-        .flights-form form{
+        .one-way form{
           grid-template-columns: 1fr;
-        }
-        .multi-city{
-          p{
-            font-size: $body_font-size + 1.4vw;
-          }
         }
       }
     }

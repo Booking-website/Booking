@@ -3,7 +3,6 @@
 //NAVBAR
 .nav{
   background-color: $nav__bcc;
-  padding: 5px 0;
   .container{
     align-items: center;
     display: grid;
@@ -12,13 +11,13 @@
   }
   &-left{
     text-align: center;
-    height: 100%;
     a{
 
     }
     img{
       width: $logo_width;
-      height: $logo_height;
+      // height: $logo_height;
+      object-fit: contain;
       &:hover{
         transform: $scale-animation;
       }
@@ -33,12 +32,20 @@
         grid-template-columns: repeat(5, 1fr);
         &-item{
           text-align: center;
+          margin: auto 0;
           &:hover{
             transform: $scale-animation;
           }
           a{
+            text-transform: uppercase;
+            display: flex;
+            width: 100%;
+            justify-content: center;
             text-decoration: none;
             color: $nav__link_col;
+            &:hover{
+              color: $nav__link_col_hover;
+            }
           }
         }
       }
@@ -50,33 +57,20 @@
 //Footer
 .footer{
   padding: 50px 0;
-  .goTop{
-    text-align: center;
-    align-items: center;
-    padding: 20px 0;
-    button{
-      font-size: 1.8vw;
-      background-color: transparent;
-      border: none;
-      padding: 20px 60px;
-      &:hover{
-        color: rgb(214, 160, 206);
-      }
-      &:focus{
-        outline: none;
-      }
-    }
-  }
+  @include bcc__c($nav__bcc, $nav__link_col);
   .links{
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2vw 10vw;
+    text-align: center;
+    margin-bottom: 10px;
     a{
+      text-transform: uppercase;
+      color: $nav__link_col;
       font-size: 1.5vw;
-      text-decoration: none;
-      color: #000;
       &:hover{
-        text-decoration: underline;
+        transform: $scale-animation;
+        color: $nav__link_col_hover;
       }
     }
   }

@@ -37,8 +37,6 @@
       }
       .front, .back{
         position: absolute;
-        width: 36vw;
-        height: 18vw;
         left: 0;
         top: 0;
         display: flex;
@@ -47,19 +45,21 @@
         transition: all 0.5s ease-out;
         backface-visibility: hidden;
         border-radius: 10px;
-        padding: 10px;
+        padding: 25px 15px;
       }
       .front{
         background-color: #ccc;
         transform: rotateY(0deg);
-        div{
-          margin-bottom: 15px;
+        .bank-card{
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-row-gap: 10px;
         }
         a{
           padding: 10px;
           position: absolute;
-          right: 20px;
-          bottom: 20px;
+          right: 10px;
+          bottom: 10px;
           text-decoration: none;
           color: #000;
           &:hover{
@@ -73,17 +73,20 @@
               margin: 0;
           }
           .card-number{
+            text-align: center;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-gap: 10px;
+            margin: auto 0;
             input{
-              width: 90%;
+
             }
           }
           .card-date{
             display: grid;
             grid-template-columns: 100px 70px 12px 70px;
             align-items: center;
+            text-align: center;
             input{
               // max-width: 100px;
               // max-height: 30px;

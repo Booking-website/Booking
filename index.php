@@ -19,7 +19,7 @@
        <div class="container">
          <div class="ways" id="ways">
            <!-- <div><a class="active" id="roundtrip"><h3>Roundtrip</h3></a></div> -->
-           <div><a id="one_way"><h3>One-way</h3></a></div>
+           <div><h3><a id="one_way">One-way</a></h3></div>
            <!-- <div><a id="multi_city"><h3>Multi-city</h3></a></div> -->
          </div>
          <!-- <div class="flights-form">
@@ -65,8 +65,8 @@
                    business
                  </option>
                </select>
-                <button type="submit" name="search">Search</button>
              </form>
+             <button class="searchButton" type="submit" name="search">Search</button>
 
            </div>
            <!-- <div class="multi-city">

@@ -22,11 +22,9 @@ body{
     grid-column-gap: minmax(10px, 20px);
     grid-row-gap: minmax(10px, 20px);
     button{
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
+
       &:hover{
-        transform: $scale-animation;
+        
       }
     }
     *{

@@ -9,18 +9,21 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+  <!-- Meta to din's ave in cache -->
+  <meta http-equiv="Cache-control" content="no-cache">
+
   <!-- Style -->
   <link rel="stylesheet" href="./css/flexable.css">
 
   <!-- Icon -->
-  <link rel="icon" href="./img/logo.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="./img/Icon.png" type="image/png" sizes="16x16">
 </head>
 <body>
   <nav class="nav" id="nav">
     <div class="container">
       <div class="nav-left">
         <a href="./index.php">
-          <img src="./img/Logo.png"/>
+          <img src="./img/logo.png"/>
         </a>
       </div>
       <div class="nav-right">

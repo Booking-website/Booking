@@ -2,6 +2,8 @@
 $background_color: #f2f2f2;
 $body_font-size: 1.6vw;
 $scale-animation: scale3d(.9, .9, .9);
+$allButtonBcc: #005aeb;
+$allButtonColor: #f2f2f2;
 
 // Table
 $table_border: none;
@@ -12,16 +14,19 @@ $table_fsize: 14px;
 $table_ta: left;
 
 // Navbar
-$nav__bcc: #464F9D/*rgb(140, 120, 90)*/;
-$nav__link_col: #fff;
+$nav__bcc: #005aeb /*#F9F0B0 rgb(140, 120, 90)*/;
+$nav__link_col: #f2f2f2;
+$nav__link_col_hover: #f2f2f2;
 // Logo
-$logo_width: 100px;
-$logo_height: 100px;
+$logo_width: 8vw;
+// $logo_height: 10vw;
 
 // Main
 // One-way
+$header__flight-bcc: #005aeb;
+$header__flights-bcc: #fff;
 $one-way__gtc: repeat(2, 2fr) 1fr 1fr;
-$index__ways_color: #0d5ab9;
+$index__ways_color: #005aeb;
 $index__ways_bcc-color: #d7e7f2;
 $one-way__g-gap: 2vw;
 

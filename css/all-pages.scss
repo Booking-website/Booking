@@ -15,12 +15,37 @@ body{
 }
 h1 h2, h3, h4, h5, h6, p{
   margin: 0;
+  padding: 0;
+}
+a{
+  cursor: pointer;
+  text-decoration: none;
 }
 .container{
   width: 80%;
   margin: 0 auto;
 }
 
+// Input, select, Form
+form{
+  input, select{
+    cursor: pointer;
+    padding: 5px 10px;
+    @include border__radius(0.5px, solid, #ccc, 5px);
+    @include bcc__c(#f2f2f2, #999)
+  }
+}
+button{
+  @include bcc__c($allButtonBcc, $allButtonColor);
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 40px;
+  &:hover{
+    transform: $scale-animation;
+  }
+}
 
 // Class: table
 .table {

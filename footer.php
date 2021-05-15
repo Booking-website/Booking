@@ -1,13 +1,11 @@
 <footer class="footer" id="footer">
   <div class="container">
-    <div class="goTop">
-      <a href="#" id="goTop">^</a>
-    </div>
     <div class="links">
-      <a href="#">Link_1</a>
+      <a href="#"><img src="./img/logo.png"/></a>
       <a href="#">Link_2</a>
       <a href="#">Link_3</a>
       <a href="#">Link_4</a>
+      <a href="#">Link_5</a>
       <a href="#">Link_5</a>
     </div>
     <div class="legal">

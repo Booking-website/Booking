@@ -1,6 +1,5 @@
 .nav {
-  background-color: #464F9D;
-  padding: 5px 0;
+  background-color: #005aeb;
 }
 .nav .container {
   align-items: center;
@@ -10,11 +9,10 @@
 }
 .nav-left {
   text-align: center;
-  height: 100%;
 }
 .nav-left img {
-  width: 100px;
-  height: 100px;
+  width: 8vw;
+  object-fit: contain;
 }
 .nav-left img:hover {
   transform: scale3d(0.9, 0.9, 0.9);
@@ -29,47 +27,43 @@
 }
 .nav-right .menu-open-item {
   text-align: center;
+  margin: auto 0;
 }
 .nav-right .menu-open-item:hover {
   transform: scale3d(0.9, 0.9, 0.9);
 }
 .nav-right .menu-open-item a {
+  text-transform: uppercase;
+  display: flex;
+  width: 100%;
+  justify-content: center;
   text-decoration: none;
-  color: #fff;
+  color: #f2f2f2;
+}
+.nav-right .menu-open-item a:hover {
+  color: #f2f2f2;
 }
 
 .footer {
   padding: 50px 0;
-}
-.footer .goTop {
-  text-align: center;
-  align-items: center;
-  padding: 20px 0;
-}
-.footer .goTop button {
-  font-size: 1.8vw;
-  background-color: transparent;
-  border: none;
-  padding: 20px 60px;
-}
-.footer .goTop button:hover {
-  color: #d6a0ce;
-}
-.footer .goTop button:focus {
-  outline: none;
+  background-color: #005aeb;
+  color: #f2f2f2;
 }
 .footer .links {
-  padding: 20px 0;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2vw 10vw;
+  text-align: center;
+  margin-bottom: 10px;
 }
 .footer .links a {
+  text-transform: uppercase;
+  color: #f2f2f2;
   font-size: 1.5vw;
-  text-decoration: none;
-  color: #000;
 }
 .footer .links a:hover {
-  text-decoration: underline;
+  transform: scale3d(0.9, 0.9, 0.9);
+  color: #f2f2f2;
 }
 .footer .legal {
   padding: 30px 0;
@@ -92,11 +86,39 @@ body {
 
 h1 h2, h3, h4, h5, h6, p {
   margin: 0;
+  padding: 0;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .container {
   width: 80%;
   margin: 0 auto;
+}
+
+form input, form select {
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 0.5px solid #ccc;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  color: #999;
+}
+
+button {
+  background-color: #005aeb;
+  color: #f2f2f2;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 40px;
+}
+button:hover {
+  transform: scale3d(0.9, 0.9, 0.9);
 }
 
 .table {
@@ -148,7 +170,7 @@ h1 h2, h3, h4, h5, h6, p {
   text-align: center;
 }
 .header .flights {
-  background-color: white;
+  background-color: #fff;
   border-radius: 10px;
 }
 .header .flights .container {
@@ -170,7 +192,6 @@ h1 h2, h3, h4, h5, h6, p {
 .header .flights .container h2 {
   text-align: left;
   font-size: 2vw;
-  margin-bottom: 2px;
 }
 .header .flights .container:nth-child(2) {
   border-top-left-radius: 0px;
@@ -178,77 +199,30 @@ h1 h2, h3, h4, h5, h6, p {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-.header .flights .container .ways {
-  display: grid;
-  grid-gap: 5vw;
-  grid-template-columns: repeat(2, 1fr);
-}
 .header .flights .container .ways div {
+  width: auto;
+  text-align: center;
   padding: 5px;
   border-radius: 10px;
 }
 .header .flights .container .ways a {
-  color: #0d5ab9;
+  border: 0 solid transparent;
+  border-radius: 15px;
+  background-color: #d7e7f2;
+  color: #005aeb;
   padding: 10px 20px;
-  cursor: pointer;
-}
-.header .flights .roundtrip form {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(2, 2fr) repeat(2, 1fr);
-  grid-gap: 2vw;
-}
-.header .flights .roundtrip form select, .header .flights .roundtrip form input {
-  min-height: 35px;
-  padding: 5px 10px;
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  border-radius: 5px;
-  cursor: pointer;
-}
-.header .flights .roundtrip form input {
-  min-width: 130px;
-}
-.header .flights .roundtrip button {
-  cursor: pointer;
-  margin-top: 15px;
-  text-align: center;
-  background-color: #005aeb;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  padding: 10px 40px;
+  font-weight: normal;
 }
 .header .flights .one-way {
-  display: none;
+  transition: all 1s ease;
 }
 .header .flights .one-way form {
   margin-top: 40px;
+  margin-bottom: 20px;
   display: grid;
   grid-template-columns: repeat(2, 2fr) 1fr 1fr;
   grid-gap: 2vw;
 }
-.header .flights .one-way form select, .header .flights .one-way form input {
-  padding: 5px 10px;
-  border: rgba(0, 0, 0, 0.8) solid #000;
-  border-radius: 5px;
-}
-.header .flights .one-way form select {
-  cursor: pointer;
-}
-.header .flights .one-way form input {
-  min-width: 130px;
-  cursor: pointer;
-}
-.header .flights .one-way button {
-  background-color: #005aeb;
-  color: white;
-  cursor: pointer;
-  text-align: center;
-  border: none;
-  border-radius: 10px;
-  padding: 10px 40px;
-}
-
 .main {
   padding: 50px 0;
 }
@@ -262,12 +236,12 @@ h1 h2, h3, h4, h5, h6, p {
   grid-auto-rows: 30vw;
 }
 .main div .card1, .main div .card2, .main div .card3, .main div .card {
-  border: 1px solid #000;
+  border: 0 solid transparent;
   border-radius: 10px;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
 .main div .card1 a, .main div .card2 a, .main div .card3 a, .main div .card a {
-  border: 1px solid #000;
+  border: 0 solid #000;
   border-radius: 10px;
   background-color: transparent;
   color: #000;
@@ -284,11 +258,14 @@ h1 h2, h3, h4, h5, h6, p {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
+.main div .top h3 {
+  line-height: 200%;
+}
 .main div .bottom {
   background-color: rgba(255, 255, 255, 0.9);
   color: black;
   align-items: center;
-  padding: 0 5px;
+  padding: 0 5%;
   line-height: 130%;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -439,7 +416,7 @@ h1 h2, h3, h4, h5, h6, p {
 }
 
 @media screen and (max-width: 1024px) {
-  .header .flights div .flights-form form {
+  .header .flights div .one-way form {
     grid-gap: 1vw;
     grid-template-columns: 1fr 1fr;
   }
@@ -547,10 +524,7 @@ h1 h2, h3, h4, h5, h6, p {
   .header .flights .container .ways a {
     margin: 5px 0;
   }
-  .header .flights .container .flights-form form {
+  .header .flights .container .one-way form {
     grid-template-columns: 1fr;
-  }
-  .header .flights .container .multi-city p {
-    font-size: 3vw;
   }
 }
