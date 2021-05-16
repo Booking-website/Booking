@@ -16,7 +16,7 @@
       <input type="email" name="email" placeholder="email">
       <input type="password" name="pwd" placeholder="Password">
       <input type="password" name="pwdrepeat" placeholder="Repeat password">
-      <button type="submit" name="submit">Register now</button>
+      <button class="registerButton" type="submit" name="submit">Register now</button>
     </form>
     <?php
       if (isset($_GET["error"])) {

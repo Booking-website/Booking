@@ -1,6 +1,4 @@
 @import "./main-vars.scss";
-@import "./nav-footer.scss";
-@import "./all-pages.scss";
 
 
 //HEADER
@@ -20,10 +18,9 @@
         grid-template-columns: 1fr 11fr;
         border-bottom: 2px solid rgb(33, 122, 201);
       }
-      img{
+      .fa-plane{
         justify-self: center;
-        width: 3.5vw;
-        object-fit: contain;
+        font-size:  3vw;
       }
       h2{
         text-align: left;
@@ -100,8 +97,8 @@
 
         }
       }
-      button{
-
+      .searchButton{
+        grid-column: 1 / 5;
       }
     }
   }
@@ -111,6 +108,9 @@
 //Main
 .main{
   padding: 50px 0;
+  .container{
+    margin-bottom: 30px;
+  }
   div{
     display: grid;
     grid-gap: 30px;
