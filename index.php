@@ -5,7 +5,7 @@
   <!-- Style -->
   <link rel="stylesheet" href="./css/master.css">
   <!-- meta icon -->
-  <title>My Avia Website</title>
+  <title>Flying</title>
 </head>
  <header class="header" id="header">
    <div class="container">
