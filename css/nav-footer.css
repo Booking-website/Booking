@@ -15,7 +15,7 @@
   object-fit: contain;
 }
 .nav-left img:hover {
-  transform: scale3d(0.9, 0.9, 0.9);
+  transform: scale3d(0.95, 0.95, 0.95);
 }
 .nav-right {
   justify-self: end;
@@ -30,7 +30,7 @@
   margin: auto 0;
 }
 .nav-right .menu-open-item:hover {
-  transform: scale3d(0.9, 0.9, 0.9);
+  transform: scale3d(0.95, 0.95, 0.95);
 }
 .nav-right .menu-open-item a {
   text-transform: uppercase;
@@ -62,7 +62,7 @@
   font-size: 1.5vw;
 }
 .footer .links a:hover {
-  transform: scale3d(0.9, 0.9, 0.9);
+  transform: scale3d(0.95, 0.95, 0.95);
   color: #f2f2f2;
 }
 .footer .legal {

@@ -1,4 +1,4 @@
-<<?php
+<?php
 include_once 'header.php'; ?>
 <?php
     if(isset($_POST['search']))
@@ -154,4 +154,8 @@ include_once 'header.php'; ?>
     {
       echo "Search request not received";
     }
+  ?>
+
+<?php
+      include_once 'footer.php';
   ?>

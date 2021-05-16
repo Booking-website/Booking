@@ -1,6 +1,4 @@
 @import "./main-vars.scss";
-@import "./nav-footer.scss";
-@import "./all-pages.scss";
 
 body{
   background: url("../img/plane-wing.jpg") no-repeat center top / cover;
@@ -19,16 +17,12 @@ body{
   form{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: minmax(10px, 20px);
-    grid-row-gap: minmax(10px, 20px);
-    button{
-
+    grid-gap: 20px;
+    .registerButton, .loginButton{
+      grid-column: 1 / 3;
       &:hover{
-        
+
       }
-    }
-    *{
-      margin: 0 auto;
     }
     input{
       min-height: 20px;
@@ -39,7 +33,7 @@ body{
       margin-bottom: 10px;
     }
     input, div{
-      width: 90%;
+      
     }
     h1{
       margin: 20px 0;

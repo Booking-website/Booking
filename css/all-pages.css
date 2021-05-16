@@ -1,3 +1,4 @@
+@import "./nav-footer.css";
 :root {
   background-color: #f2f2f2;
 }
@@ -12,9 +13,8 @@ body {
   width: 100vw;
 }
 
-h1 h2, h3, h4, h5, h6, p {
+h1 h2, h3, h4, h5, h6 {
   margin: 0;
-  padding: 0;
 }
 
 a {
@@ -46,7 +46,26 @@ button {
   padding: 10px 40px;
 }
 button:hover {
-  transform: scale3d(0.9, 0.9, 0.9);
+  transform: scale3d(0.95, 0.95, 0.95);
+}
+
+main {
+  position: relative;
+}
+
+.goTopBtn {
+  padding: 1% 2%;
+  background-color: transparent;
+  border: 0.75px solid #005aeb;
+  position: absolute;
+  right: 4%;
+  bottom: 1vw;
+}
+.goTopBtn:focus {
+  outline: none;
+}
+.goTopBtn i {
+  color: #005aeb;
 }
 
 .table {
