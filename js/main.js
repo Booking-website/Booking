@@ -2,9 +2,9 @@ $(document).ready(function() {
   // Scroll Reveal
   ScrollReveal().reveal('*', { delay: 1 });
 
-  
+
   $(".goTopBtn").click(function() {
-    $('html, body').animate({scrollTop:0},'200');
+    $('html, body').animate({scrollTop:0},'500');
     // window.scrollTo({top: 0, behavior: "smooth"});
   })
 
