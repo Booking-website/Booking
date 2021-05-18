@@ -1,5 +1,5 @@
 .header {
-  background: url(../img/bg-main.jpg) no-repeat top center/cover;
+  background: url("../img/bg-main.jpg") no-repeat top center/cover;
   padding: 40px 0;
   text-align: center;
 }
@@ -27,8 +27,8 @@
   font-size: 2vw;
 }
 .header .flights .container:nth-child(2) {
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -70,17 +70,27 @@
   display: grid;
   grid-gap: 30px;
 }
-.main div .part1, .main div .part2, .main div .part3, .main div .part4, .main div .part5 {
+.main div .part1,
+.main div .part2,
+.main div .part3,
+.main div .part4,
+.main div .part5 {
   display: grid;
   grid-gap: 30px;
   grid-auto-rows: 30vw;
 }
-.main div .card1, .main div .card2, .main div .card3, .main div .card {
+.main div .card,
+.main div .card1,
+.main div .card2,
+.main div .card3 {
   border: 0 solid transparent;
   border-radius: 10px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
-.main div .card1 a, .main div .card2 a, .main div .card3 a, .main div .card a {
+.main div .card a,
+.main div .card1 a,
+.main div .card2 a,
+.main div .card3 a {
   border: 0 solid #000;
   border-radius: 10px;
   background-color: transparent;
@@ -110,17 +120,50 @@
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-.main div .part1 .card1, .main div .part1 .card2, .main div .part1 .card3, .main div .part1 .card, .main div .part2 .card1, .main div .part2 .card2, .main div .part2 .card3, .main div .part2 .card, .main div .part3 .card1, .main div .part3 .card2, .main div .part3 .card3, .main div .part3 .card, .main div .part4 .card1, .main div .part4 .card2, .main div .part4 .card3, .main div .part4 .card {
+.main div .part1 .card,
+.main div .part1 .card1,
+.main div .part1 .card2,
+.main div .part1 .card3,
+.main div .part2 .card,
+.main div .part2 .card1,
+.main div .part2 .card2,
+.main div .part2 .card3,
+.main div .part3 .card,
+.main div .part3 .card1,
+.main div .part3 .card2,
+.main div .part3 .card3,
+.main div .part4 .card,
+.main div .part4 .card1,
+.main div .part4 .card2,
+.main div .part4 .card3 {
   transition: all 0.5s ease-out;
   perspective: 1000px;
 }
-.main div .part1 .card1:hover, .main div .part1 .card2:hover, .main div .part1 .card3:hover, .main div .part1 .card:hover, .main div .part2 .card1:hover, .main div .part2 .card2:hover, .main div .part2 .card3:hover, .main div .part2 .card:hover, .main div .part3 .card1:hover, .main div .part3 .card2:hover, .main div .part3 .card3:hover, .main div .part3 .card:hover, .main div .part4 .card1:hover, .main div .part4 .card2:hover, .main div .part4 .card3:hover, .main div .part4 .card:hover {
+.main div .part1 .card1:hover,
+.main div .part1 .card2:hover,
+.main div .part1 .card3:hover,
+.main div .part1 .card:hover,
+.main div .part2 .card1:hover,
+.main div .part2 .card2:hover,
+.main div .part2 .card3:hover,
+.main div .part2 .card:hover,
+.main div .part3 .card1:hover,
+.main div .part3 .card2:hover,
+.main div .part3 .card3:hover,
+.main div .part3 .card:hover,
+.main div .part4 .card1:hover,
+.main div .part4 .card2:hover,
+.main div .part4 .card3:hover,
+.main div .part4 .card:hover {
   transform: scale3d(0.95, 0.95, 0.95);
 }
-.main div .part1, .main div .part2, .main div .part4 {
+.main div .part1,
+.main div .part2,
+.main div .part4 {
   grid-template-columns: repeat(3, 1fr);
 }
-.main div .part3, .main div .part5 {
+.main div .part3,
+.main div .part5 {
   grid-template-columns: 1fr;
 }
 .main div .part1 {
@@ -236,7 +279,7 @@
 .main div .part5 .card .left {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  background: url(../img/booking-by-phone.jpg) no-repeat center top/cover;
+  background: url("../img/booking-by-phone.jpg") no-repeat center top/cover;
 }
 .main div .part5 .card .right {
   padding: 40px;
@@ -268,7 +311,9 @@
   .main div {
     grid-gap: 30px;
   }
-  .main div .part1, .main div .part2, .main div .part4 {
+  .main div .part1,
+.main div .part2,
+.main div .part4 {
     grid-template-columns: 1fr;
   }
   .main div .part1 {
@@ -320,32 +365,6 @@
   }
 }
 @media screen and (max-width: 425px) {
-  body {
-    font-size: 2vw;
-  }
-
-  .nav .container {
-    display: block;
-  }
-  .nav .container .nav-left {
-    align-items: center;
-  }
-  .nav .container .nav-left .logo {
-    max-height: 50px;
-    object-fit: contain;
-  }
-  .nav .container .menu {
-    text-align: center;
-    padding: 10px;
-  }
-  .nav-left .logo {
-    width: auto;
-  }
-
-  .container {
-    width: 85vw;
-  }
-
   .header .flights .container h2 {
     font-size: 4vw;
     text-align: center;

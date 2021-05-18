@@ -33,7 +33,7 @@ body{
       margin-bottom: 10px;
     }
     input, div{
-      
+
     }
     h1{
       margin: 20px 0;
@@ -43,54 +43,7 @@ body{
       grid-template-columns: 1fr;
     }
   }
-
 }
-
-// // Header
-// .header{
-//   padding: 40px 0 0 40px;
-//   a{
-//     padding: 20px;
-//     background-color: rgb(255, 255, 255);
-//     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
-//   }
-// }
-
-//
-// //Header
-// .header{
-//   padding: 40px 0;
-//   padding-left: 40px;
-//   a{
-//     padding: 20px;
-//     background-color: rgb(21, 135, 150);
-//     border: 2px solid rgb(0, 0, 0);
-//     border-radius: 10px;
-//     text-decoration: none;
-//     color: rgb(0, 0, 0);
-//   }
-// }
-//
-// //Main
-// .main{
-//   height: 60vh;
-//   padding-top: 20vh;
-//   .container{
-//     padding: 20px;
-//     border: 2px solid rgb(0, 0, 0);
-//     border-radius: 10px;
-//     text-align: center;
-//     background-color: rgb(21, 135, 150);
-//     input:not([type="radio"]){
-//       margin: 2vw 0;
-//       display: block;
-//       width: 100%;
-//       font-size: 3vw;
-//     }
-//   }
-// }
-
-
 
 
 
@@ -116,6 +69,11 @@ body{
       .menu{
         text-align: center;
       }
+    }
+  }
+  main{
+    form{
+      grid-template-columns: 1fr;
     }
   }
   .main{

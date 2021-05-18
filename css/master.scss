@@ -1,39 +1,44 @@
-@import "./main-vars.scss";
+@import "./main-vars.scss"; //HEADER
 
-
-//HEADER
-.header{
-  background: url(../img/bg-main.jpg) no-repeat top center / cover;
+.header {
+  background: url("../img/bg-main.jpg") no-repeat top center / cover;
   padding: 40px 0;
   text-align: center;
-  .flights{
+
+  .flights {
     @include bcc__radius($header__flights-bcc, 10px);
-    .container{
+
+    .container {
       width: 95%;
       padding: 20px 10px;
-      .flight{
+
+      .flight {
         padding: 5px;
         align-items: center;
         display: grid;
         grid-template-columns: 1fr 11fr;
         border-bottom: 2px solid rgb(33, 122, 201);
       }
-      .fa-plane{
+
+      .fa-plane {
         justify-self: center;
-        font-size:  3vw;
+        font-size: 3vw;
       }
-      h2{
+
+      h2 {
         text-align: left;
         font-size: 2vw;
       }
-      &:nth-child(2){
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
+
+      &:nth-child(2) {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
       }
-      .ways{
-        div{
+
+      .ways {
+        div {
           width: auto;
           text-align: center;
           padding: 5px;
@@ -42,7 +47,8 @@
           //   transform: $scale-animation;
           // }
         }
-        a{
+
+        a {
           @include border__radius(0, solid, transparent, 15px);
           background-color: $index__ways_bcc-color;
           color: $index__ways_color;
@@ -79,50 +85,61 @@
     //     padding: 10px 40px;
     //   }
     // }
-    .one-way{
+    .one-way {
       transition: all 1s ease;
-      form{
+
+      form {
         margin-top: 40px;
         margin-bottom: 20px;
         display: grid;
         grid-template-columns: $one-way__gtc;
         grid-gap: $one-way__g-gap;
-        select, input{
 
-        }
-        select{
+        input,
+        select {}
 
-        }
-        input{
+        select {}
 
-        }
+        input {}
       }
-      .searchButton{
+
+      .searchButton {
         grid-column: 1 / 5;
       }
     }
   }
 }
-
-
 //Main
-.main{
+
+.main {
   padding: 50px 0;
-  .container{
+
+  .container {
     margin-bottom: 30px;
   }
-  div{
+
+  div {
     display: grid;
     grid-gap: 30px;
-    .part1, .part2, .part3, .part4, .part5{
+
+    .part1,
+    .part2,
+    .part3,
+    .part4,
+    .part5 {
       display: grid;
       grid-gap: 30px;
       grid-auto-rows: 30vw;
     }
-    .card1, .card2, .card3, .card{
+
+    .card,
+    .card1,
+    .card2,
+    .card3 {
       @include border__radius(0, solid, transparent, $rad: 10px);
       box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-      a{
+
+      a {
         @include border__radius($width: 0, $rad: 10px);
         @include bcc__c($color: #000);
         text-decoration: none;
@@ -130,18 +147,21 @@
         grid-template-rows: 70% 30%;
       }
     }
-    .top{
+
+    .top {
       @include bcc__c($color: #fff);
       text-shadow: 0 0 3px rgb(0, 0, 0);
       padding-left: 10px;
       align-content: flex-end;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
-      h3{
+
+      h3 {
         line-height: 200%;
       }
     }
-    .bottom{
+
+    .bottom {
       @include bcc__c($bcc:rgba(255, 255, 255, 0.9));
       align-items: center;
       padding: 0 5%;
@@ -149,132 +169,175 @@
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
     }
-    .part1, .part2, .part3, .part4{
-      .card1, .card2, .card3, .card{
+
+    .part1,
+    .part2,
+    .part3,
+    .part4 {
+      .card,
+      .card1,
+      .card2,
+      .card3 {
         transition: all 0.5s ease-out;
         perspective: 1000px;
       }
-      .card1:hover, .card2:hover, .card3:hover, .card:hover{
+
+      .card1:hover,
+      .card2:hover,
+      .card3:hover,
+      .card:hover {
         transform: $scale-animation;
       }
     }
-    .part1, .part2, .part4{
+
+    .part1,
+    .part2,
+    .part4 {
       grid-template-columns: repeat(3, 1fr);
     }
-    .part3, .part5{
+
+    .part3,
+    .part5 {
       grid-template-columns: 1fr;
     }
-    .part1{
-      grid-template-areas:
-      "p1_card1 p1_card2 p1_card3";
-      .card1{
+
+    .part1 {
+      grid-template-areas: "p1_card1 p1_card2 p1_card3";
+
+      .card1 {
         grid-area: p1_card1;
-        .top{
-          background: url('../img/beach.jpg') no-repeat center top / cover;
+
+        .top {
+          background: url("../img/beach.jpg") no-repeat center top / cover;
         }
       }
-      .card2{
+
+      .card2 {
         grid-area: p1_card2;
-        .top{
-          background: url('../img/travel-world.jpg') no-repeat center top / cover;
+
+        .top {
+          background: url("../img/travel-world.jpg") no-repeat center top / cover;
         }
       }
-      .card3{
+
+      .card3 {
         grid-area: p1_card3;
-        .top{
-          background: url('../img/only-boat.jpg') no-repeat center top / cover;
+
+        .top {
+          background: url("../img/only-boat.jpg") no-repeat center top / cover;
         }
       }
     }
-    .part2{
-      grid-template-areas:
-      "p2_card1 p2_card1 p2_card2"
-      "p2_card1 p2_card1 p2_card3";
-      .card1{
+
+    .part2 {
+      grid-template-areas: "p2_card1 p2_card1 p2_card2" "p2_card1 p2_card1 p2_card3";
+
+      .card1 {
         grid-area: p2_card1;
-        a{
+
+        a {
           grid-template-rows: 100%;
-          .top{
+
+          .top {
             border-radius: 10px;
           }
         }
-        .top{
-          background: url('../img/norway.jpg') no-repeat center top / cover;
+
+        .top {
+          background: url("../img/norway.jpg") no-repeat center top / cover;
         }
       }
-      .card2{
+
+      .card2 {
         grid-area: p2_card2;
-        .top{
-          background: url('../img/stock.jpg') no-repeat center top / cover;
+
+        .top {
+          background: url("../img/stock.jpg") no-repeat center top / cover;
         }
       }
-      .card3{
+
+      .card3 {
         grid-area: p2_card3;
-        .top{
-          background: url('../img/plane-man.jpg') no-repeat center top / cover;
+
+        .top {
+          background: url("../img/plane-man.jpg") no-repeat center top / cover;
         }
       }
     }
-    .part3{
-      grid-template-areas:
-      "p3_card";
-      .card{
+
+    .part3 {
+      grid-template-areas: "p3_card";
+
+      .card {
         grid-area: p3_card;
-        .top{
-          background: url('../img/long.jpg') no-repeat center top / cover;
+
+        .top {
+          background: url("../img/long.jpg") no-repeat center top / cover;
         }
       }
     }
-    .part4{
-      grid-template-areas:
-      "p4_card1 p4_card2 p4_card3";
-      .card1{
+
+    .part4 {
+      grid-template-areas: "p4_card1 p4_card2 p4_card3";
+
+      .card1 {
         grid-area: p4_card1;
-        .top{
-          background: url('../img/alone.jpg') no-repeat center top / cover;
+
+        .top {
+          background: url("../img/alone.jpg") no-repeat center top / cover;
         }
       }
-      .card2{
+
+      .card2 {
         grid-area: p4_card2;
-        .top{
-          background: url('../img/sand-travel.jpg') no-repeat center top / cover;
+
+        .top {
+          background: url("../img/sand-travel.jpg") no-repeat center top / cover;
         }
       }
-      .card3{
+
+      .card3 {
         grid-area: p4_card3;
-        .top{
-          background: url('../img/happy.jpg') no-repeat center top / cover;
+
+        .top {
+          background: url("../img/happy.jpg") no-repeat center top / cover;
         }
       }
     }
-    .part5{
+
+    .part5 {
       grid-gap: 0;
       grid-template-rows: auto;
-      .card{
+
+      .card {
         grid-gap: 0;
         border-radius: 10px;
         background-color: rgba(255, 255, 255, 0.9);
         grid-template-columns: 33.33% 66.67%;
-        .left{
+
+        .left {
           border-top-left-radius: 10px;
           border-bottom-left-radius: 10px;
-          background: url(../img/booking-by-phone.jpg) no-repeat center top / cover;
+          background: url("../img/booking-by-phone.jpg") no-repeat center top / cover;
         }
-        .right{
+
+        .right {
           padding: 40px;
           grid-template-columns: 3fr 1fr;
-          .text{
+
+          .text {
             display: block;
           }
-          .qr{
 
-          }
-          .qr_img{
+          .qr {}
+
+          .qr_img {
             display: -webkit-flex;
             display: -ms-flex;
             display: flex;
             align-items: center;
-            img{
+
+            img {
               width: 50px;
               height: 50px;
             }
@@ -284,180 +347,88 @@
     }
   }
 }
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 1440px) {
-  .header{
-    // height: 340px;
-    // background-size: auto;
-  }
-}
 @media screen and (max-width: 1024px) {
-  .nav{
-    &-left{
-      .logo{
-        // width: 14vw;
-      }
-    }
-  }
-  .header{
-    .flights div{
-      .one-way form{
+  .header {
+    .flights div {
+      .one-way form {
         grid-gap: 1vw;
         grid-template-columns: 1fr 1fr;
       }
-      .multi-city{
-        p{
+
+      .multi-city {
+        p {
           font-size: 2.5vw;
         }
       }
     }
   }
-  .main{
-    .div{
-
-    }
-  }
 }
 @media screen and (max-width: 768px) {
-  .main{
-    div{
+  .main {
+    div {
       grid-gap: 30px;
-      .part1, .part2, .part3, .part4, .part5{
-        .card1, .card2, .card3, .card{
-          a{
 
-          }
-        }
-      }
-      .part1, .part2, .part4{
+      .part1,
+      .part2,
+      .part4 {
         grid-template-columns: 1fr;
       }
-      .part1{
-        grid-template-areas:
-        "p1_card1"
-        "p1_card2"
-        "p1_card3";
-      }
-      .part2{
-        grid-template-areas:
-        "p2_card1"
-        "p2_card2"
-        "p2_card3";
-      }
-      .part3{
 
+      .part1 {
+        grid-template-areas: "p1_card1" "p1_card2" "p1_card3";
       }
-      .part4{
-        grid-template-areas:
-        "p4_card1"
-        "p4_card2"
-        "p4_card3";
+
+      .part2 {
+        grid-template-areas: "p2_card1" "p2_card2" "p2_card3";
       }
-      .part5{
-        .card{
-          .right{
-            // grid-template-columns: 1fr;
-            // grid-gap: 10px;
-            // .qr{
-            //   min-height: 100px;
-            //   min-width: 100px;
-            // }
-          }
-        }
+
+      .part3 {}
+
+      .part4 {
+        grid-template-areas: "p4_card1" "p4_card2" "p4_card3";
       }
+
+      .part5 {}
     }
   }
 }
 @media screen and (max-width: 425px) {
-  body{
-    font-size: 2vw;
-  }
-  .nav{
-    .container{
-      display: block;
-      .nav-left{
-        align-items: center;
-        .logo{
-          max-height: 50px;
-          object-fit: contain;
-        }
-      }
-      .menu{
-        text-align: center;
-        padding: 10px;
-      }
-    }
-    &-left{
-      .logo{
-        width: auto;
-      }
-    }
-  }
-  .container{
-    width: 85vw;
-  }
-  .header{
-    .flights{
-      .container{
-        h2{
+  
+
+  .header {
+    .flights {
+      .container {
+        h2 {
           font-size: 4vw;
           text-align: center;
         }
-        .flight{
+
+        .flight {
           border-bottom: 1px solid #217ac9;
           grid-template-columns: 1fr;
           grid-template-rows: minmax(auto, 30px);
-          img{
+
+          img {
             display: none;
           }
         }
-        .ways{
+
+        .ways {
           display: block;
-          a{
+
+          a {
             margin: 5px 0;
           }
         }
-        .one-way form{
+
+        .one-way form {
           grid-template-columns: 1fr;
         }
       }
     }
   }
-  .main{
-    div{
 
-    }
-  }
-}
-
-
-
-
-
-
-@media screen and (min-width: 1024px) {
-  .main{
-    div{
-      .part1, .part2, .part3, .part4, .part5{
-
-      }
-    }
-  }
-}
-@media screen and (min-width: 1920px) {
-  .main{
-    div{
-      .part1, .part2, .part3, .part4, .part5{
-
-      }
-    }
+  .main {
+    div {}
   }
 }
