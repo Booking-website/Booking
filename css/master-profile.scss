@@ -2,152 +2,338 @@
 
 // Main
 .main{
-  div{
-    display: block;
-  }
-  .container{
-
-  }
-  .info{
+  .main__info{
+    padding: 3% 0;
     display: grid;
-    grid-template-columns: 40% 60%;
-    grid-gap: 0;
-    padding: 40px;
-    background-color: #f2f2f2;
-    height: 100vh;
-    &__left{
-      padding: 20px;
-
+    grid-template-columns: 2fr 4fr;
+    grid-gap: 2%;
+    grid-template-areas:
+    "sidebar profile";
+  }
+  .main__sidebar{
+    border-radius: 10px;
+    background-color: $profile-cards-bcc;
+    padding: 1% 0;
+    grid-area: sidebar;
+    ul{
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
-    &__right{
-      padding: 20px;
-      .wrap{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
+    li{
+      margin: 4% 0;
+      padding: 0 0 0 4%;
+    }
+  }
+  .main__profile-info{
+    border-radius: 10px;
+    background-color: $profile-cards-bcc;
+    grid-area: profile;
+    padding: 1% 0;
+  }
+  .main__profile-img-wrapper{
+    padding: 2% 0;
+    text-align: center;
+    align-items: center;
+  }
+  .main__profile-img{
+    display: inline-block;
+    width: 20em;
+    height: 20em;
+    overflow: hidden;
+    border-radius: 100%;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .main__individual-info{
+    text-align: center;
+  }
+  .main__bank-card{
+    text-align: center;
+  }
+  .main__bank-card-dropdown{
+    //////////////////////////////////////////
+    // display: none;
+    //////////////////////////////////////////
+    .wrap{
+      justify-content: center;
+    }
+    .card{
+      width: 15em;
+      height: 10em;
+      position: relative;
+      perspective: 1000px;
+    }
+    .front, .back{
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.5s ease-out;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      padding: 25px 15px;
+    }
+    .front{
+      background-color: #ccc;
+      transform: rotateY(0deg);
+      .bank-card{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 10px;
       }
-      .card{
-        width: 500px;
-        height: 300px;
-        position: relative;
-        perspective: 1000px;
-      }
-      .front, .back{
+      a{
+        padding: 10px;
         position: absolute;
-        left: 0;
-        top: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: all 0.5s ease-out;
-        backface-visibility: hidden;
-        border-radius: 10px;
-        padding: 25px 15px;
+        right: 10px;
+        bottom: 10px;
+        text-decoration: none;
+        color: #000;
+        &:hover{
+          transform: $scale-animation;
+        }
       }
-      .front{
-        background-color: #ccc;
-        transform: rotateY(0deg);
-        .bank-card{
+      form{
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .card-number{
+          text-align: center;
           display: grid;
-          grid-template-columns: 1fr;
-          grid-row-gap: 10px;
-        }
-        a{
-          padding: 10px;
-          position: absolute;
-          right: 10px;
-          bottom: 10px;
-          text-decoration: none;
-          color: #000;
-          &:hover{
-            transform: $scale-animation;
-          }
-        }
-        form{
-          input::-webkit-outer-spin-button,
-          input::-webkit-inner-spin-button {
-              -webkit-appearance: none;
-              margin: 0;
-          }
-          .card-number{
-            text-align: center;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-gap: 10px;
-            margin: auto 0;
-            input{
-
-            }
-          }
-          .card-date{
-            display: grid;
-            grid-template-columns: 100px 70px 12px 70px;
-            align-items: center;
-            text-align: center;
-            input{
-              // max-width: 100px;
-              // max-height: 30px;
-            }
-            .valid{
-              margin-right: 10px;
-              text-transform: uppercase;
-              font-size: 2vw;
-            }
-            span{
-              text-align: center;
-            }
-          }
-          .name-surname{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 20px;
-          }
-        }
-      }
-      .back{
-        background-color: #ccc;
-        transform: rotateY(180deg);
-        a{
-          padding: 10px;
-          position: absolute;
-          right: 20px;
-          bottom: 20px;
-          text-decoration: none;
-          color: #000;
-        }
-        form{
-          input::-webkit-outer-spin-button,
-          input::-webkit-inner-spin-button {
-              -webkit-appearance: none;
-              margin: 0;
-          }
-          .card-cvv{
+          grid-template-columns: repeat(4, 1fr);
+          grid-gap: 10px;
+          margin: auto 0;
+          input{
 
           }
         }
+        .card-date{
+          display: grid;
+          grid-template-columns: 100px 70px 12px 70px;
+          align-items: center;
+          text-align: center;
+          input{
+            // max-width: 100px;
+            // max-height: 30px;
+          }
+          .valid{
+            margin-right: 10px;
+            text-transform: uppercase;
+            font-size: 2vw;
+          }
+          span{
+            text-align: center;
+          }
+        }
+        .name-surname{
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 20px;
+        }
       }
     }
-    &__profile-photo{
-      text-align: center;
-      img{
-        width: 100%;
+    .back{
+      background-color: #ccc;
+      transform: rotateY(180deg);
+      a{
+        padding: 10px;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        text-decoration: none;
+        color: #000;
       }
-    }
-    &__profile-info{
-      padding: 20px;
-      .name-surname{
-        margin-bottom: 20px;
-      }
-      .login{
-        margin-bottom: 20px;
-      }
-      .number{
-        margin-bottom: 20px;
+      form{
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .card-cvv{
+
+        }
       }
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .main{
+//   div{
+//     display: block;
+//   }
+//   .container{
+//
+//   }
+//   .info{
+//     display: grid;
+//     grid-template-columns: 40% 60%;
+//     grid-gap: 0;
+//     padding: 40px;
+//     background-color: #f2f2f2;
+//     &__left{
+//       padding: 20px;
+//
+//     }
+//     &__right{
+//       padding: 20px;
+//       .wrap{
+//         width: 100%;
+//         height: 100%;
+//         display: flex;
+//         justify-content: center;
+//       }
+//       .card{
+//         width: 500px;
+//         height: 300px;
+//         position: relative;
+//         perspective: 1000px;
+//       }
+//       .front, .back{
+//         position: absolute;
+//         left: 0;
+//         top: 0;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         transition: all 0.5s ease-out;
+//         backface-visibility: hidden;
+//         border-radius: 10px;
+//         padding: 25px 15px;
+//       }
+//       .front{
+//         background-color: #ccc;
+//         transform: rotateY(0deg);
+//         .bank-card{
+//           display: grid;
+//           grid-template-columns: 1fr;
+//           grid-row-gap: 10px;
+//         }
+//         a{
+//           padding: 10px;
+//           position: absolute;
+//           right: 10px;
+//           bottom: 10px;
+//           text-decoration: none;
+//           color: #000;
+//           &:hover{
+//             transform: $scale-animation;
+//           }
+//         }
+//         form{
+//           input::-webkit-outer-spin-button,
+//           input::-webkit-inner-spin-button {
+//               -webkit-appearance: none;
+//               margin: 0;
+//           }
+//           .card-number{
+//             text-align: center;
+//             display: grid;
+//             grid-template-columns: repeat(4, 1fr);
+//             grid-gap: 10px;
+//             margin: auto 0;
+//             input{
+//
+//             }
+//           }
+//           .card-date{
+//             display: grid;
+//             grid-template-columns: 100px 70px 12px 70px;
+//             align-items: center;
+//             text-align: center;
+//             input{
+//               // max-width: 100px;
+//               // max-height: 30px;
+//             }
+//             .valid{
+//               margin-right: 10px;
+//               text-transform: uppercase;
+//               font-size: 2vw;
+//             }
+//             span{
+//               text-align: center;
+//             }
+//           }
+//           .name-surname{
+//             display: grid;
+//             grid-template-columns: repeat(2, 1fr);
+//             grid-gap: 20px;
+//           }
+//         }
+//       }
+//       .back{
+//         background-color: #ccc;
+//         transform: rotateY(180deg);
+//         a{
+//           padding: 10px;
+//           position: absolute;
+//           right: 20px;
+//           bottom: 20px;
+//           text-decoration: none;
+//           color: #000;
+//         }
+//         form{
+//           input::-webkit-outer-spin-button,
+//           input::-webkit-inner-spin-button {
+//               -webkit-appearance: none;
+//               margin: 0;
+//           }
+//           .card-cvv{
+//
+//           }
+//         }
+//       }
+//     }
+//     &__profile-photo{
+//       text-align: center;
+//       img{
+//         width: 100%;
+//       }
+//     }
+//     &__profile-info{
+//       padding: 20px;
+//       .name-surname{
+//         margin-bottom: 20px;
+//       }
+//       .login{
+//         margin-bottom: 20px;
+//       }
+//       .number{
+//         margin-bottom: 20px;
+//       }
+//     }
+//   }
+// }
+
+
+
+
+
 // .main{
 //   .breakline{
 //     display: grid;
@@ -225,4 +411,12 @@
   .container{
     width: 85vw;
   }
+}
+
+
+
+
+
+.show{
+  display: block !important;
 }

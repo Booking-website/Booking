@@ -1,33 +1,68 @@
-.main div {
-  display: block;
-}
-.main .info {
+.main .main__info {
+  padding: 3% 0;
   display: grid;
-  grid-template-columns: 40% 60%;
-  grid-gap: 0;
-  padding: 40px;
-  background-color: #f2f2f2;
-  height: 100vh;
+  grid-template-columns: 2fr 4fr;
+  grid-gap: 2%;
+  grid-template-areas: "sidebar profile";
 }
-.main .info__left {
-  padding: 20px;
+.main .main__sidebar {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  border-radius: 10px;
+  background-color: #fefefe;
+  padding: 1% 0;
+  grid-area: sidebar;
 }
-.main .info__right {
-  padding: 20px;
+.main .main__sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-.main .info__right .wrap {
+.main .main__sidebar li {
+  margin: 4% 0;
+  padding: 0 0 0 4%;
+}
+.main .main__profile-info {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  border-radius: 10px;
+  background-color: #fefefe;
+  grid-area: profile;
+  padding: 1% 0;
+}
+.main .main__profile-img-wrapper {
+  padding: 2% 0;
+  text-align: center;
+  align-items: center;
+}
+.main .main__profile-img {
+  display: inline-block;
+  width: 20em;
+  height: 20em;
+  overflow: hidden;
+  border-radius: 100%;
+}
+.main .main__profile-img img {
   width: 100%;
   height: 100%;
-  display: flex;
+  object-fit: cover;
+}
+.main .main__individual-info {
+  text-align: center;
+}
+.main .main__bank-card {
+  text-align: center;
+}
+.main .main__bank-card-dropdown .wrap {
   justify-content: center;
 }
-.main .info__right .card {
-  width: 500px;
-  height: 300px;
+.main .main__bank-card-dropdown .card {
+  width: 15em;
+  height: 10em;
   position: relative;
   perspective: 1000px;
 }
-.main .info__right .front, .main .info__right .back {
+.main .main__bank-card-dropdown .front, .main .main__bank-card-dropdown .back {
   position: absolute;
   left: 0;
   top: 0;
@@ -40,16 +75,16 @@
   border-radius: 10px;
   padding: 25px 15px;
 }
-.main .info__right .front {
+.main .main__bank-card-dropdown .front {
   background-color: #ccc;
   transform: rotateY(0deg);
 }
-.main .info__right .front .bank-card {
+.main .main__bank-card-dropdown .front .bank-card {
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 10px;
 }
-.main .info__right .front a {
+.main .main__bank-card-dropdown .front a {
   padding: 10px;
   position: absolute;
   right: 10px;
@@ -57,45 +92,45 @@
   text-decoration: none;
   color: #000;
 }
-.main .info__right .front a:hover {
+.main .main__bank-card-dropdown .front a:hover {
   transform: scale3d(0.95, 0.95, 0.95);
 }
-.main .info__right .front form input::-webkit-outer-spin-button,
-.main .info__right .front form input::-webkit-inner-spin-button {
+.main .main__bank-card-dropdown .front form input::-webkit-outer-spin-button,
+.main .main__bank-card-dropdown .front form input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.main .info__right .front form .card-number {
+.main .main__bank-card-dropdown .front form .card-number {
   text-align: center;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
   margin: auto 0;
 }
-.main .info__right .front form .card-date {
+.main .main__bank-card-dropdown .front form .card-date {
   display: grid;
   grid-template-columns: 100px 70px 12px 70px;
   align-items: center;
   text-align: center;
 }
-.main .info__right .front form .card-date .valid {
+.main .main__bank-card-dropdown .front form .card-date .valid {
   margin-right: 10px;
   text-transform: uppercase;
   font-size: 2vw;
 }
-.main .info__right .front form .card-date span {
+.main .main__bank-card-dropdown .front form .card-date span {
   text-align: center;
 }
-.main .info__right .front form .name-surname {
+.main .main__bank-card-dropdown .front form .name-surname {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
 }
-.main .info__right .back {
+.main .main__bank-card-dropdown .back {
   background-color: #ccc;
   transform: rotateY(180deg);
 }
-.main .info__right .back a {
+.main .main__bank-card-dropdown .back a {
   padding: 10px;
   position: absolute;
   right: 20px;
@@ -103,30 +138,11 @@
   text-decoration: none;
   color: #000;
 }
-.main .info__right .back form input::-webkit-outer-spin-button,
-.main .info__right .back form input::-webkit-inner-spin-button {
+.main .main__bank-card-dropdown .back form input::-webkit-outer-spin-button,
+.main .main__bank-card-dropdown .back form input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.main .info__profile-photo {
-  text-align: center;
-}
-.main .info__profile-photo img {
-  width: 100%;
-}
-.main .info__profile-info {
-  padding: 20px;
-}
-.main .info__profile-info .name-surname {
-  margin-bottom: 20px;
-}
-.main .info__profile-info .login {
-  margin-bottom: 20px;
-}
-.main .info__profile-info .number {
-  margin-bottom: 20px;
-}
-
 @media screen and (max-width: 425px) {
   body {
     font-size: 3.5vw;
@@ -153,4 +169,7 @@
   .container {
     width: 85vw;
   }
+}
+.show {
+  display: block !important;
 }

@@ -9,7 +9,6 @@ body {
   font-family: "Arial", sans-serif;
   font-size: 1.6vw;
   overflow-x: hidden;
-  height: 100vh;
   width: 100vw;
 }
 
@@ -25,6 +24,10 @@ a {
 .container {
   width: 80%;
   margin: 0 auto;
+}
+
+.rotate180 {
+  transform: rotate(180deg);
 }
 
 form input, form select {
