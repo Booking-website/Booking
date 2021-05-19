@@ -134,36 +134,14 @@ main {
 .table tbody tr td:last-child {
   border-radius: 0 8px 8px 0;
 }
+
+
 @media screen and (max-width: 425px) {
   body {
     font-size: 2vw;
   }
 
-  .nav {
-    .container {
-      display: block;
 
-      .nav-left {
-        align-items: center;
-
-        .logo {
-          max-height: 50px;
-          object-fit: contain;
-        }
-      }
-
-      .menu {
-        text-align: center;
-        padding: 10px;
-      }
-    }
-
-    &-left {
-      .logo {
-        width: auto;
-      }
-    }
-  }
 
   .container {
     width: 85vw;

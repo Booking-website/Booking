@@ -130,24 +130,6 @@ main {
     font-size: 2vw;
   }
 
-  .nav .container {
-    display: block;
-  }
-  .nav .container .nav-left {
-    align-items: center;
-  }
-  .nav .container .nav-left .logo {
-    max-height: 50px;
-    object-fit: contain;
-  }
-  .nav .container .menu {
-    text-align: center;
-    padding: 10px;
-  }
-  .nav-left .logo {
-    width: auto;
-  }
-
   .container {
     width: 85vw;
   }

@@ -1,8 +1,10 @@
 @import "./main-vars.scss"; // Main
 
 .main {
-  .main__info {
+  .container{
     padding: 3% 0;
+  }
+  .main__info {
     display: grid;
     grid-template-columns: 2fr 4fr;
     grid-gap: 2%;
@@ -32,6 +34,7 @@
     background-color: $profile-cards-bcc;
     grid-area: profile;
     padding: 1% 0;
+    margin-bottom: 3%;
   }
 
   .main__profile-img-wrapper {
@@ -59,6 +62,7 @@
   }
 
   .main__bank-card {
+    padding: 3%;
     cursor: pointer;
     text-align: center;
   }
@@ -99,13 +103,19 @@
       border-radius: 10px;
       padding: 5%;
 
+      form{
+        input{
+          font-size: 1vw;
+        }
+      }
+
       i.fa-angle-double-right {
         font-weight: 900;
         cursor: pointer;
-        padding: 10px;
         position: absolute;
         right: 5%;
         bottom: 5%;
+        font-size: 1.5vw;
 
         &:hover {
           transform: $scale-animation;
@@ -129,7 +139,7 @@
         }
 
         input{
-          height: 2.5em;
+          height: 2vw;
         }
 
         .card-number, .card-date{
@@ -205,7 +215,7 @@
 
         }
         input{
-          height: 2.5em;
+          height: 2vw;
         }
       }
     }
@@ -231,41 +241,64 @@
 }
 @media screen and (max-width: 768px) {
   .main {
-    div {}
-  }
-}
-@media screen and (max-width: 425px) {
-  body {
-    font-size: 3.5vw;
-  }
+    div {
 
-  .nav {
-    .container {
-      display: block;
-
-      .nav-left {
-        align-items: center;
-
-        .logo {
-          max-height: 50px;
-          object-fit: contain;
+    }
+    .main__info{
+      grid-template-columns: 1fr;
+      grid-template-areas:
+      "sidebar"
+      "profile";
+    }
+    .main__sidebar{
+      padding: 3% 0;
+      li{
+        margin: 3% 0;
+      }
+    }
+    .main__bank-card-dropdown{
+      .front{
+        form{
+          input{
+            height: 1vw;
+          }
         }
       }
-
-      .menu {
-        text-align: center;
-        padding: 10px;
-      }
     }
-
-    &-left {
-      .logo {
-        width: auto;
-      }
-    }
-  }
-
-  .container {
-    width: 85vw;
   }
 }
+// @media screen and (max-width: 425px) {
+//   body {
+//     font-size: 3.5vw;
+//   }
+//
+//   .nav {
+//     .container {
+//       display: block;
+//
+//       .nav-left {
+//         align-items: center;
+//
+//         .logo {
+//           max-height: 50px;
+//           object-fit: contain;
+//         }
+//       }
+//
+//       .menu {
+//         text-align: center;
+//         padding: 10px;
+//       }
+//     }
+//
+//     &-left {
+//       .logo {
+//         width: auto;
+//       }
+//     }
+//   }
+//
+//   .container {
+//     width: 85vw;
+//   }
+// }

@@ -7,6 +7,20 @@
   <!-- meta icon -->
   <title>Flying</title>
 </head>
+
+
+ <!--
+   TODO LIST:
+   1. Wrap all form except button.searchButton in div to make it's display grid better for button;
+   2. Create some pages for cards and link them together, to make content;
+   3. Realize bank card, update/change;
+   4. Make design for Profile page;
+   5. Finish JS function to make correct date in date in main page;
+   6. Finish 5th card in main page
+   7. Finish footer links
+ -->
+
+
  <header class="header" id="header">
    <div class="container">
      <div class="flights">
@@ -22,25 +36,14 @@
          </div>
            <div class="one-way">
              <form action="available.flights.php" method="post">
-              <!--
-                TODO LIST:
-                1. Wrap all form except button.searchButton in div to make it's display grid better for button;
-                2. Create some pages for cards and link them together, to make content;
-                3. Realize bank card, update/change;
-                4. Make design for Profile page;
-                5. Finish JS function to make correct date in date in main page;
-                6. Finish 5th card in main page
-                7. Finish footer links
-              -->
-
                <select class="" name="from_city">
-                 <option value="">-Select-</option>
+                 <option value="">From city</option>
                  <option value="nur-sultan">Nur-Sultan</option>
                  <option value="almaty">Almaty</option>
                  <option value="taraz">Taraz</option>
                </select>
                <select class="" name="to_city">
-                 <option value="">-Select-</option>
+                 <option value="">To city</option>
                  <option value="nur-sultan">Nur-Sultan</option>
                  <option value="almaty">Almaty</option>
                  <option value="taraz">Taraz</option>
@@ -48,13 +51,13 @@
                <input type="date" name="from_date" min="2000-01-01">
                <select class="one-way__flight-class" name="class">
                  <option value="economy">
-                   economy
+                   Economy
                  </option>
                  <option value="business">
-                   business
+                   Business
                  </option>
                </select>
-               <button class="searchButton" type="submit" name="search">Search</button>
+               <button class="searchButton" type="submit" name="search">Search tickets</button>
              </form>
 
            </div>

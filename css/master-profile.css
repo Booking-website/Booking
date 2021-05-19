@@ -1,6 +1,8 @@
 /*#F9F0B0 rgb(140, 120, 90)*/
-.main .main__info {
+.main .container {
   padding: 3% 0;
+}
+.main .main__info {
   display: grid;
   grid-template-columns: 2fr 4fr;
   grid-gap: 2%;
@@ -30,6 +32,7 @@
   background-color: #fefefe;
   grid-area: profile;
   padding: 1% 0;
+  margin-bottom: 3%;
 }
 .main .main__profile-img-wrapper {
   padding: 5% 0;
@@ -52,6 +55,7 @@
   text-align: center;
 }
 .main .main__bank-card {
+  padding: 3%;
   cursor: pointer;
   text-align: center;
 }
@@ -89,14 +93,18 @@
   border-radius: 10px;
   padding: 5%;
 }
+.main .main__bank-card-dropdown .back form input,
+.main .main__bank-card-dropdown .front form input {
+  font-size: 1vw;
+}
 .main .main__bank-card-dropdown .back i.fa-angle-double-right,
 .main .main__bank-card-dropdown .front i.fa-angle-double-right {
   font-weight: 900;
   cursor: pointer;
-  padding: 10px;
   position: absolute;
   right: 5%;
   bottom: 5%;
+  font-size: 1.5vw;
 }
 .main .main__bank-card-dropdown .back i.fa-angle-double-right:hover,
 .main .main__bank-card-dropdown .front i.fa-angle-double-right:hover {
@@ -115,7 +123,7 @@
   margin: 0;
 }
 .main .main__bank-card-dropdown .front form input {
-  height: 2.5em;
+  height: 2vw;
 }
 .main .main__bank-card-dropdown .front form .card-number, .main .main__bank-card-dropdown .front form .card-date {
   margin-bottom: 2%;
@@ -174,33 +182,29 @@
   margin: 0;
 }
 .main .main__bank-card-dropdown .back form input {
-  height: 2.5em;
+  height: 2vw;
 }
 
-@media screen and (max-width: 425px) {
-  body {
-    font-size: 3.5vw;
+@media screen and (max-width: 768px) {
+  .main .main__info {
+    grid-template-columns: 1fr;
+    grid-template-areas: "sidebar" "profile";
   }
-
-  .nav .container {
-    display: block;
+  .main .main__sidebar {
+    padding: 3% 0;
   }
-  .nav .container .nav-left {
-    align-items: center;
+  .main .main__sidebar li {
+    margin: 3% 0;
   }
-  .nav .container .nav-left .logo {
-    max-height: 50px;
-    object-fit: contain;
+  .main .main__bank-card-dropdown .front form input {
+    height: 1vw;
   }
-  .nav .container .menu {
-    text-align: center;
-    padding: 10px;
+  .main .main__sidebar {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
   }
-  .nav-left .logo {
-    width: auto;
-  }
-
-  .container {
-    width: 85vw;
+  .main .main__profile-info {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
   }
 }

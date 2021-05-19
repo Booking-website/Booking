@@ -33,7 +33,7 @@
       &-open {
         display: grid;
         grid-gap: 4vw;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
 
         &-item {
           text-align: center;
@@ -63,7 +63,7 @@
 //Footer
 
 .footer {
-  padding: 50px 0;
+  padding: 5% 0;
   @include bcc__c($nav__bcc, $nav__link_col);
 
   .links {
@@ -74,6 +74,7 @@
     margin-bottom: 10px;
 
     a {
+      align-self: center;
       text-transform: uppercase;
       color: $nav__link_col;
       font-size: 1.5vw;
@@ -88,5 +89,31 @@
   .legal {
     padding: 30px 0;
     text-align: center;
+  }
+}
+
+
+
+
+
+
+@media screen and (max-width: 425px) {
+  .nav{
+    padding: 5% 0;
+    .container {
+      display: block;
+
+      .nav-left {
+        align-items: center;
+      }
+
+      .menu {
+        text-align: center;
+        padding: 2% 0;
+      }
+    }
+  }
+  .nav-left img{
+    width: 15vw;
   }
 }
