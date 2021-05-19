@@ -1,49 +1,57 @@
-@import "./main-vars.scss";
+@import "./main-vars.scss"; //NAVBAR
 
-//NAVBAR
-.nav{
+.nav {
   background-color: $nav__bcc;
-  .container{
+
+  .container {
     align-items: center;
     display: grid;
     grid-template-columns: 20% 80%;
     grid-template-rows: minmax(20px, 100px);
   }
-  &-left{
-    text-align: center;
-    a{
 
-    }
-    img{
+  &-left {
+    text-align: center;
+
+    a {}
+
+    img {
       width: $logo_width;
       // height: $logo_height;
       object-fit: contain;
-      &:hover{
+
+      &:hover {
         transform: $scale-animation;
       }
     }
   }
-  &-right{
+
+  &-right {
     justify-self: end;
-    .menu{
-      &-open{
+
+    .menu {
+      &-open {
         display: grid;
         grid-gap: 4vw;
         grid-template-columns: repeat(5, 1fr);
-        &-item{
+
+        &-item {
           text-align: center;
           margin: auto 0;
-          &:hover{
+
+          &:hover {
             transform: $scale-animation;
           }
-          a{
+
+          a {
             text-transform: uppercase;
             display: flex;
             width: 100%;
             justify-content: center;
             text-decoration: none;
             color: $nav__link_col;
-            &:hover{
+
+            &:hover {
               color: $nav__link_col_hover;
             }
           }
@@ -52,29 +60,32 @@
     }
   }
 }
-
-
 //Footer
-.footer{
+
+.footer {
   padding: 50px 0;
   @include bcc__c($nav__bcc, $nav__link_col);
-  .links{
+
+  .links {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2vw 10vw;
     text-align: center;
     margin-bottom: 10px;
-    a{
+
+    a {
       text-transform: uppercase;
       color: $nav__link_col;
       font-size: 1.5vw;
-      &:hover{
+
+      &:hover {
         transform: $scale-animation;
         color: $nav__link_col_hover;
       }
     }
   }
-  .legal{
+
+  .legal {
     padding: 30px 0;
     text-align: center;
   }

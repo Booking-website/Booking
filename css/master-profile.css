@@ -1,3 +1,4 @@
+/*#F9F0B0 rgb(140, 120, 90)*/
 .main .main__info {
   padding: 3% 0;
   display: grid;
@@ -10,7 +11,7 @@
   -ms-grid-column: 1;
   border-radius: 10px;
   background-color: #fefefe;
-  padding: 1% 0;
+  padding: 5% 0;
   grid-area: sidebar;
 }
 .main .main__sidebar ul {
@@ -19,8 +20,8 @@
   margin: 0;
 }
 .main .main__sidebar li {
-  margin: 4% 0;
-  padding: 0 0 0 4%;
+  margin: 10% 0;
+  padding: 0 0 0 5%;
 }
 .main .main__profile-info {
   -ms-grid-row: 1;
@@ -31,7 +32,7 @@
   padding: 1% 0;
 }
 .main .main__profile-img-wrapper {
-  padding: 2% 0;
+  padding: 5% 0;
   text-align: center;
   align-items: center;
 }
@@ -51,21 +52,34 @@
   text-align: center;
 }
 .main .main__bank-card {
+  cursor: pointer;
   text-align: center;
 }
+.main .main__bank-card-dropdown {
+  display: none;
+}
 .main .main__bank-card-dropdown .wrap {
+  display: flex;
   justify-content: center;
+  align-items: center;
 }
 .main .main__bank-card-dropdown .card {
-  width: 15em;
-  height: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15em;
   position: relative;
   perspective: 1000px;
 }
-.main .main__bank-card-dropdown .front, .main .main__bank-card-dropdown .back {
+.main .main__bank-card-dropdown .back,
+.main .main__bank-card-dropdown .front {
+  color: #fafafa;
+  background-color: rgba(0, 90, 235, 0.9);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+  width: 22em;
+  height: 10em;
   position: absolute;
-  left: 0;
-  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,45 +87,66 @@
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   border-radius: 10px;
-  padding: 25px 15px;
+  padding: 5%;
+}
+.main .main__bank-card-dropdown .back i.fa-angle-double-right,
+.main .main__bank-card-dropdown .front i.fa-angle-double-right {
+  font-weight: 900;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+}
+.main .main__bank-card-dropdown .back i.fa-angle-double-right:hover,
+.main .main__bank-card-dropdown .front i.fa-angle-double-right:hover {
+  transform: scale3d(0.95, 0.95, 0.95);
 }
 .main .main__bank-card-dropdown .front {
-  background-color: #ccc;
   transform: rotateY(0deg);
 }
 .main .main__bank-card-dropdown .front .bank-card {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-row-gap: 10px;
+  justify-content: center;
+  width: 100%;
 }
-.main .main__bank-card-dropdown .front a {
-  padding: 10px;
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  text-decoration: none;
-  color: #000;
-}
-.main .main__bank-card-dropdown .front a:hover {
-  transform: scale3d(0.95, 0.95, 0.95);
-}
-.main .main__bank-card-dropdown .front form input::-webkit-outer-spin-button,
-.main .main__bank-card-dropdown .front form input::-webkit-inner-spin-button {
+.main .main__bank-card-dropdown .front form input::-webkit-inner-spin-button,
+.main .main__bank-card-dropdown .front form input::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+.main .main__bank-card-dropdown .front form input {
+  height: 2.5em;
+}
+.main .main__bank-card-dropdown .front form .card-number, .main .main__bank-card-dropdown .front form .card-date {
+  margin-bottom: 2%;
+}
 .main .main__bank-card-dropdown .front form .card-number {
+  display: flex;
+}
+.main .main__bank-card-dropdown .front form .card-number input {
   text-align: center;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
-  margin: auto 0;
+  width: 100%;
+  margin-right: 2%;
+  margin-bottom: 0;
+}
+.main .main__bank-card-dropdown .front form .card-number:last-child {
+  margin-right: 0;
 }
 .main .main__bank-card-dropdown .front form .card-date {
-  display: grid;
-  grid-template-columns: 100px 70px 12px 70px;
+  display: flex;
+  justify-content: center;
   align-items: center;
   text-align: center;
+}
+.main .main__bank-card-dropdown .front form .card-date input {
+  width: 100%;
+  margin: 0 2%;
+}
+.main .main__bank-card-dropdown .front form .card-date input:nth-child(4) {
+  margin-right: 0;
+}
+.main .main__bank-card-dropdown .front form .card-date .fa-slash {
+  transform: rotateX(180deg);
 }
 .main .main__bank-card-dropdown .front form .card-date .valid {
   margin-right: 10px;
@@ -122,27 +157,26 @@
   text-align: center;
 }
 .main .main__bank-card-dropdown .front form .name-surname {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
+  display: flex;
+}
+.main .main__bank-card-dropdown .front form .name-surname input {
+  width: 100%;
+}
+.main .main__bank-card-dropdown .front form .name-surname input:nth-child(1) {
+  margin-right: 4%;
 }
 .main .main__bank-card-dropdown .back {
-  background-color: #ccc;
   transform: rotateY(180deg);
 }
-.main .main__bank-card-dropdown .back a {
-  padding: 10px;
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  text-decoration: none;
-  color: #000;
-}
-.main .main__bank-card-dropdown .back form input::-webkit-outer-spin-button,
-.main .main__bank-card-dropdown .back form input::-webkit-inner-spin-button {
+.main .main__bank-card-dropdown .back form input::-webkit-inner-spin-button,
+.main .main__bank-card-dropdown .back form input::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+.main .main__bank-card-dropdown .back form input {
+  height: 2.5em;
+}
+
 @media screen and (max-width: 425px) {
   body {
     font-size: 3.5vw;
@@ -169,7 +203,4 @@
   .container {
     width: 85vw;
   }
-}
-.show {
-  display: block !important;
 }

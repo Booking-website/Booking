@@ -1,358 +1,216 @@
-@import "./main-vars.scss";
+@import "./main-vars.scss"; // Main
 
-// Main
-.main{
-  .main__info{
+.main {
+  .main__info {
     padding: 3% 0;
     display: grid;
     grid-template-columns: 2fr 4fr;
     grid-gap: 2%;
-    grid-template-areas:
-    "sidebar profile";
+    grid-template-areas: "sidebar profile";
   }
-  .main__sidebar{
+
+  .main__sidebar {
     border-radius: 10px;
     background-color: $profile-cards-bcc;
-    padding: 1% 0;
+    padding: 5% 0;
     grid-area: sidebar;
-    ul{
+
+    ul {
       list-style: none;
       padding: 0;
       margin: 0;
     }
-    li{
-      margin: 4% 0;
-      padding: 0 0 0 4%;
+
+    li {
+      margin: 10% 0;
+      padding: 0 0 0 5%;
     }
   }
-  .main__profile-info{
+
+  .main__profile-info {
     border-radius: 10px;
     background-color: $profile-cards-bcc;
     grid-area: profile;
     padding: 1% 0;
   }
-  .main__profile-img-wrapper{
-    padding: 2% 0;
+
+  .main__profile-img-wrapper {
+    padding: 5% 0;
     text-align: center;
     align-items: center;
   }
-  .main__profile-img{
+
+  .main__profile-img {
     display: inline-block;
     width: 20em;
     height: 20em;
     overflow: hidden;
     border-radius: 100%;
-    img{
+
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
-  .main__individual-info{
+
+  .main__individual-info {
     text-align: center;
   }
-  .main__bank-card{
+
+  .main__bank-card {
+    cursor: pointer;
     text-align: center;
   }
-  .main__bank-card-dropdown{
+
+  .main__bank-card-dropdown {
     //////////////////////////////////////////
-    // display: none;
+    display: none;
     //////////////////////////////////////////
-    .wrap{
+    .wrap {
+      display: flex;
       justify-content: center;
+      align-items: center;
     }
-    .card{
-      width: 15em;
-      height: 10em;
+
+    .card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 15em;
       position: relative;
       perspective: 1000px;
     }
-    .front, .back{
+
+    .back,
+    .front {
+      color: $profile__credit-card-color;
+      background-color: $profile__credit-card-bcc;
+      box-shadow: 0 0 6px rgb(0, 0, 0, .4);
+      width: $profile__bank-card-width;
+      height: $profile__bank-card-height;
       position: absolute;
-      left: 0;
-      top: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       transition: all 0.5s ease-out;
       backface-visibility: hidden;
       border-radius: 10px;
-      padding: 25px 15px;
-    }
-    .front{
-      background-color: #ccc;
-      transform: rotateY(0deg);
-      .bank-card{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-row-gap: 10px;
-      }
-      a{
+      padding: 5%;
+
+      i.fa-angle-double-right {
+        font-weight: 900;
+        cursor: pointer;
         padding: 10px;
         position: absolute;
-        right: 10px;
-        bottom: 10px;
-        text-decoration: none;
-        color: #000;
-        &:hover{
+        right: 5%;
+        bottom: 5%;
+
+        &:hover {
           transform: $scale-animation;
         }
       }
-      form{
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-        .card-number{
-          text-align: center;
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          grid-gap: 10px;
-          margin: auto 0;
-          input{
+    }
 
+    .front {
+      transform: rotateY(0deg);
+
+      .bank-card {
+        justify-content: center;
+        width: 100%;
+      }
+
+      form {
+        input::-webkit-inner-spin-button,
+        input::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        input{
+          height: 2.5em;
+        }
+
+        .card-number, .card-date{
+          margin-bottom: 2%;
+        }
+
+        .card-number {
+          display: flex;
+
+          input{
+            text-align: center;
+            width: 100%;
+            margin-right: 2%;
+            margin-bottom: 0;
+          }
+          &:last-child{
+            margin-right: 0;
           }
         }
-        .card-date{
-          display: grid;
-          grid-template-columns: 100px 70px 12px 70px;
+
+        .card-date {
+          display: flex;
+          justify-content: center;
           align-items: center;
           text-align: center;
+
           input{
-            // max-width: 100px;
-            // max-height: 30px;
+            width: 100%;
+            margin: 0 2%;
+            &:nth-child(4){
+              margin-right: 0;
+            }
           }
-          .valid{
+
+          .fa-slash{
+            transform: rotateX(180deg);
+          }
+
+          .valid {
             margin-right: 10px;
             text-transform: uppercase;
             font-size: 2vw;
           }
-          span{
+
+          span {
             text-align: center;
           }
         }
-        .name-surname{
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          grid-gap: 20px;
+
+        .name-surname {
+          display: flex;
+
+          input{
+            width: 100%;
+            &:nth-child(1){
+            margin-right: 4%;
+            }
+          }
         }
       }
     }
-    .back{
-      background-color: #ccc;
-      transform: rotateY(180deg);
-      a{
-        padding: 10px;
-        position: absolute;
-        right: 20px;
-        bottom: 20px;
-        text-decoration: none;
-        color: #000;
-      }
-      form{
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-        .card-cvv{
 
+    .back {
+      transform: rotateY(180deg);
+
+      form {
+        input::-webkit-inner-spin-button,
+        input::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+        .card-cvv {
+
+        }
+        input{
+          height: 2.5em;
         }
       }
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .main{
-//   div{
-//     display: block;
-//   }
-//   .container{
-//
-//   }
-//   .info{
-//     display: grid;
-//     grid-template-columns: 40% 60%;
-//     grid-gap: 0;
-//     padding: 40px;
-//     background-color: #f2f2f2;
-//     &__left{
-//       padding: 20px;
-//
-//     }
-//     &__right{
-//       padding: 20px;
-//       .wrap{
-//         width: 100%;
-//         height: 100%;
-//         display: flex;
-//         justify-content: center;
-//       }
-//       .card{
-//         width: 500px;
-//         height: 300px;
-//         position: relative;
-//         perspective: 1000px;
-//       }
-//       .front, .back{
-//         position: absolute;
-//         left: 0;
-//         top: 0;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         transition: all 0.5s ease-out;
-//         backface-visibility: hidden;
-//         border-radius: 10px;
-//         padding: 25px 15px;
-//       }
-//       .front{
-//         background-color: #ccc;
-//         transform: rotateY(0deg);
-//         .bank-card{
-//           display: grid;
-//           grid-template-columns: 1fr;
-//           grid-row-gap: 10px;
-//         }
-//         a{
-//           padding: 10px;
-//           position: absolute;
-//           right: 10px;
-//           bottom: 10px;
-//           text-decoration: none;
-//           color: #000;
-//           &:hover{
-//             transform: $scale-animation;
-//           }
-//         }
-//         form{
-//           input::-webkit-outer-spin-button,
-//           input::-webkit-inner-spin-button {
-//               -webkit-appearance: none;
-//               margin: 0;
-//           }
-//           .card-number{
-//             text-align: center;
-//             display: grid;
-//             grid-template-columns: repeat(4, 1fr);
-//             grid-gap: 10px;
-//             margin: auto 0;
-//             input{
-//
-//             }
-//           }
-//           .card-date{
-//             display: grid;
-//             grid-template-columns: 100px 70px 12px 70px;
-//             align-items: center;
-//             text-align: center;
-//             input{
-//               // max-width: 100px;
-//               // max-height: 30px;
-//             }
-//             .valid{
-//               margin-right: 10px;
-//               text-transform: uppercase;
-//               font-size: 2vw;
-//             }
-//             span{
-//               text-align: center;
-//             }
-//           }
-//           .name-surname{
-//             display: grid;
-//             grid-template-columns: repeat(2, 1fr);
-//             grid-gap: 20px;
-//           }
-//         }
-//       }
-//       .back{
-//         background-color: #ccc;
-//         transform: rotateY(180deg);
-//         a{
-//           padding: 10px;
-//           position: absolute;
-//           right: 20px;
-//           bottom: 20px;
-//           text-decoration: none;
-//           color: #000;
-//         }
-//         form{
-//           input::-webkit-outer-spin-button,
-//           input::-webkit-inner-spin-button {
-//               -webkit-appearance: none;
-//               margin: 0;
-//           }
-//           .card-cvv{
-//
-//           }
-//         }
-//       }
-//     }
-//     &__profile-photo{
-//       text-align: center;
-//       img{
-//         width: 100%;
-//       }
-//     }
-//     &__profile-info{
-//       padding: 20px;
-//       .name-surname{
-//         margin-bottom: 20px;
-//       }
-//       .login{
-//         margin-bottom: 20px;
-//       }
-//       .number{
-//         margin-bottom: 20px;
-//       }
-//     }
-//   }
-// }
-
-
-
-
-
-// .main{
-//   .breakline{
-//     display: grid;
-//     grid-template-columns: minmax(10%, 20%) auto;
-//     color: rgb(130, 130, 130);
-//     hr{
-//       height: 2px;
-//       background-color: rgb(130, 130, 130);
-//       border: 1px solid black;
-//     }
-//   }
-// }
-
-
-
-
-
-
-
 
 
 
@@ -362,61 +220,52 @@
 
 
 @media screen and (max-width: 1440px) {
-  .header{
-    // height: 340px;
-    // background-size: auto;
-  }
+  .header {}
 }
 @media screen and (max-width: 1024px) {
-  .nav{
-    &-left{
-      .logo{
-        // width: 14vw;
-      }
+  .nav {
+    &-left {
+      .logo {}
     }
   }
 }
 @media screen and (max-width: 768px) {
-  .main{
-    div{
-
-    }
+  .main {
+    div {}
   }
 }
 @media screen and (max-width: 425px) {
-  body{
+  body {
     font-size: 3.5vw;
   }
-  .nav{
-    .container{
+
+  .nav {
+    .container {
       display: block;
-      .nav-left{
+
+      .nav-left {
         align-items: center;
-        .logo{
+
+        .logo {
           max-height: 50px;
           object-fit: contain;
         }
       }
-      .menu{
+
+      .menu {
         text-align: center;
         padding: 10px;
       }
     }
-    &-left{
-      .logo{
+
+    &-left {
+      .logo {
         width: auto;
       }
     }
   }
-  .container{
+
+  .container {
     width: 85vw;
   }
-}
-
-
-
-
-
-.show{
-  display: block !important;
 }

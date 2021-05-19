@@ -1,11 +1,11 @@
 @import "./main-vars.scss";
 @import "./nav-footer.css";
 
-:root{
+:root {
   background-color: $background_color;
 }
 
-body{
+body {
   padding: 0;
   margin: 0;
   font-family: "Arial", sans-serif;
@@ -13,70 +13,91 @@ body{
   overflow-x: hidden;
   width: 100vw;
 }
-h1 h2, h3, h4, h5, h6{
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
-p{
+
+p {
   // padding: 2px 0;
 }
-a{
+
+a {
   cursor: pointer;
   text-decoration: none;
 }
-.container{
+
+.container {
   width: 80%;
   margin: 0 auto;
 }
-.rotate180{
-  transform: rotate(180deg);
+
+.show {
+  display: block !important;
 }
 
+.rotate180 {
+  transform: rotate(180deg);
+}
 // Input, select, Form
-form{
-  input, select{
+
+form {
+  input,
+  select {
     cursor: pointer;
     padding: 5px 10px;
     @include border__radius(0.5px, solid, #ccc, 5px);
     @include bcc__c(#f2f2f2, #999)
   }
 }
-button{
+
+button {
   @include bcc__c($allButtonBcc, $allButtonColor);
   cursor: pointer;
   text-align: center;
   border: none;
   border-radius: 10px;
   padding: 10px 40px;
-  &:hover{
+
+  &:hover {
     transform: $scale-animation;
   }
 }
-
 // Go to top button
-main{
+
+main {
   position: relative;
 }
-.goTopBtn{
+
+.goTopBtn {
   padding: 1% 2%;
   background-color: $goTopBtn-bcc;
   border: $goTopBtn-border;
   position: absolute;
   right: $goTopBtn-right;
   bottom: $goTopBtn-bottom;
-  &:focus{
+
+  &:focus {
     outline: none;
   }
-  i{
+
+  i {
     color: $goTopBtnI-bcc;
   }
 }
-
 // Class: table
+
 .table {
   width: 100%;
   border: $table_border;
   margin-bottom: 20px;
 }
+
 .table thead th {
   font-weight: $table_fw;
   text-align: $table_ta;
@@ -85,12 +106,15 @@ main{
   background: $table_bcc;
   font-size: $table_fsize;
 }
+
 .table thead tr th:first-child {
   border-radius: 8px 0 0 8px;
 }
+
 .table thead tr th:last-child {
   border-radius: 0 8px 8px 0;
 }
+
 .table tbody td {
   text-align: $table_ta;
   border: $table_border;
@@ -98,20 +122,18 @@ main{
   font-size: $table_fsize;
   vertical-align: top;
 }
-.table tbody tr:nth-child(even){
+
+.table tbody tr:nth-child(even) {
   background: $table_bcc-even;
 }
+
 .table tbody tr td:first-child {
   border-radius: 8px 0 0 8px;
 }
+
 .table tbody tr td:last-child {
   border-radius: 0 8px 8px 0;
 }
-
-
-
-
-
 @media screen and (max-width: 425px) {
   body {
     font-size: 2vw;

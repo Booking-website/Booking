@@ -1,85 +1,96 @@
 @import "./main-vars.scss";
 
-body{
+body {
   background: url("../img/plane-wing.jpg") no-repeat center top / cover;
 }
-
 //Main
-.main{
+
+.main {
   margin: auto;
   height: 80vh;
-  .container{
+
+  .container {
     margin-top: 50px;
     background-color: rgba(255, 255, 255, .6);
     border-radius: 5px;
     padding: 20px 30px;
   }
-  form{
+
+  form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
-    .registerButton, .loginButton{
-      grid-column: 1 / 3;
-      &:hover{
 
-      }
+    .loginButton,
+    .registerButton {
+      grid-column: 1 / 3;
+
+      &:hover {}
     }
-    input{
+
+    input {
       min-height: 20px;
     }
-    input, button, div{
+
+    button,
+    div,
+    input {
       display: block;
       margin-top: 10px;
       margin-bottom: 10px;
     }
-    input, div{
 
-    }
-    h1{
+    div,
+    input {}
+
+    h1 {
       margin: 20px 0;
-        text-align: center;
+      text-align: center;
     }
-    &>.button{
+
+    & > .button {
       grid-template-columns: 1fr;
     }
   }
 }
-
-
-
 @media screen and (max-width: 1024px) {
-  .nav{
-    &-left{
-      .logo{
+  .nav {
+    &-left {
+      .logo {
         width: 14vw;
       }
     }
   }
 }
 @media screen and (max-width: 425px) {
-  .nav{
-    .container{
+  .nav {
+    .container {
       display: block;
-      .nav-left{
+
+      .nav-left {
         align-items: center;
-        .logo{
+
+        .logo {
           object-fit: contain;
         }
       }
-      .menu{
+
+      .menu {
         text-align: center;
       }
     }
   }
-  main{
-    form{
+
+  main {
+    form {
       grid-template-columns: 1fr;
     }
   }
-  .main{
-    .container{
-      form{
-        div{
+
+  .main {
+    .container {
+      form {
+        div {
           grid-template-columns: 1fr 5fr;
           grid-gap: 10px;
         }

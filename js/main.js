@@ -8,10 +8,7 @@ $(document).ready(function() {
     // window.scrollTo({top: 0, behavior: "smooth"});
   });
 
-  $(".main__bank-card p").click(function() {
-    $(".main__bank-card i").toggleClass("rotate180");
-    $(".main__bank-card-dropdown").toggleClass("show");
-  });
+
 
 
 

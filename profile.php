@@ -15,6 +15,7 @@
 
         <div class="main__sidebar">
           <ul>
+            <li><h3>Menu</h3></li>
             <li>
               <a href="index.php">
                 <i class="fa fa-plane" aria-hidden="true"></i>
@@ -76,7 +77,7 @@
                     <div class="card-date">
                       <span class="valid">Valid thru</span>
                       <input type="number" class="card-date card-date1" name="card-date1" maxlength="2" min="01" max="12" value="" placeholder="MM">
-                      <span>/</span>
+                      <i class="fa fa-slash"></i>
                       <input type="number" class="card-date card-date2" name="card-date2" maxlength="2" min="10" value="" placeholder="YY">
                     </div>
                     <div class="name-surname">
@@ -84,7 +85,7 @@
                       <input type="text" name="surname" value="" placeholder="Surname" maxlength="15">
                     </div>
                   </form>
-                  <a href="#" class="flipToBack">></a>
+                  <i class="fa fa-angle-double-right flipToBack"></i>
                 </div>
                 <div class="back">
                   <form class="bank-card" action="" method="post">
@@ -92,7 +93,7 @@
                       <input type="number" class="card-cvv" name="card-cvv" value="" placeholder="CVV">
                     </div>
                   </form>
-                  <a href="#" class="flipToFront">></a>
+                  <i class="fa fa-angle-double-right flipToFront"></i>
                 </div>
               </div>
             </div>

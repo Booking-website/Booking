@@ -6,6 +6,11 @@ $(".flipToFront").click(function() {
   $('.front').css("transform", "rotateY(0deg)");
   $('.back').css("transform", "rotateY(180deg)");
 });
+
+$(".main__bank-card p").click(function() {
+  $(".main__bank-card i.fa-sort-down").toggleClass("rotate180");
+  $(".main__bank-card-dropdown").toggleClass("show");
+});
 $(document).ready(function() {
   $("input.card-number").keyup(function() {
     if (this.value.length > 4) {
