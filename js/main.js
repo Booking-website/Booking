@@ -1,31 +1,15 @@
 $(document).ready(function() {
+  // Scroll Reveal
+  ScrollReveal().reveal('.flights, .card1, .card2, .card3, .card4', { delay: 1 });
 
-  // $("#roundtrip").on("click", function() {
-  //   $(this).addClass("active");
-  //   $(".roundtrip").show();
-  //   $("#one_way").removeClass("active");
-  //   $(".one-way").hide();
-  //   set_min_date();
-  // });
-  // $("#one_way").click(function() {
-  //   if (condition) {
-  //
-  //   }
-  //   $(".one-way").css("display", "block");
-  //   $(".one-way").css("display", "none");
-  // });
-  // $("#one_way").click(function () {
-  //   if ($(".header .flights .one-way").css("display") == "none") {
-  //     $(".header .flights .one-way").css("display", "block");
-  //   } else {
-  //     $(".header .flights .one-way").css("display", "none");
-  //   }
-  // });
-  // $("#one_way").on("click", function() {
-  //   // $(this).toggleClass("active");
-  //   $(".one-way").
-  //   set_min_date();
-  // });
+
+  $(".goTopBtn").click(function() {
+    $('html, body').animate({scrollTop:0},'500');
+    // window.scrollTo({top: 0, behavior: "smooth"});
+  })
+
+
+
   set_min_date();
 });
 

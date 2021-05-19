@@ -5,45 +5,34 @@
   <!-- Style -->
   <link rel="stylesheet" href="./css/master.css">
   <!-- meta icon -->
-  <title>My Avia Website</title>
+  <title>Flying</title>
 </head>
  <header class="header" id="header">
    <div class="container">
      <div class="flights">
        <div class="container">
          <div class="flight">
-           <img src="./img/plane.png" alt="plane">
+           <i class="fa fa-plane fa-xs"></i>
            <h2>Flights</h2>
          </div>
        </div>
        <div class="container">
          <div class="ways" id="ways">
-           <!-- <div><a class="active" id="roundtrip"><h3>Roundtrip</h3></a></div> -->
            <div><h3><a id="one_way">One-way</a></h3></div>
-           <!-- <div><a id="multi_city"><h3>Multi-city</h3></a></div> -->
          </div>
-         <!-- <div class="flights-form">
-           <div class="roundtrip">
-             <form action="./includes/booking.search.php" method="post">
-               <select class="" name="from_city">
-                 <option value="">-Select-</option>
-                 <option value="nur-sultan">Nur-Sultan</option>
-                 <option value="almaty">Almaty</option>
-                 <option value="taraz">Taraz</option>
-               </select>
-               <select class="" name="to_city">
-                 <option value="">-Select-</option>
-                 <option value="nur-sultan">Nur-Sultan</option>
-                 <option value="almaty">Almaty</option>
-                 <option value="taraz">Taraz</option>
-               </select>
-               <input type="date" id="date-from" name="from_date" min="2000-01-01">
-               <input type="date" id="date-to" name="to_date" min="2000-01-01">
-             </form>
-             <button type="button" name="search">Search</button>
-           </div> -->
            <div class="one-way">
              <form action="available.flights.php" method="post">
+              <!--
+                TODO LIST:
+                1. Wrap all form except button.searchButton in div to make it's display grid better for button;
+                2. Create some pages for cards and link them together, to make content;
+                3. Realize bank card, update/change;
+                4. Make design for Profile page;
+                5. Finish JS function to make correct date in date in main page;
+                6. Finish 5th card in main page
+                7. Finish footer links
+              -->
+
                <select class="" name="from_city">
                  <option value="">-Select-</option>
                  <option value="nur-sultan">Nur-Sultan</option>
@@ -65,47 +54,10 @@
                    business
                  </option>
                </select>
+               <button class="searchButton" type="submit" name="search">Search</button>
              </form>
-             <button class="searchButton" type="submit" name="search">Search</button>
 
            </div>
-           <!-- <div class="multi-city">
-             <p>First place</p>
-             <form action="">
-               <select class="" name="">
-                 <option value="">-Select-</option>
-                 <option value="">Option1</option>
-                 <option value="">Option2</option>
-                 <option value="">Option3</option>
-               </select>
-               <select class="" name="">
-                 <option value="">-Select-</option>
-                 <option value="">Option1</option>
-                 <option value="">Option2</option>
-                 <option value="">Option3</option>
-               </select>
-               <input type="date" id="date-from" min="2000-01-01">
-             </form>
-
-
-               <p>Next place</p>
-             <form action="">
-               <select class="" name="">
-                 <option value="">-Select-</option>
-                 <option value="">Option1</option>
-                 <option value="">Option2</option>
-                 <option value="">Option3</option>
-               </select>
-               <select class="" name="">
-                 <option value="">-Select-</option>
-                 <option value="">Option1</option>
-                 <option value="">Option2</option>
-                 <option value="">Option3</option>
-               </select>
-               <input type="date" id="date-from" min="2000-01-01">
-             </form>
-             <button type="button" name="search">Search</button>
-           </div> -->
          </div>
        </div>
      </div>
@@ -114,6 +66,7 @@
 
  <main class="main" id="main">
    <div class="container">
+     <h2>Something with title</h2>
      <div class="part1">
        <div class="card1">
          <a href="#">
@@ -136,9 +89,9 @@
          </a>
        </div>
        <div class="card3">
-         <a href="#">
+         <a href="./Japan.php">
            <div class="top">
-             <h3>Title h3</h3>
+             <h3>Japan</h3>
            </div>
            <div class="bottom">
              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quos.</p>
@@ -146,6 +99,9 @@
          </a>
        </div>
      </div>
+   </div>
+   <div class="container">
+   <h2>Something with title</h2>
      <div class="part2 featuredTravel">
        <div class="card1">
          <a href="#">
@@ -175,6 +131,9 @@
          </a>
        </div>
      </div>
+   </div>
+   <div class="container">
+   <h2>Something with title</h2>
      <div class="part3 inTheSpotlight">
        <div class="card">
          <a href="#">
@@ -187,6 +146,9 @@
          </a>
        </div>
      </div>
+   </div>
+   <div class="container">
+   <h2>Something with title</h2>
      <div class="part4 familyTravel">
        <div class="card1">
          <a href="#">
@@ -219,6 +181,8 @@
          </a>
        </div>
      </div>
+   </div>
+   <div class="container">
      <div class="part5">
        <div class="card getApp">
          <div class="left">
@@ -230,6 +194,10 @@
        </div>
      </div>
    </div>
+   </div>
+   <button class="goTopBtn" type="goTop" name="goTop">
+     <i class="fa fa-chevron-up"></i>
+   </button>
  </main>
 
 <?php

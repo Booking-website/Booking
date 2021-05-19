@@ -9,14 +9,19 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+
   <!-- Meta to din's ave in cache -->
   <meta http-equiv="Cache-control" content="no-cache">
 
   <!-- Style -->
-  <link rel="stylesheet" href="./css/flexable.css">
+  <link rel="stylesheet" href="./css/all-pages.css">
 
   <!-- Icon -->
   <link rel="icon" href="./img/Icon.png" type="image/png" sizes="16x16">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
 </head>
 <body>
   <nav class="nav" id="nav">

@@ -1,171 +1,5 @@
-.nav {
-  background-color: #005aeb;
-}
-.nav .container {
-  align-items: center;
-  display: grid;
-  grid-template-columns: 20% 80%;
-  grid-template-rows: minmax(20px, 100px);
-}
-.nav-left {
-  text-align: center;
-}
-.nav-left img {
-  width: 8vw;
-  object-fit: contain;
-}
-.nav-left img:hover {
-  transform: scale3d(0.9, 0.9, 0.9);
-}
-.nav-right {
-  justify-self: end;
-}
-.nav-right .menu-open {
-  display: grid;
-  grid-gap: 4vw;
-  grid-template-columns: repeat(5, 1fr);
-}
-.nav-right .menu-open-item {
-  text-align: center;
-  margin: auto 0;
-}
-.nav-right .menu-open-item:hover {
-  transform: scale3d(0.9, 0.9, 0.9);
-}
-.nav-right .menu-open-item a {
-  text-transform: uppercase;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  text-decoration: none;
-  color: #f2f2f2;
-}
-.nav-right .menu-open-item a:hover {
-  color: #f2f2f2;
-}
-
-.footer {
-  padding: 50px 0;
-  background-color: #005aeb;
-  color: #f2f2f2;
-}
-.footer .links {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2vw 10vw;
-  text-align: center;
-  margin-bottom: 10px;
-}
-.footer .links a {
-  text-transform: uppercase;
-  color: #f2f2f2;
-  font-size: 1.5vw;
-}
-.footer .links a:hover {
-  transform: scale3d(0.9, 0.9, 0.9);
-  color: #f2f2f2;
-}
-.footer .legal {
-  padding: 30px 0;
-  text-align: center;
-}
-
-:root {
-  background-color: #f2f2f2;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  font-family: "Arial", sans-serif;
-  font-size: 1.6vw;
-  overflow-x: hidden;
-  height: 100vh;
-  width: 100vw;
-}
-
-h1 h2, h3, h4, h5, h6, p {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.container {
-  width: 80%;
-  margin: 0 auto;
-}
-
-form input, form select {
-  cursor: pointer;
-  padding: 5px 10px;
-  border: 0.5px solid #ccc;
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  color: #999;
-}
-
-button {
-  background-color: #005aeb;
-  color: #f2f2f2;
-  cursor: pointer;
-  text-align: center;
-  border: none;
-  border-radius: 10px;
-  padding: 10px 40px;
-}
-button:hover {
-  transform: scale3d(0.9, 0.9, 0.9);
-}
-
-.table {
-  width: 100%;
-  border: none;
-  margin-bottom: 20px;
-}
-
-.table thead th {
-  font-weight: bold;
-  text-align: left;
-  border: none;
-  padding: 10px 15px;
-  background: #d8d8d8;
-  font-size: 14px;
-}
-
-.table thead tr th:first-child {
-  border-radius: 8px 0 0 8px;
-}
-
-.table thead tr th:last-child {
-  border-radius: 0 8px 8px 0;
-}
-
-.table tbody td {
-  text-align: left;
-  border: none;
-  padding: 10px 15px;
-  font-size: 14px;
-  vertical-align: top;
-}
-
-.table tbody tr:nth-child(even) {
-  background: #f3f3f3;
-}
-
-.table tbody tr td:first-child {
-  border-radius: 8px 0 0 8px;
-}
-
-.table tbody tr td:last-child {
-  border-radius: 0 8px 8px 0;
-}
-
 .header {
-  background: url(../img/bg-main.jpg) no-repeat top center/cover;
+  background: url("../img/bg-main.jpg") no-repeat top center/cover;
   padding: 40px 0;
   text-align: center;
 }
@@ -184,18 +18,17 @@ button:hover {
   grid-template-columns: 1fr 11fr;
   border-bottom: 2px solid #217ac9;
 }
-.header .flights .container img {
+.header .flights .container .fa-plane {
   justify-self: center;
-  width: 3.5vw;
-  object-fit: contain;
+  font-size: 3vw;
 }
 .header .flights .container h2 {
   text-align: left;
   font-size: 2vw;
 }
 .header .flights .container:nth-child(2) {
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -223,24 +56,41 @@ button:hover {
   grid-template-columns: repeat(2, 2fr) 1fr 1fr;
   grid-gap: 2vw;
 }
+.header .flights .one-way .searchButton {
+  grid-column: 1/5;
+}
+
 .main {
   padding: 50px 0;
+}
+.main .container {
+  margin-bottom: 30px;
 }
 .main div {
   display: grid;
   grid-gap: 30px;
 }
-.main div .part1, .main div .part2, .main div .part3, .main div .part4, .main div .part5 {
+.main div .part1,
+.main div .part2,
+.main div .part3,
+.main div .part4,
+.main div .part5 {
   display: grid;
   grid-gap: 30px;
   grid-auto-rows: 30vw;
 }
-.main div .card1, .main div .card2, .main div .card3, .main div .card {
+.main div .card,
+.main div .card1,
+.main div .card2,
+.main div .card3 {
   border: 0 solid transparent;
   border-radius: 10px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
-.main div .card1 a, .main div .card2 a, .main div .card3 a, .main div .card a {
+.main div .card a,
+.main div .card1 a,
+.main div .card2 a,
+.main div .card3 a {
   border: 0 solid #000;
   border-radius: 10px;
   background-color: transparent;
@@ -270,17 +120,50 @@ button:hover {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-.main div .part1 .card1, .main div .part1 .card2, .main div .part1 .card3, .main div .part1 .card, .main div .part2 .card1, .main div .part2 .card2, .main div .part2 .card3, .main div .part2 .card, .main div .part3 .card1, .main div .part3 .card2, .main div .part3 .card3, .main div .part3 .card, .main div .part4 .card1, .main div .part4 .card2, .main div .part4 .card3, .main div .part4 .card {
+.main div .part1 .card,
+.main div .part1 .card1,
+.main div .part1 .card2,
+.main div .part1 .card3,
+.main div .part2 .card,
+.main div .part2 .card1,
+.main div .part2 .card2,
+.main div .part2 .card3,
+.main div .part3 .card,
+.main div .part3 .card1,
+.main div .part3 .card2,
+.main div .part3 .card3,
+.main div .part4 .card,
+.main div .part4 .card1,
+.main div .part4 .card2,
+.main div .part4 .card3 {
   transition: all 0.5s ease-out;
   perspective: 1000px;
 }
-.main div .part1 .card1:hover, .main div .part1 .card2:hover, .main div .part1 .card3:hover, .main div .part1 .card:hover, .main div .part2 .card1:hover, .main div .part2 .card2:hover, .main div .part2 .card3:hover, .main div .part2 .card:hover, .main div .part3 .card1:hover, .main div .part3 .card2:hover, .main div .part3 .card3:hover, .main div .part3 .card:hover, .main div .part4 .card1:hover, .main div .part4 .card2:hover, .main div .part4 .card3:hover, .main div .part4 .card:hover {
-  transform: scale3d(0.9, 0.9, 0.9);
+.main div .part1 .card1:hover,
+.main div .part1 .card2:hover,
+.main div .part1 .card3:hover,
+.main div .part1 .card:hover,
+.main div .part2 .card1:hover,
+.main div .part2 .card2:hover,
+.main div .part2 .card3:hover,
+.main div .part2 .card:hover,
+.main div .part3 .card1:hover,
+.main div .part3 .card2:hover,
+.main div .part3 .card3:hover,
+.main div .part3 .card:hover,
+.main div .part4 .card1:hover,
+.main div .part4 .card2:hover,
+.main div .part4 .card3:hover,
+.main div .part4 .card:hover {
+  transform: scale3d(0.95, 0.95, 0.95);
 }
-.main div .part1, .main div .part2, .main div .part4 {
+.main div .part1,
+.main div .part2,
+.main div .part4 {
   grid-template-columns: repeat(3, 1fr);
 }
-.main div .part3, .main div .part5 {
+.main div .part3,
+.main div .part5 {
   grid-template-columns: 1fr;
 }
 .main div .part1 {
@@ -396,7 +279,7 @@ button:hover {
 .main div .part5 .card .left {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  background: url(../img/booking-by-phone.jpg) no-repeat center top/cover;
+  background: url("../img/booking-by-phone.jpg") no-repeat center top/cover;
 }
 .main div .part5 .card .right {
   padding: 40px;
@@ -428,7 +311,9 @@ button:hover {
   .main div {
     grid-gap: 30px;
   }
-  .main div .part1, .main div .part2, .main div .part4 {
+  .main div .part1,
+.main div .part2,
+.main div .part4 {
     grid-template-columns: 1fr;
   }
   .main div .part1 {
@@ -480,32 +365,6 @@ button:hover {
   }
 }
 @media screen and (max-width: 425px) {
-  body {
-    font-size: 2vw;
-  }
-
-  .nav .container {
-    display: block;
-  }
-  .nav .container .nav-left {
-    align-items: center;
-  }
-  .nav .container .nav-left .logo {
-    max-height: 50px;
-    object-fit: contain;
-  }
-  .nav .container .menu {
-    text-align: center;
-    padding: 10px;
-  }
-  .nav-left .logo {
-    width: auto;
-  }
-
-  .container {
-    width: 85vw;
-  }
-
   .header .flights .container h2 {
     font-size: 4vw;
     text-align: center;

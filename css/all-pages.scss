@@ -1,4 +1,5 @@
 @import "./main-vars.scss";
+@import "./nav-footer.css";
 
 :root{
   background-color: $background_color;
@@ -13,9 +14,11 @@ body{
   height: 100vh;
   width: 100vw;
 }
-h1 h2, h3, h4, h5, h6, p{
+h1 h2, h3, h4, h5, h6{
   margin: 0;
-  padding: 0;
+}
+p{
+  // padding: 2px 0;
 }
 a{
   cursor: pointer;
@@ -44,6 +47,25 @@ button{
   padding: 10px 40px;
   &:hover{
     transform: $scale-animation;
+  }
+}
+
+// Go to top button
+main{
+  position: relative;
+}
+.goTopBtn{
+  padding: 1% 2%;
+  background-color: $goTopBtn-bcc;
+  border: $goTopBtn-border;
+  position: absolute;
+  right: $goTopBtn-right;
+  bottom: $goTopBtn-bottom;
+  &:focus{
+    outline: none;
+  }
+  i{
+    color: $goTopBtnI-bcc;
   }
 }
 
@@ -82,4 +104,44 @@ button{
 }
 .table tbody tr td:last-child {
   border-radius: 0 8px 8px 0;
+}
+
+
+
+
+
+@media screen and (max-width: 425px) {
+  body {
+    font-size: 2vw;
+  }
+
+  .nav {
+    .container {
+      display: block;
+
+      .nav-left {
+        align-items: center;
+
+        .logo {
+          max-height: 50px;
+          object-fit: contain;
+        }
+      }
+
+      .menu {
+        text-align: center;
+        padding: 10px;
+      }
+    }
+
+    &-left {
+      .logo {
+        width: auto;
+      }
+    }
+  }
+
+  .container {
+    width: 85vw;
+  }
 }

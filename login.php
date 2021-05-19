@@ -12,7 +12,7 @@
     <form action="includes/login.inc.php" method="post">
       <input type="text" name="login" placeholder="Email/Phone number">
       <input type="password" name="pwd" placeholder="Password">
-      <button type="submit" name="submit">Log In</button>
+      <button class="loginButton" type="submit" name="submit">Log In</button>
     </form>
     <?php
       if (isset($_GET["error"])) {
