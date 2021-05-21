@@ -3,23 +3,25 @@ $background_color: rgba(219, 219, 247, 0.85);
 $body_font-size: 1.6vw;
 $scale-animation: scale3d(.95, .95, .95);
 $allButtonBcc: #005aeb;
-$allButtonColor: #f2f2f2; // Go top button
+$allButtonColor: #f2f2f2;
+// Go top button
 $goTopBtn-bcc: transparent;
 $goTopBtn-border: 0.75px solid #005aeb;
 $goTopBtnI-bcc: #005aeb;
 $goTopBtn-right: 4%;
-$goTopBtn-bottom: 1vw; // Table
+$goTopBtn-bottom: 1vw;
+// Table
 $table_border: none;
 $table_fw: bold;
 $table_bcc: #d8d8d8;
 $table_bcc-even: #f3f3f3;
 $table_fsize: 14px;
 $table_ta: left;
-/*#F9F0B0 rgb(140, 120, 90)*/
 // Navbar
 $nav__bcc: #005aeb;
 $nav__link_col: #f2f2f2;
-$nav__link_col_hover: #f2f2f2; // Logo
+$nav__link_col_hover: #f2f2f2;
+// Logo
 $logo_width: 8vw;
 $nav__number_of_links: repeat(2, 1fr);
 // Main
@@ -34,9 +36,11 @@ $header__flights-bcc: #fff;
 $one-way__gtc: repeat(2, 2fr) 1fr 1fr;
 $index__ways_color: #005aeb;
 $index__ways_bcc-color: #d7e7f2;
-$one-way__g-gap: 2vw; // Profile
+$one-way__g-gap: 2vw;
+// Profile
 $profile-cards-bcc: #fefefe;
 // Footer
+// Mixins
 @mixin border__radius($width:1px, $style:solid, $color:#000, $rad:5px) {
   border: $width $style $color;
   border-radius: $rad;
