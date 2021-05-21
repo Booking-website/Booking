@@ -6,7 +6,7 @@
   }
   .main__info {
     display: grid;
-    grid-template-columns: 2fr 4fr;
+    grid-template-columns: 1fr 2fr;
     grid-gap: 2%;
     grid-template-areas: "sidebar profile";
   }
@@ -34,7 +34,6 @@
     background-color: $profile-cards-bcc;
     grid-area: profile;
     padding: 1% 0;
-    margin-bottom: 3%;
   }
 
   .main__profile-img-wrapper {

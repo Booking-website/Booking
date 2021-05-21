@@ -34,8 +34,6 @@ session_start();
       <div class="nav-right">
         <div class="menu">
           <div class="menu-open" id="menu-open">
-            <div class="menu-open-item"><a href="#">link1</a></div>
-            <div class="menu-open-item"><a href="#">link2</a></div>
             <?php
             if (isset($_SESSION["userid"])) {
               echo '<div class="menu-open-item"><a href="./profile.php">Profile page</a></div>';

@@ -69,20 +69,20 @@
                 <div class="front">
                   <form class="bank-card" action="" method="post">
                     <div class="card-number">
-                      <input type="number" class="card-number card-number1" name="card-number1" value="" maxlength="4" min="1000" max="9999" placeholder="XXXX">
-                      <input type="number" class="card-number card-number2"  name="card-number2" value="" maxlength="4" min="1000" max="9999" placeholder="XXXX">
-                      <input type="number" class="card-number card-number3"  name="card-number3" value="" maxlength="4" min="1000" max="9999" placeholder="XXXX">
-                      <input type="number" class="card-number card-number4"  name="card-number4" value="" maxlength="4" min="1000" max="9999" placeholder="XXXX">
+                      <input type="number" class="card-number card-number1" name="card-number1" value="" maxlength="4" min="1000" max="9999" placeholder="XXXX" required>
+                      <input type="number" class="card-number card-number2"  name="card-number2" value="" maxlength="4" min="1000" max="9999" placeholder="XXXX" required>
+                      <input type="number" class="card-number card-number3"  name="card-number3" value="" maxlength="4" min="1000" max="9999" placeholder="XXXX" required>
+                      <input type="number" class="card-number card-number4"  name="card-number4" value="" maxlength="4" min="1000" max="9999" placeholder="XXXX" required>
                     </div>
                     <div class="card-date">
                       <span class="valid">Valid thru</span>
-                      <input type="number" class="card-date card-date1" name="card-date1" maxlength="2" min="01" max="12" value="" placeholder="MM">
+                      <input type="number" class="card-date card-date1" name="card-date1" maxlength="2" min="01" max="12" value="" placeholder="MM" required>
                       <i class="fa fa-slash"></i>
-                      <input type="number" class="card-date card-date2" name="card-date2" maxlength="2" min="10" value="" placeholder="YY">
+                      <input type="number" class="card-date card-date2" name="card-date2" maxlength="2" min="10" value="" placeholder="YY" required>
                     </div>
                     <div class="name-surname">
-                      <input type="text" name="name" value="" placeholder="Name" maxlength="15">
-                      <input type="text" name="surname" value="" placeholder="Surname" maxlength="15">
+                      <input type="text" name="name" value="" placeholder="Name" maxlength="15" required>
+                      <input type="text" name="surname" value="" placeholder="Surname" maxlength="15" required>
                     </div>
                   </form>
                   <i class="fa fa-angle-double-right flipToBack"></i>
@@ -90,7 +90,7 @@
                 <div class="back">
                   <form class="bank-card" action="" method="post">
                     <div class="card-cvv">
-                      <input type="number" class="card-cvv" name="card-cvv" value="" placeholder="CVV">
+                      <input type="number" class="card-cvv" name="card-cvv" value="" placeholder="CVV" required>
                     </div>
                   </form>
                   <i class="fa fa-angle-double-right flipToFront"></i>

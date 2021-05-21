@@ -2,11 +2,11 @@
   <div class="container">
     <div class="links">
       <a href="#"><img src="./img/logo.png"/></a>
-      <a href="#">Link_2</a>
-      <a href="#">Link_3</a>
-      <a href="#">Link_4</a>
-      <a href="#">Link_5</a>
-      <a href="#">Link_5</a>
+      <a href="#">Our partners</a>
+      <a href="#">Need help?</a>
+      <a href="#">Donate</a>
+      <a href="#">About us</a>
+      <a href="#">Future updates</a>
     </div>
     <div class="legal">
       Copyright (c) 2021 Copyright Holder All Rights Reserved.

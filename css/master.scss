@@ -27,7 +27,6 @@
 
       h2 {
         text-align: left;
-        font-size: 2vw;
       }
 
       &:nth-child(2) {
@@ -136,7 +135,7 @@
     }
 
     .bottom {
-      @include bcc__c($bcc:rgba(255, 255, 255, 0.9));
+      @include bcc__c($bcc: rgba(255, 255, 255, 0.9));
       align-items: center;
       padding: 0 5%;
       line-height: 130%;
@@ -182,7 +181,7 @@
         grid-area: p1_card1;
 
         .top {
-          background: url("../img/beach.jpg") no-repeat center top / cover;
+          background: url("../img/beach.jpg") no-repeat center / cover;
         }
       }
 
@@ -190,7 +189,7 @@
         grid-area: p1_card2;
 
         .top {
-          background: url("../img/travel-world.jpg") no-repeat center top / cover;
+          background: url("../img/travel-world.jpg") no-repeat center / cover;
         }
       }
 
@@ -198,7 +197,7 @@
         grid-area: p1_card3;
 
         .top {
-          background: url("../img/only-boat.jpg") no-repeat center top / cover;
+          background: url("../img/only-boat.jpg") no-repeat center / cover;
         }
       }
     }
@@ -210,15 +209,12 @@
         grid-area: p2_card1;
 
         a {
-          grid-template-rows: 100%;
+          grid-template-rows: 1fr;
 
           .top {
             border-radius: 10px;
+            background: url("../img/norway.jpg") no-repeat center bottom / cover;
           }
-        }
-
-        .top {
-          background: url("../img/norway.jpg") no-repeat center top / cover;
         }
       }
 
@@ -226,7 +222,7 @@
         grid-area: p2_card2;
 
         .top {
-          background: url("../img/stock.jpg") no-repeat center top / cover;
+          background: url("../img/stock.jpg") no-repeat center bottom / cover;
         }
       }
 
@@ -234,7 +230,7 @@
         grid-area: p2_card3;
 
         .top {
-          background: url("../img/plane-man.jpg") no-repeat center top / cover;
+          background: url("../img/plane-man.jpg") no-repeat center / cover;
         }
       }
     }
@@ -266,7 +262,7 @@
         grid-area: p4_card2;
 
         .top {
-          background: url("../img/sand-travel.jpg") no-repeat center top / cover;
+          background: url("../img/sand-travel.jpg") no-repeat center / cover;
         }
       }
 
@@ -274,47 +270,65 @@
         grid-area: p4_card3;
 
         .top {
-          background: url("../img/happy.jpg") no-repeat center top / cover;
+          background: url("../img/happy.jpg") no-repeat center / cover;
         }
       }
     }
 
-    .part5 {
-      grid-gap: 0;
-      grid-template-rows: auto;
-
-      .card {
+    .part5{
+      grid-auto-rows: auto;
+      div{
+        display: block;
         grid-gap: 0;
-        border-radius: 10px;
-        background-color: rgba(255, 255, 255, 0.9);
-        grid-template-columns: 33.33% 66.67%;
 
-        .left {
+        .card, .card1, .card2, .card3{
+
+          a{
+            grid-template-rows: 1fr;
+            grid-template-columns: 30% 70%;
+          }
+        }
+      }
+      .p5_card {
+        @include bcc__c($bcc: rgba(255, 255, 255, 0.9));
+        display: flex;
+        @include border__radius(0, solid, transparent, $rad: 10px);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+        justify-content: center;
+        align-items: center;
+
+        a {
+          @include border__radius($width: 0, $rad: 10px);
+          @include bcc__c($color: #000);
+          text-decoration: none;
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+        }
+      }
+      .left{
+        .getApp__photo{
+          height: 100%;
+        }
+        img{
           border-top-left-radius: 10px;
           border-bottom-left-radius: 10px;
-          background: url("../img/booking-by-phone.jpg") no-repeat center top / cover;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
-
-        .right {
-          padding: 40px;
-          grid-template-columns: 3fr 1fr;
-
-          .text {
-            display: block;
-          }
-
-          .qr {}
-
-          .qr_img {
-            display: -webkit-flex;
-            display: -ms-flex;
-            display: flex;
-            align-items: center;
-
-            img {
-              width: 50px;
-              height: 50px;
-            }
+      }
+      .right{
+        display: flex;
+        .text{
+          padding: 2%;
+          width: 70%;
+        }
+        .qr_code{
+          padding: 4%;
+          width: 18%;
+          margin: auto;
+          img{
+            width: 100%;
           }
         }
       }
@@ -388,7 +402,24 @@
         grid-template-areas: "p4_card1" "p4_card2" "p4_card3";
       }
 
-      .part5 {}
+      .part5 {
+        .p5_card{
+          a{
+            grid-template-columns: 1fr;
+          }
+        }
+        .left{
+          display: none;
+        }
+        .right{
+          .text{
+            width: 80%;
+          }
+          .qr_code{
+            width: 20%;
+          }
+        }
+      }
     }
   }
 }

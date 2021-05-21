@@ -59,7 +59,6 @@
                </select>
                <button class="searchButton" type="submit" name="search">Search tickets</button>
              </form>
-
            </div>
          </div>
        </div>
@@ -69,7 +68,7 @@
 
  <main class="main" id="main">
    <div class="container">
-     <h2>Something with title</h2>
+     <h2>Popular places to travel</h2>
      <div class="part1">
        <div class="card1">
          <a href="#">
@@ -104,7 +103,7 @@
      </div>
    </div>
    <div class="container">
-   <h2>Something with title</h2>
+   <h2>Hot sales</h2>
      <div class="part2 featuredTravel">
        <div class="card1">
          <a href="#">
@@ -136,7 +135,7 @@
      </div>
    </div>
    <div class="container">
-   <h2>Something with title</h2>
+   <h2>Best place to relax</h2>
      <div class="part3 inTheSpotlight">
        <div class="card">
          <a href="#">
@@ -151,7 +150,7 @@
      </div>
    </div>
    <div class="container">
-   <h2>Something with title</h2>
+   <h2>Recomended to you</h2>
      <div class="part4 familyTravel">
        <div class="card1">
          <a href="#">
@@ -186,14 +185,27 @@
      </div>
    </div>
    <div class="container">
-     <div class="part5">
-       <div class="card getApp">
-         <div class="left">
-
-         </div>
-         <div class="right">
-           <h3>right</h3>
-         </div>
+   <h2>Our app</h2>
+     <div class="part5 getApp">
+       <div class="p5_card">
+         <a href="#">
+          <div class="left">
+            <div class="getApp__photo">
+              <img src="./img/booking-by-phone.jpg" alt="get the app">
+            </div>
+          </div>
+          <div class="right">
+            <div class="text">
+              <h3>Get out mobile app just now!</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+            <div class="qr_code">
+              <img src="./img/qr_code.png" alt="qr code">
+            </div>
+          </div>
+         </a>
        </div>
      </div>
    </div>
