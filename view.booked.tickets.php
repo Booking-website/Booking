@@ -20,7 +20,7 @@ ON tickets.flightID = flights.flightID where userID=? ORDER BY  date_of_reservat
 			}
 			else
 			{
-				echo "<table cellpadding=\"10\"";
+				echo "<table class='table' cellpadding=\"10\"";
 				echo "<tr><th>TicketID</th>
 				<th>Date of Reservation</th>
 				<th>FlightID.</th>

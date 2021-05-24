@@ -60,7 +60,7 @@ include_once 'header.php'; ?>
           else
           {
             echo "<form action=\"passenger.details.php\" method=\"post\">";
-            echo "<table cellpadding=\"10\"";
+            echo "<table class = 'table' cellpadding=\"10\">";
             echo "<tr><th>Flight No.</th>
             <th>Origin</th>
             <th>Destination</th>
@@ -104,7 +104,7 @@ include_once 'header.php'; ?>
           else
           {
             echo "<form action=\"passenger.details.php\" method=\"post\">";
-            echo "<table cellpadding=\"10\"";
+            echo "<table class = 'table' cellpadding=\"10\">";
             echo "<tr><th>Flight No.</th>
             <th>Origin</th>
             <th>Destination</th>

@@ -9,7 +9,7 @@ include_once 'header.php';
 			echo "<h2>ADD PASSENGERS DETAILS</h2>";
 			echo "<form action=\"add.new.ticket.php\" method=\"post\">";
 					echo "<p><strong>PASSENGER<strong></p>";
-					echo "<table cellpadding=\"0\">";
+					echo "<table class = 'table' cellpadding=\"0\">";
 					echo "<tr>";
 					echo "<td class=\"fix_table_short\">Passenger's Name</td>";
 					echo "<td class=\"fix_table_short\">Passenger's Age</td>";
