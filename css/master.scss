@@ -27,7 +27,6 @@
 
       h2 {
         text-align: left;
-        font-size: 2vw;
       }
 
       &:nth-child(2) {
@@ -57,34 +56,6 @@
         }
       }
     }
-    // .roundtrip{
-    //   form{
-    //     margin-top: 40px;
-    //     display: grid;
-    //     grid-template-columns: repeat(2, 2fr) repeat(2, 1fr);
-    //     grid-gap: 2vw;
-    //     select, input{
-    //       min-height: 35px;
-    //       padding: 5px 10px;
-    //       border: 1px solid rgba(0, 0, 0, 0.8);
-    //       border-radius: 5px;
-    //       cursor: pointer;
-    //     }
-    //     input{
-    //       min-width: 130px;
-    //     }
-    //   }
-    //   button{
-    //     cursor: pointer;
-    //     margin-top: 15px;
-    //     text-align: center;
-    //     background-color: #005aeb;
-    //     color: rgb(255, 255, 255);
-    //     border: none;
-    //     border-radius: 10px;
-    //     padding: 10px 40px;
-    //   }
-    // }
     .one-way {
       transition: all 1s ease;
 
@@ -96,7 +67,9 @@
         grid-gap: $one-way__g-gap;
 
         input,
-        select {}
+        select, .searchButton{
+
+        }
 
         select {}
 
@@ -129,7 +102,6 @@
     .part5 {
       display: grid;
       grid-gap: 30px;
-      grid-auto-rows: 30vw;
     }
 
     .card,
@@ -144,25 +116,26 @@
         @include bcc__c($color: #000);
         text-decoration: none;
         display: grid;
-        grid-template-rows: 70% 30%;
+        grid-template-rows: 2fr 1fr;
       }
     }
 
     .top {
       @include bcc__c($color: #fff);
       text-shadow: 0 0 3px rgb(0, 0, 0);
-      padding-left: 10px;
-      align-content: flex-end;
+      text-align: right;
+      align-items: flex-end;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
 
       h3 {
+        padding: 0 5%;
         line-height: 200%;
       }
     }
 
     .bottom {
-      @include bcc__c($bcc:rgba(255, 255, 255, 0.9));
+      @include bcc__c($bcc: rgba(255, 255, 255, 0.9));
       align-items: center;
       padding: 0 5%;
       line-height: 130%;
@@ -208,7 +181,7 @@
         grid-area: p1_card1;
 
         .top {
-          background: url("../img/beach.jpg") no-repeat center top / cover;
+          background: url("../img/beach.jpg") no-repeat center / cover;
         }
       }
 
@@ -216,7 +189,7 @@
         grid-area: p1_card2;
 
         .top {
-          background: url("../img/travel-world.jpg") no-repeat center top / cover;
+          background: url("../img/travel-world.jpg") no-repeat center / cover;
         }
       }
 
@@ -224,7 +197,7 @@
         grid-area: p1_card3;
 
         .top {
-          background: url("../img/only-boat.jpg") no-repeat center top / cover;
+          background: url("../img/only-boat.jpg") no-repeat center / cover;
         }
       }
     }
@@ -236,15 +209,12 @@
         grid-area: p2_card1;
 
         a {
-          grid-template-rows: 100%;
+          grid-template-rows: 1fr;
 
           .top {
             border-radius: 10px;
+            background: url("../img/norway.jpg") no-repeat center bottom / cover;
           }
-        }
-
-        .top {
-          background: url("../img/norway.jpg") no-repeat center top / cover;
         }
       }
 
@@ -252,7 +222,7 @@
         grid-area: p2_card2;
 
         .top {
-          background: url("../img/stock.jpg") no-repeat center top / cover;
+          background: url("../img/stock.jpg") no-repeat center bottom / cover;
         }
       }
 
@@ -260,7 +230,7 @@
         grid-area: p2_card3;
 
         .top {
-          background: url("../img/plane-man.jpg") no-repeat center top / cover;
+          background: url("../img/plane-man.jpg") no-repeat center / cover;
         }
       }
     }
@@ -272,6 +242,7 @@
         grid-area: p3_card;
 
         .top {
+          padding: 15% 0;
           background: url("../img/long.jpg") no-repeat center top / cover;
         }
       }
@@ -292,7 +263,7 @@
         grid-area: p4_card2;
 
         .top {
-          background: url("../img/sand-travel.jpg") no-repeat center top / cover;
+          background: url("../img/sand-travel.jpg") no-repeat center / cover;
         }
       }
 
@@ -300,47 +271,85 @@
         grid-area: p4_card3;
 
         .top {
-          background: url("../img/happy.jpg") no-repeat center top / cover;
+          background: url("../img/happy.jpg") no-repeat center / cover;
         }
       }
     }
 
-    .part5 {
-      grid-gap: 0;
-      grid-template-rows: auto;
-
-      .card {
+    .part5{
+      grid-auto-rows: auto;
+      div{
+        display: block;
         grid-gap: 0;
-        border-radius: 10px;
-        background-color: rgba(255, 255, 255, 0.9);
-        grid-template-columns: 33.33% 66.67%;
 
-        .left {
+        .card, .card1, .card2, .card3{
+
+          a{
+            grid-template-rows: 1fr;
+            grid-template-columns: 30% 70%;
+          }
+        }
+      }
+      .p5_card {
+        @include bcc__c($bcc: rgba(255, 255, 255, 0.9));
+        display: flex;
+        @include border__radius(0, solid, transparent, $rad: 10px);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+        justify-content: center;
+        align-items: center;
+
+        a {
+          @include border__radius($width: 0, $rad: 10px);
+          @include bcc__c($color: #000);
+          text-decoration: none;
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+        }
+      }
+      .left{
+        .getApp__photo{
+          height: 100%;
+        }
+        img{
           border-top-left-radius: 10px;
           border-bottom-left-radius: 10px;
-          background: url("../img/booking-by-phone.jpg") no-repeat center top / cover;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
-
-        .right {
-          padding: 40px;
-          grid-template-columns: 3fr 1fr;
-
-          .text {
-            display: block;
+      }
+      .right{
+        display: flex;
+        .text{
+          padding: 4%;
+          width: 66%;
+        }
+        .qr_code{
+          padding: 4%;
+          width: 18%;
+          margin: auto;
+          img{
+            width: 100%;
           }
+        }
+      }
+    }
+  }
+}
 
-          .qr {}
 
-          .qr_img {
-            display: -webkit-flex;
-            display: -ms-flex;
-            display: flex;
-            align-items: center;
 
-            img {
-              width: 50px;
-              height: 50px;
-            }
+
+
+
+
+@media screen and (min-width: 2560px) {
+  .header{
+    .flights{
+      .one-way{
+        form{
+          input, select, .searchButton{
+            height: 2vw;
           }
         }
       }
@@ -348,22 +357,28 @@
   }
 }
 @media screen and (max-width: 1024px) {
-  .header {
-    .flights div {
-      .one-way form {
-        grid-gap: 1vw;
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .multi-city {
-        p {
-          font-size: 2.5vw;
+  // .header {
+  //   .flights div {
+  //     .one-way form {
+  //       grid-gap: 1vw;
+  //       grid-template-columns: 1fr 1fr;
+  //     }
+  //   }
+  // }
+}
+@media screen and (max-width: 768px) {
+  .header{
+    .flights{
+      .one-way{
+        form{
+          grid-template-columns: 1fr 1fr;
+        }
+        .searchButton{
+          grid-column: 1 / 3;
         }
       }
     }
   }
-}
-@media screen and (max-width: 768px) {
   .main {
     div {
       grid-gap: 30px;
@@ -388,47 +403,70 @@
         grid-template-areas: "p4_card1" "p4_card2" "p4_card3";
       }
 
-      .part5 {}
-    }
-  }
-}
-@media screen and (max-width: 425px) {
-  
-
-  .header {
-    .flights {
-      .container {
-        h2 {
-          font-size: 4vw;
-          text-align: center;
-        }
-
-        .flight {
-          border-bottom: 1px solid #217ac9;
-          grid-template-columns: 1fr;
-          grid-template-rows: minmax(auto, 30px);
-
-          img {
-            display: none;
+      .part5 {
+        .p5_card{
+          a{
+            grid-template-columns: 1fr;
           }
         }
-
-        .ways {
-          display: block;
-
-          a {
-            margin: 5px 0;
-          }
+        .left{
+          display: none;
         }
-
-        .one-way form {
-          grid-template-columns: 1fr;
+        .right{
+          .text{
+            width: 80%;
+          }
+          .qr_code{
+            width: 20%;
+          }
         }
       }
     }
   }
-
-  .main {
-    div {}
+}
+@media screen and (max-width: 425px) {
+  .header{
+    .flights{
+      .one-way{
+        form{
+          grid-template-columns: 1fr;
+        }
+        .searchButton{
+          grid-column: 1 / 2;
+        }
+      }
+    }
   }
+  // .header {
+  //   .flights {
+  //     .container {
+  //       h2 {
+  //         font-size: 4vw;
+  //         text-align: center;
+  //       }
+  //
+  //       .flight {
+  //         border-bottom: 1px solid #217ac9;
+  //         grid-template-columns: 1fr;
+  //         grid-template-rows: minmax(auto, 30px);
+  //
+  //         img {
+  //           display: none;
+  //         }
+  //       }
+  //
+  //       .ways {
+  //         display: block;
+  //
+  //         a {
+  //           margin: 5px 0;
+  //         }
+  //       }
+  //
+  //       .one-way form {
+  //         grid-template-columns: 1fr;
+  //       }
+  //     }
+  //   }
+  // }
 }

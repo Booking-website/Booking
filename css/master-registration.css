@@ -17,13 +17,16 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
 }
-.main form .registerButton, .main form .loginButton {
+.main form .loginButton,
+.main form .registerButton {
   grid-column: 1/3;
 }
 .main form input {
   min-height: 20px;
 }
-.main form input, .main form button, .main form div {
+.main form button,
+.main form div,
+.main form input {
   display: block;
   margin-top: 10px;
   margin-bottom: 10px;

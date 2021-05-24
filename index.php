@@ -7,6 +7,20 @@
   <!-- meta icon -->
   <title>Flying</title>
 </head>
+
+
+ <!--
+   TODO LIST:
+   1. Wrap all form except button.searchButton in div to make it's display grid better for button;
+   2. Create some pages for cards and link them together, to make content;
+   3. Realize bank card, update/change;
+   4. Make design for Profile page;
+   5. Finish JS function to make correct date in date in main page;
+   6. Finish 5th card in main page
+   7. Finish footer links
+ -->
+
+
  <header class="header" id="header">
    <div class="container">
      <div class="flights">
@@ -22,25 +36,14 @@
          </div>
            <div class="one-way">
              <form action="available.flights.php" method="post">
-              <!--
-                TODO LIST:
-                1. Wrap all form except button.searchButton in div to make it's display grid better for button;
-                2. Create some pages for cards and link them together, to make content;
-                3. Realize bank card, update/change;
-                4. Make design for Profile page;
-                5. Finish JS function to make correct date in date in main page;
-                6. Finish 5th card in main page
-                7. Finish footer links
-              -->
-
                <select class="" name="from_city">
-                 <option value="">-Select-</option>
+                 <option value="">From city</option>
                  <option value="nur-sultan">Nur-Sultan</option>
                  <option value="almaty">Almaty</option>
                  <option value="taraz">Taraz</option>
                </select>
                <select class="" name="to_city">
-                 <option value="">-Select-</option>
+                 <option value="">To city</option>
                  <option value="nur-sultan">Nur-Sultan</option>
                  <option value="almaty">Almaty</option>
                  <option value="taraz">Taraz</option>
@@ -48,15 +51,14 @@
                <input type="date" name="from_date" min="2000-01-01">
                <select class="one-way__flight-class" name="class">
                  <option value="economy">
-                   economy
+                   Economy
                  </option>
                  <option value="business">
-                   business
+                   Business
                  </option>
                </select>
-               <button class="searchButton" type="submit" name="search">Search</button>
+               <button class="searchButton" type="submit" name="search">Search tickets</button>
              </form>
-
            </div>
          </div>
        </div>
@@ -66,7 +68,7 @@
 
  <main class="main" id="main">
    <div class="container">
-     <h2>Something with title</h2>
+     <h2>Popular places to travel</h2>
      <div class="part1">
        <div class="card1">
          <a href="#">
@@ -101,7 +103,7 @@
      </div>
    </div>
    <div class="container">
-   <h2>Something with title</h2>
+   <h2>Hot sales</h2>
      <div class="part2 featuredTravel">
        <div class="card1">
          <a href="#">
@@ -133,7 +135,7 @@
      </div>
    </div>
    <div class="container">
-   <h2>Something with title</h2>
+   <h2>Best place to relax</h2>
      <div class="part3 inTheSpotlight">
        <div class="card">
          <a href="#">
@@ -148,7 +150,7 @@
      </div>
    </div>
    <div class="container">
-   <h2>Something with title</h2>
+   <h2>Recomended to you</h2>
      <div class="part4 familyTravel">
        <div class="card1">
          <a href="#">
@@ -183,14 +185,27 @@
      </div>
    </div>
    <div class="container">
-     <div class="part5">
-       <div class="card getApp">
-         <div class="left">
-
-         </div>
-         <div class="right">
-           <h3>right</h3>
-         </div>
+   <h2>Our app</h2>
+     <div class="part5 getApp">
+       <div class="p5_card">
+         <a href="#">
+          <div class="left">
+            <div class="getApp__photo">
+              <img src="./img/booking-by-phone.jpg" alt="get the app">
+            </div>
+          </div>
+          <div class="right">
+            <div class="text">
+              <h3>Get out mobile app just now!</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+            <div class="qr_code">
+              <img src="./img/qr_code.png" alt="qr code">
+            </div>
+          </div>
+         </a>
        </div>
      </div>
    </div>
