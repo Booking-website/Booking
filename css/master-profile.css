@@ -4,7 +4,7 @@
 .main .main__info {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-gap: 2%;
+  grid-gap: 2vw;
   grid-template-areas: "sidebar profile";
 }
 .main .main__sidebar {

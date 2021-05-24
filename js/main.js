@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // Scroll Reveal
-  ScrollReveal().reveal('.flights, .part1, .part2, .part3, .part4, .part5', { delay: 100 });
+  // ScrollReveal().reveal('.flights, .part1, .part2, .part3, .part4, .part5', { delay: 100 });
 
 
   $(".goTopBtn").click(function() {
