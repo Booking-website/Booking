@@ -1,5 +1,5 @@
 <?php
-		include_once '../header.php';
+		include_once 'header.php';
 ?>
 		<?php
 			if(isset($_POST['Cancel_Ticket']))
@@ -16,7 +16,7 @@
 
 				if(empty($data_missing))
 				{
-					require_once('./dbh.inc.php');
+					require_once('./includes/dbh.inc.php');
 
 					$userID=$_SESSION['userid'];
 
@@ -39,7 +39,6 @@
             mysqli_stmt_bind_param($stmt,"s", $flightID);
             mysqli_stmt_execute($stmt);
             $affected_rows=mysqli_stmt_affected_rows($stmt);
-            echo $affected_rows.'<br>';
             mysqli_stmt_close($stmt);
           }
           else if($class=='business')
@@ -49,7 +48,6 @@
             mysqli_stmt_bind_param($stmt,"s", $flightID);
             mysqli_stmt_execute($stmt);
             $affected_rows=mysqli_stmt_affected_rows($stmt);
-            echo $affected_rows.'<br>';
             mysqli_stmt_close($stmt);
           }
 					if($affected_rows==1)
@@ -83,3 +81,6 @@
 				echo "Cancel request not received";
 			}
 		?>
+<?php
+include_once 'footer.php';
+ ?>

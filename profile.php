@@ -36,11 +36,59 @@
             </li>
           </ul>
         </div>
+
         <div class="main__profile-info">
           <div class="main__profile-img-wrapper">
-            <div class="main__profile-img">
-              <img src="./img/alone.jpg" alt="profile image"/>
-            </div>
+            <form method="POST" action="profile.php">
+                <input type="hidden" name="size" value="1000000">
+              <div>
+                <input type="file" name="image">
+              </div>
+              <div>
+                <button type="submit" name="upload">POST</button>
+              </div>
+            </form>
+              <?php
+              include_once './includes/dbh.inc.php';
+              $msg = "";
+
+                // If upload button is clicked ...
+                if (isset($_POST['upload'])) {
+                	// Get image name
+                  if(isset($_FILES['image'])){
+                    	$image = $_FILES['image']['name'];
+                      $userID = $_SESSION['userid'];
+                    	// image file directory
+                    	$target = "img/".basename($image);
+
+                    	$sql = "INSERT INTO images (imgName, userID) VALUES ('$image', '$userID')";
+                    	// execute query
+                      mysqli_query($conn, $sql);
+
+                      	if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
+                      		$msg = "Image uploaded successfully";
+                      	}else{
+                      		$msg = "Failed to upload image";
+                      	}
+                      $query = mysqli_query($conn, "SELECT * FROM images  where userID = ?");
+                      $stmt=mysqli_prepare($conn,$query);
+                      mysqli_stmt_bind_param($stmt,"s",$userID);
+                      mysqli_stmt_execute($stmt);
+                      mysqli_stmt_store_result($stmt);
+                      if(mysqli_stmt_num_rows($stmt)==0)
+                      {
+                        while ($row = mysqli_fetch_array($result)) {
+                          echo "";
+                            echo "<img src='img/".$row['imgName']."' >";
+                          echo "";
+                        }
+                      }
+                      else{
+                        echo "Failed!";
+                      }
+                }
+      }
+ ?>
           </div>
           <div class="main__individual-info">
             <?php
