@@ -138,6 +138,24 @@
   transition: all 0.5s ease-out;
   perspective: 1000px;
 }
+.main div .part1 .card a .top,
+.main div .part1 .card1 a .top,
+.main div .part1 .card2 a .top,
+.main div .part1 .card3 a .top,
+.main div .part2 .card a .top,
+.main div .part2 .card1 a .top,
+.main div .part2 .card2 a .top,
+.main div .part2 .card3 a .top,
+.main div .part3 .card a .top,
+.main div .part3 .card1 a .top,
+.main div .part3 .card2 a .top,
+.main div .part3 .card3 a .top,
+.main div .part4 .card a .top,
+.main div .part4 .card1 a .top,
+.main div .part4 .card2 a .top,
+.main div .part4 .card3 a .top {
+  padding: 30% 0 0 0;
+}
 .main div .part1 .card1:hover,
 .main div .part1 .card2:hover,
 .main div .part1 .card3:hover,
@@ -234,7 +252,6 @@
   grid-area: p3_card;
 }
 .main div .part3 .card .top {
-  padding: 30% 0 0 10%;
   background: url("../img/long.jpg") no-repeat center top/cover;
 }
 .main div .part4 {
