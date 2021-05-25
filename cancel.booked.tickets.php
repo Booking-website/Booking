@@ -2,7 +2,7 @@
 	include_once 'header.php';
 ?>
 	<body>
-		<form action="./includes/cancel.booked.tickets.inc.php" method="post">
+		<form action="cancel.booked.tickets.inc.php" method="post">
 			<h2>CANCEL BOOKED TICKETS</h2>
 			<?php
 				if(isset($_GET['msg']) && $_GET['msg']=='failed')
