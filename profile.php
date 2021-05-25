@@ -40,14 +40,14 @@
         <div class="main__profile-info">
           <div class="main__profile-img-wrapper">
             <form method="POST" action="profile.php">
-        <input type="hidden" name="size" value="1000000">
-        <div>
-          <input type="file" name="image">
-        </div>
-        <div>
-          <button type="submit" name="upload">POST</button>
-        </div>
-      </form>
+                <input type="hidden" name="size" value="1000000">
+              <div>
+                <input type="file" name="image">
+              </div>
+              <div>
+                <button type="submit" name="upload">POST</button>
+              </div>
+            </form>
               <?php
               include_once './includes/dbh.inc.php';
               $msg = "";
@@ -80,7 +80,7 @@
                         while ($row = mysqli_fetch_array($result)) {
                           echo "";
                             echo "<img src='img/".$row['imgName']."' >";
-                          echo "</div>";
+                          echo "";
                         }
                       }
                       else{
@@ -89,7 +89,6 @@
                 }
       }
  ?>
-
           </div>
           <div class="main__individual-info">
             <?php
