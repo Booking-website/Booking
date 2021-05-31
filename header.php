@@ -26,26 +26,37 @@ session_start();
 <body>
   <nav class="nav" id="nav">
     <div class="container">
-      <div class="nav-left">
-        <a href="./index.php">
-          <img src="./img/logo.png"/>
-        </a>
-      </div>
-      <div class="nav-right">
-        <div class="menu">
-          <div class="menu-open" id="menu-open">
-            <?php
-            if (isset($_SESSION["userid"])) {
-              echo '<div class="menu-open-item"><a href="./profile.php">Profile page</a></div>';
-              echo '<div class="menu-open-item"><a href="includes/logout.inc.php">Log Out</a></div>';
-            }
-            else {
-              echo '<div class="menu-open-item"><a href="./signup.php">Register</a></div>';
-              echo  '<div class="menu-open-item"><a href="./login.php">Log In</a></div>';
-            }
-             ?>
-          </div>
+    <div class="bottom">
+      <p>
+
+      </p>
+      <p>
+        <i class="fa fa-envelope"></i> help@example.com
+      </p>
+      <p>
+        <i class="fa fa-phone"></i> +7 (777) 777 77 77
+      </p>
+    </div>
+    <div class="nav-left">
+      <a href="./index.php">
+        <img src="./img/logo.png"/>
+      </a>
+    </div>
+    <div class="nav-right">
+      <div class="menu">
+        <div class="menu-open" id="menu-open">
+          <?php
+          if (isset($_SESSION["userid"])) {
+            echo '<div class="menu-open-item"><a href="./profile.php">Profile page</a></div>';
+            echo '<div class="menu-open-item"><a href="includes/logout.inc.php">Log Out</a></div>';
+          }
+          else {
+            echo '<div class="menu-open-item"><a href="./signup.php">Register</a></div>';
+            echo  '<div class="menu-open-item"><a href="./login.php">Log In</a></div>';
+          }
+           ?>
         </div>
       </div>
+    </div>
     </div>
   </nav>

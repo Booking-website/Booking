@@ -1,8 +1,28 @@
 @import "./main-vars.scss"; // Main
 
+.header {
+  color: $nav__link_col;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  word-spacing: 5px;
+  background: url("../img/goodtravel.jpg") no-repeat top center / cover;
+  padding: 8% 0;
+  text-align: center;
+
+  h1{
+    font-size: 4vw;
+  }
+  h3{
+    font-size: 3.5vw;
+  }
+  p{
+    font-size: 2.5vw;
+  }
+}
+
+
 .main {
   .container{
-    padding: 3% 0;
+    padding: 5% 0;
   }
   .main__info {
     display: grid;
@@ -59,164 +79,6 @@
   .main__individual-info {
     text-align: center;
   }
-
-  .main__bank-card {
-    padding: 3%;
-    cursor: pointer;
-    text-align: center;
-  }
-
-  .main__bank-card-dropdown {
-    display: none;
-    .wrap {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .card {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 15em;
-      position: relative;
-      perspective: 1000px;
-    }
-
-    .back,
-    .front {
-      color: $profile__credit-card-color;
-      background-color: $profile__credit-card-bcc;
-      box-shadow: 0 0 6px rgb(0, 0, 0, .4);
-      width: $profile__bank-card-width;
-      height: $profile__bank-card-height;
-      position: absolute;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: all 0.5s ease-out;
-      backface-visibility: hidden;
-      border-radius: 10px;
-      padding: 5%;
-
-      form{
-        input{
-          font-size: 1vw;
-        }
-      }
-
-      i.fa-angle-double-right {
-        font-weight: 900;
-        cursor: pointer;
-        position: absolute;
-        right: 5%;
-        bottom: 5%;
-        font-size: 1.5vw;
-
-        &:hover {
-          transform: $scale-animation;
-        }
-      }
-    }
-
-    .front {
-      transform: rotateY(0deg);
-
-      .bank-card {
-        justify-content: center;
-        width: 100%;
-      }
-
-      form {
-        input::-webkit-inner-spin-button,
-        input::-webkit-outer-spin-button {
-          -webkit-appearance: none;
-          margin: 0;
-        }
-
-        input{
-          height: 2vw;
-        }
-
-        .card-number, .card-date{
-          margin-bottom: 2%;
-        }
-
-        .card-number {
-          display: flex;
-
-          input{
-            text-align: center;
-            width: 100%;
-            margin-right: 2%;
-            margin-bottom: 0;
-          }
-          &:last-child{
-            margin-right: 0;
-          }
-        }
-
-        .card-date {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-
-          input{
-            width: 100%;
-            margin: 0 2%;
-            &:nth-child(4){
-              margin-right: 0;
-            }
-          }
-
-          .fa-slash{
-            transform: rotateX(180deg);
-          }
-
-          .valid {
-            margin-right: 10px;
-            text-transform: uppercase;
-            font-size: 2vw;
-          }
-
-          span {
-            text-align: center;
-          }
-        }
-
-        .name-surname {
-          display: flex;
-
-          input{
-            width: 100%;
-            &:nth-child(1){
-            margin-right: 4%;
-            }
-          }
-        }
-      }
-    }
-
-    .back {
-      transform: rotateY(180deg);
-
-      form {
-        input::-webkit-inner-spin-button,
-        input::-webkit-outer-spin-button {
-          -webkit-appearance: none;
-          margin: 0;
-        }
-        .card-cvv {
-
-        }
-        input{
-          height: 2vw;
-        }
-      }
-    }
-  }
 }
 
 
@@ -239,7 +101,7 @@
 @media screen and (max-width: 768px) {
   .main {
     div {
-      
+
     }
     .main__info{
       grid-template-columns: 1fr;

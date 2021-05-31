@@ -36,19 +36,19 @@
          </div>
            <div class="one-way">
              <form action="available.flights.php" method="post">
-               <select class="" name="from_city">
+               <select class="" name="from_city" required>
                  <option value="">From city</option>
                  <option value="nur-sultan">Nur-Sultan</option>
                  <option value="almaty">Almaty</option>
                  <option value="taraz">Taraz</option>
                </select>
-               <select class="" name="to_city">
+               <select class="" name="to_city" required>
                  <option value="">To city</option>
                  <option value="nur-sultan">Nur-Sultan</option>
                  <option value="almaty">Almaty</option>
                  <option value="taraz">Taraz</option>
                </select>
-               <input type="date" name="from_date" min="2000-01-01">
+               <input type="date" name="from_date" min="2000-01-01" required>
                <select class="one-way__flight-class" name="class">
                  <option value="economy">
                    Economy
@@ -188,7 +188,7 @@
    <h2>Our app</h2>
      <div class="part5 getApp">
        <div class="p5_card">
-         <a href="#">
+         <a>
           <div class="left">
             <div class="getApp__photo">
               <img src="./img/booking-by-phone.jpg" alt="get the app">

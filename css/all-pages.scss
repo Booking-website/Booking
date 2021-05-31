@@ -68,6 +68,18 @@ button {
     transform: $scale-animation;
   }
 }
+input[type="submit"]{
+  @include bcc__c($allButtonBcc, $allButtonColor);
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 40px;
+
+  &:hover {
+    transform: $scale-animation;
+  }
+}
 // Go to top button
 
 main {

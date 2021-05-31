@@ -1,7 +1,24 @@
 <?php
 include_once 'header.php';
 ?>
-	<body>
+
+
+<head>
+	<link rel="stylesheet" href="./css/master-bookings.css">
+	<title>Success</title>
+</head>
+
+
+<header class="header" id="header">
+	<div class="container">
+		<h1>What a good day to start travel!</h1>
+		<h3>Isn't it?</h3>
+		<p>We are always happy to see you again. We will service you in high level everytime and everywhere!</p>
+	</div>
+</header>
+
+<main class="main" id="main">
+	<div class="container">
 		<h2>VIEW BOOKED FLIGHT TICKETS</h2>
 		<?php
 
@@ -45,5 +62,13 @@ ON tickets.flightID = flights.flightID where userID=? ORDER BY  date_of_reservat
 			mysqli_stmt_close($stmt);
 			mysqli_close($conn);
 		?>
-	</body>
-</html>
+	</div>
+</main>
+
+
+
+
+
+	<?php
+				include_once 'footer.php';
+		?>

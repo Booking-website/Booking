@@ -6,7 +6,9 @@ body {
 //Main
 
 .main {
-  margin: auto;
+  display: flex;
+  text-align: center;
+  align-items: center;
   height: 80vh;
 
   .container {

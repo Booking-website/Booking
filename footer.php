@@ -1,5 +1,13 @@
 <footer class="footer" id="footer">
   <div class="container">
+    <div class="partners">
+      <div class="image1">
+        <img src="./img/partner1.png" alt="partner">
+      </div>
+      <div class="image2">
+        <img src="./img/partner2.png" alt="partner">
+      </div>
+    </div>
     <div class="links">
       <a href="#"><img src="./img/logo.png"/></a>
       <a href="#">Our partners</a>

@@ -1,5 +1,23 @@
+.header {
+  color: #f2f2f2;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  word-spacing: 5px;
+  background: url("../img/goodtravel.jpg") no-repeat top center/cover;
+  padding: 8% 0;
+  text-align: center;
+}
+.header h1 {
+  font-size: 4vw;
+}
+.header h3 {
+  font-size: 3.5vw;
+}
+.header p {
+  font-size: 2.5vw;
+}
+
 .main .container {
-  padding: 3% 0;
+  padding: 5% 0;
 }
 .main .main__info {
   display: grid;
@@ -51,136 +69,6 @@
 }
 .main .main__individual-info {
   text-align: center;
-}
-.main .main__bank-card {
-  padding: 3%;
-  cursor: pointer;
-  text-align: center;
-}
-.main .main__bank-card-dropdown {
-  display: none;
-}
-.main .main__bank-card-dropdown .wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.main .main__bank-card-dropdown .card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 15em;
-  position: relative;
-  perspective: 1000px;
-}
-.main .main__bank-card-dropdown .back,
-.main .main__bank-card-dropdown .front {
-  color: #fafafa;
-  background-color: rgba(0, 90, 235, 0.9);
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
-  width: 22em;
-  height: 10em;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.5s ease-out;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  border-radius: 10px;
-  padding: 5%;
-}
-.main .main__bank-card-dropdown .back form input,
-.main .main__bank-card-dropdown .front form input {
-  font-size: 1vw;
-}
-.main .main__bank-card-dropdown .back i.fa-angle-double-right,
-.main .main__bank-card-dropdown .front i.fa-angle-double-right {
-  font-weight: 900;
-  cursor: pointer;
-  position: absolute;
-  right: 5%;
-  bottom: 5%;
-  font-size: 1.5vw;
-}
-.main .main__bank-card-dropdown .back i.fa-angle-double-right:hover,
-.main .main__bank-card-dropdown .front i.fa-angle-double-right:hover {
-  transform: scale3d(0.95, 0.95, 0.95);
-}
-.main .main__bank-card-dropdown .front {
-  transform: rotateY(0deg);
-}
-.main .main__bank-card-dropdown .front .bank-card {
-  justify-content: center;
-  width: 100%;
-}
-.main .main__bank-card-dropdown .front form input::-webkit-inner-spin-button,
-.main .main__bank-card-dropdown .front form input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-.main .main__bank-card-dropdown .front form input {
-  height: 2vw;
-}
-.main .main__bank-card-dropdown .front form .card-number, .main .main__bank-card-dropdown .front form .card-date {
-  margin-bottom: 2%;
-}
-.main .main__bank-card-dropdown .front form .card-number {
-  display: flex;
-}
-.main .main__bank-card-dropdown .front form .card-number input {
-  text-align: center;
-  width: 100%;
-  margin-right: 2%;
-  margin-bottom: 0;
-}
-.main .main__bank-card-dropdown .front form .card-number:last-child {
-  margin-right: 0;
-}
-.main .main__bank-card-dropdown .front form .card-date {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.main .main__bank-card-dropdown .front form .card-date input {
-  width: 100%;
-  margin: 0 2%;
-}
-.main .main__bank-card-dropdown .front form .card-date input:nth-child(4) {
-  margin-right: 0;
-}
-.main .main__bank-card-dropdown .front form .card-date .fa-slash {
-  transform: rotateX(180deg);
-}
-.main .main__bank-card-dropdown .front form .card-date .valid {
-  margin-right: 10px;
-  text-transform: uppercase;
-  font-size: 2vw;
-}
-.main .main__bank-card-dropdown .front form .card-date span {
-  text-align: center;
-}
-.main .main__bank-card-dropdown .front form .name-surname {
-  display: flex;
-}
-.main .main__bank-card-dropdown .front form .name-surname input {
-  width: 100%;
-}
-.main .main__bank-card-dropdown .front form .name-surname input:nth-child(1) {
-  margin-right: 4%;
-}
-.main .main__bank-card-dropdown .back {
-  transform: rotateY(180deg);
-}
-.main .main__bank-card-dropdown .back form input::-webkit-inner-spin-button,
-.main .main__bank-card-dropdown .back form input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-.main .main__bank-card-dropdown .back form input {
-  height: 2vw;
 }
 
 @media screen and (max-width: 768px) {

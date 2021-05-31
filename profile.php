@@ -6,13 +6,15 @@
  <!-- meta icon -->
  <title>My Profile</title>
 </head>
+
+
+
+
+
+
   <main class="main" id="main">
     <div class="container">
       <div class="main__info">
-
-
-
-
         <div class="main__sidebar">
           <ul>
             <li><h3>Menu</h3></li>
@@ -109,48 +111,20 @@
             mysqli_close($conn);
             ?>
           </div>
-          <div class="main__bank-card">
-            <p>My bank card <i class="fa fa-sort-down"></i></p>
-          <div class="main__bank-card-dropdown">
-            <div class="wrap">
-              <div class="card">
-                <div class="front">
-                  <form class="bank-card" action="" method="post">
-                    <div class="card-number">
-                      <input type="number" class="card-number card-number1" name="card-number1" value="" maxlength="4" min="1000" max="9999" placeholder="XXXX" required>
-                      <input type="number" class="card-number card-number2"  name="card-number2" value="" maxlength="4" min="1000" max="9999" placeholder="XXXX" required>
-                      <input type="number" class="card-number card-number3"  name="card-number3" value="" maxlength="4" min="1000" max="9999" placeholder="XXXX" required>
-                      <input type="number" class="card-number card-number4"  name="card-number4" value="" maxlength="4" min="1000" max="9999" placeholder="XXXX" required>
-                    </div>
-                    <div class="card-date">
-                      <span class="valid">Valid thru</span>
-                      <input type="number" class="card-date card-date1" name="card-date1" maxlength="2" min="01" max="12" value="" placeholder="MM" required>
-                      <i class="fa fa-slash"></i>
-                      <input type="number" class="card-date card-date2" name="card-date2" maxlength="2" min="10" value="" placeholder="YY" required>
-                    </div>
-                    <div class="name-surname">
-                      <input type="text" name="name" value="" placeholder="Name" maxlength="15" required>
-                      <input type="text" name="surname" value="" placeholder="Surname" maxlength="15" required>
-                    </div>
-                  </form>
-                  <i class="fa fa-angle-double-right flipToBack"></i>
-                </div>
-                <div class="back">
-                  <form class="bank-card" action="" method="post">
-                    <div class="card-cvv">
-                      <input type="number" class="card-cvv" name="card-cvv" value="" placeholder="CVV" required>
-                    </div>
-                  </form>
-                  <i class="fa fa-angle-double-right flipToFront"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
         </div>
       </div>
     </div>
   </main>
+
+
+
+  <header class="header" id="header">
+  	<div class="container">
+  		<h1>What a good day to start travel!</h1>
+  		<h3>Isn't it?</h3>
+  		<p>We are always happy to see you again. We will service you in high level everytime and everywhere!</p>
+  	</div>
+  </header>
 
 
 		<!--Following data fields were empty!
@@ -160,9 +134,6 @@
 			PREDEFINED LOCATION WHEN BOOKING TICKETS
 
 		-->
-	</body>
-</html>
-
 
 <?php
   include_once 'footer.php';
