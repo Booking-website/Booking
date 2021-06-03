@@ -3,13 +3,16 @@ $(document).ready(function() {
   // ScrollReveal().reveal('.flights, .part1, .part2, .part3, .part4, .part5', { delay: 100 });
 
 
+
   $(".goTopBtn").click(function() {
     $('html, body').animate({scrollTop:0},'500');
     // window.scrollTo({top: 0, behavior: "smooth"});
   });
 
 
-
+  $("a.disabled").on('click', (e) => {
+    e.preventDefault();
+  })
 
 
 
@@ -42,6 +45,78 @@ $(document).ready(function() {
 
 
 
+
+
+  $(".part1 .card1").click(()=>{
+    $(".p1c1_popup").addClass("show");
+  });
+  $(".p1c1_popup #closePopup").click(()=>{
+    $(".p1c1_popup").removeClass("show");
+  });
+
+  $(".part1 .card2").click(()=>{
+    $(".p1c2_popup").addClass("show");
+  });
+  $(".p1c2_popup #closePopup").click(()=>{
+    $(".p1c2_popup").removeClass("show");
+  });
+
+  $(".part1 .card3").click(()=>{
+    $(".p1c3_popup").addClass("show");
+  });
+  $(".p1c3_popup #closePopup").click(()=>{
+    $(".p1c3_popup").removeClass("show");
+  });
+
+  $(".part2 .card1").click(()=>{
+    $(".p2c1_popup").addClass("show");
+  });
+  $(".p2c1_popup #closePopup").click(()=>{
+    $(".p2c1_popup").removeClass("show");
+  });
+
+  $(".part2 .card2").click(()=>{
+    $(".p2c2_popup").addClass("show");
+  });
+  $(".p2c2_popup #closePopup").click(()=>{
+    $(".p2c2_popup").removeClass("show");
+  });
+
+  $(".part2 .card3").click(()=>{
+    $(".p2c3_popup").addClass("show");
+  });
+  $(".p2c3_popup #closePopup").click(()=>{
+    $(".p2c3_popup").removeClass("show");
+
+  });
+  $(".part4 .card1").click(()=>{
+    $(".p4c1_popup").addClass("show");
+  });
+  $(".p4c1_popup #closePopup").click(()=>{
+    $(".p4c1_popup").removeClass("show");
+  });
+
+  $(".part4 .card2").click(()=>{
+    $(".p4c2_popup").addClass("show");
+  });
+  $(".p4c2_popup #closePopup").click(()=>{
+    $(".p4c2_popup").removeClass("show");
+
+  });
+  $(".part4 .card3").click(()=>{
+    $(".p4c3_popup").addClass("show");
+  });
+  $(".p4c3_popup #closePopup").click(()=>{
+    $(".p4c3_popup").removeClass("show");
+  });
+
+
+
+
+
+
+
+
   $("input.card-number").keyup(function() {
     if (this.value.length > 4) {
       this.value = this.value.slice(0,4);
@@ -70,36 +145,61 @@ $(document).ready(function() {
     if (this.value.length > 3) {
       this.value = this.value.slice(0,3);
     }
-  })
+  });
+ // let inputDate = document.querySelector(".one-way input[type=\"date\"]");
+ //  inputDate.click(()=>{
+ //
+ //    // set_min_date(inputDate);
+  // });
+ //
+  var today = new Date();
+  var dd = today.getDate();
+  var mm = today.getMonth()+1; //January is 0 so need to add 1 to make it 1!
+  var yyyy = today.getFullYear();
+  if(dd<10){
+    dd='0'+dd
+  }
+  if(mm<10){
+    mm='0'+mm
+  }
+  today = yyyy+'-'+mm+'-'+dd;
+  document.getElementById("from_date").setAttribute("min", today);
 
 
+  // $("footer li a").click((e) => {
+  //   e.preventDefault();
+  // });
+
+  // $(".ourPartners").click(()=>{
+  //   $(".partner").animate([
+  //     {"transform", "scale3d(1.5, 1.5, 1.5)"}
+  //   ]){
+  //     delay: 4000
+  //   }
+  // });
 
 
-
-  set_min_date();
 });
 
 
-function set_min_date() {
-  var date_from = $("#date-from");;
-  date_from.on("click", function(){
-    var today = new Date();
-    var dd = today.getDate();
-    var mm = today.getMonth()+1;
-    var yyyy = today.getFullYear();
-     if(dd<10){
-            dd='0'+dd
-        }
-        if(mm<10){
-            mm='0'+mm
-        }
-    today = yyyy+'-'+mm+'-'+dd;
-
-    document.getElementById('date-from').setAttribute("min", today);
-    document.getElementById('date-to').setAttribute("min", today);
-    date_from.on("change", function(){
-      var date_to = $(this).val();
-      document.getElementById('date-to').setAttribute("min", date_to);
-    });
-  });
-};
+// function set_min_date(props) {
+//   props.inputDate.on("click", function(){
+//     var today = new Date();
+//     var dd = today.getDate();
+//     var mm = today.getMonth()+1;
+//     var yyyy = today.getFullYear();
+//      if(dd<10){
+//             dd='0'+dd
+//         }
+//         if(mm<10){
+//             mm='0'+mm
+//         }
+//     today = yyyy+'-'+mm+'-'+dd;
+//
+//     props.inputDate.setAttribute("min", today);
+//     // date_from.on("change", function(){
+//     //   var date_to = $(this).val();
+//     //   document.getElementById('date-to').setAttribute("min", date_to);
+//     // });
+//   });
+// };

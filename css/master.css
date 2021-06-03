@@ -54,6 +54,19 @@
   display: grid;
   grid-template-columns: repeat(2, 2fr) 1fr 1fr;
   grid-gap: 2vw;
+  position: relative;
+}
+.header .flights .one-way form input[type=date]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: auto;
 }
 .header .flights .one-way .searchButton {
   grid-column: 1/5;
@@ -64,6 +77,65 @@
 }
 .main .container {
   margin-bottom: 30px;
+}
+.main .popup {
+  position: fixed;
+  left: 8vw;
+  right: 8vw;
+  top: 10vh;
+  bottom: 10vh;
+  width: 84vw;
+  height: 80vh;
+  overflow: hidden;
+  z-index: 100;
+  background-color: #dbdbf7;
+  border: 1px solid #005aeb;
+  border-radius: 5px;
+  box-shadow: 0 0 4px #141414;
+}
+.main .popupWrapper {
+  display: block;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: auto -webkit-min-content;
+  grid-template-rows: auto min-content;
+  grid-gap: 0;
+  position: relative;
+  overflow-y: overlay;
+}
+.main .closeButtonWrapper {
+  display: block;
+}
+.main .closeButtonWrapper button {
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #005aeb;
+}
+.main .popupContentWrapper {
+  padding: 2vh;
+  display: block;
+}
+.main .popupContentWrapper .popupTextWrapper {
+  display: block;
+}
+.main .popupContentWrapper .popupGalleryWrapper {
+  display: flex;
+  overflow-x: scroll;
+  width: 95%;
+  margin: 0 auto;
+}
+.main .popupContentWrapper h2 {
+  text-align: center;
+}
+.main .popupContentWrapper h2 .small {
+  font-size: 0.7em;
+}
+.main .p1c1_popup, .main .p1c2_popup, .main .p1c3_popup,
+.main .p2c1_popup, .main .p2c2_popup, .main .p2c3_popup,
+.main .p4c1_popup, .main .p4c2_popup, .main .p4c3_popup {
+  display: none;
 }
 .main div {
   display: grid;

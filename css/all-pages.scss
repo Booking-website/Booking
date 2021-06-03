@@ -17,9 +17,7 @@ body {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4 {
   margin: 0;
 }
 
@@ -30,6 +28,11 @@ p {
 a {
   cursor: pointer;
   text-decoration: none;
+}
+
+a.disabled{
+  color: rgb(140, 140, 140) !important;
+  cursor: not-allowed;
 }
 
 .container {
@@ -146,6 +149,8 @@ main {
 .table tbody tr td:last-child {
   border-radius: 0 8px 8px 0;
 }
+
+
 
 
 

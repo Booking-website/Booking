@@ -65,6 +65,13 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 5%;
+
+    a{
+      color: $nav__link_col;
+    }
+  }
+  .bottom:nth-child(1):before{
+    content: '';
   }
 }
 //Footer
@@ -76,17 +83,17 @@
 
   .partners{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 0 0 5% 0;
     .image1{
-      width: 45%;
+      width: 30%;
       img{
         width: 100%;
       }
     }
     .image2{
-      width: 45%;
+      width: 30%;
       img{
         width: 100%;
       }
@@ -137,6 +144,12 @@
         text-align: center;
         padding: 2% 0;
       }
+    }
+    .bottom{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .bottom:nth-child(1):before{
+      content: none;
     }
   }
   .nav-left img{

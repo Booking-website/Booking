@@ -1,23 +1,5 @@
 @import "./main-vars.scss"; // Main
 
-.header {
-  color: $nav__link_col;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-  word-spacing: 5px;
-  background: url("../img/goodtravel.jpg") no-repeat top center / cover;
-  padding: 8% 0;
-  text-align: center;
-
-  h1{
-    font-size: 4vw;
-  }
-  h3{
-    font-size: 3.5vw;
-  }
-  p{
-    font-size: 2.5vw;
-  }
-}
 
 
 .main {
@@ -39,13 +21,18 @@
 
     ul {
       list-style: none;
-      padding: 0;
+      padding: 2% 3%;
       margin: 0;
     }
 
-    li {
+    li{
       margin: 10% 0;
-      padding: 0 0 0 5%;
+    }
+    li + li {
+      padding-top: 5%;
+    }
+    li:hover{
+      transform: $scale-animation;
     }
   }
 
@@ -60,6 +47,26 @@
     padding: 5% 0;
     text-align: center;
     align-items: center;
+
+    i.fa-user-circle{
+      font-size: 25vw;
+      margin: 2% 0;
+      // object-fit: contain;
+    }
+
+    div.uploadImage{
+      padding: 5% 0;
+    }
+    label[for="uploadImageInput"]{
+      cursor: pointer;
+      @include bcc__c(transparent, $allButtonBcc);
+      @include border__radius($color: $allButtonBcc, $rad: 8px);
+      padding: 2%;
+    }
+    input#uploadImageInput{
+      display: none;
+      margin-bottom: 1%;
+    }
   }
 
   .main__profile-img {
@@ -78,6 +85,15 @@
 
   .main__individual-info {
     text-align: center;
+  }
+
+  .editButtonWrapper{
+    margin: 2% 3%;
+    float: right;
+    button{
+      @include bcc__c($color: $allButtonBcc);
+      @include border__radius($color: transparent);
+    }
   }
 }
 

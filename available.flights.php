@@ -73,12 +73,15 @@ include_once 'header.php'; ?>
               mysqli_stmt_store_result($stmt);
               if(mysqli_stmt_num_rows($stmt)==0)
               {
-                echo "<h3>No flights are available !</h3>";
+                echo "<h3><i class=\"fa fa-times\"></i> Sorry, no flights are available!</h3>
+                <p>
+          				<a href=\"./index.php\"><i class=\"fa fa-home\"></i> Go Home</a>
+          			</p>";
               }
               else
               {
-                echo "<form action=\"passenger.details.php\" method=\"post\">";
-                echo "<table class = 'table' cellpadding=\"10\">";
+                echo "<form class=\"availableFlightsForm\" action=\"passenger.details.php\" method=\"post\">";
+                echo "<table class = \"table\" cellpadding=\"10\">";
                 echo "<tr><th>Flight No.</th>
                 <th>Origin</th>
                 <th>Destination</th>
@@ -86,7 +89,7 @@ include_once 'header.php'; ?>
                 <th>Departure Time</th>
                 <th>Arrival Date</th>
                 <th>Arrival Time</th>
-                <th>Price(Economy)</th>
+                <th>Price (Economy)</th>
                 <th>Select</th>
                 </tr>";
                 while(mysqli_stmt_fetch($stmt)) {
@@ -122,7 +125,7 @@ include_once 'header.php'; ?>
               else
               {
                 echo "<form action=\"passenger.details.php\" method=\"post\">";
-                echo "<table class = 'table' cellpadding=\"10\">";
+                echo "<table class = 'table availableFlights' cellpadding=\"10\">";
                 echo "<tr><th>Flight No.</th>
                 <th>Origin</th>
                 <th>Destination</th>
@@ -130,7 +133,7 @@ include_once 'header.php'; ?>
                 <th>Departure Time</th>
                 <th>Arrival Date</th>
                 <th>Arrival Time</th>
-                <th>Price(Business)</th>
+                <th>Price (Business)</th>
                 <th>Select</th>
                 </tr>";
                 while(mysqli_stmt_fetch($stmt)) {

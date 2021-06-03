@@ -1,6 +1,6 @@
 @import "./nav-footer.css";
 :root {
-  background-color: rgba(219, 219, 247, 0.85);
+  background-color: #dbdbf7;
 }
 
 body {
@@ -15,15 +15,18 @@ body {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4 {
   margin: 0;
 }
 
 a {
   cursor: pointer;
   text-decoration: none;
+}
+
+a.disabled {
+  color: #8c8c8c !important;
+  cursor: not-allowed;
 }
 
 .container {

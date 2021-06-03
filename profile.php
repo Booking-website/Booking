@@ -16,8 +16,8 @@
     <div class="container">
       <div class="main__info">
         <div class="main__sidebar">
-          <ul>
-            <li><h3>Menu</h3></li>
+          <ul class="hoverEffect">
+            <h3>Menu</h3>
             <li>
               <a href="index.php">
                 <i class="fa fa-plane" aria-hidden="true"></i>
@@ -36,21 +36,37 @@
                 <span>Cancel Booked Flight Tickets</span>
               </a>
             </li>
+            <li>
+              <a href="#" class="disabled">
+                <i class="fa fa-plane" aria-hidden="true"></i>
+                <span>Flight Details</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="disabled">
+                <i class="fa fa-plane" aria-hidden="true"></i>
+                <span>Repot an error</span>
+              </a>
+            </li>
           </ul>
         </div>
 
         <div class="main__profile-info">
           <div class="main__profile-img-wrapper">
+            <i class="fa fa-user-circle"></i>
             <form method="POST" action="profile.php">
                 <input type="hidden" name="size" value="1000000">
-              <div>
-                <input type="file" name="image">
+              <div class="uploadImage">
+                <label for="uploadImageInput">Upload Image</label>
+                <input type="file" name="image" id="uploadImageInput">
               </div>
               <div>
                 <button type="submit" name="upload">POST</button>
               </div>
             </form>
+
               <?php
+              /*
               include_once './includes/dbh.inc.php';
               $msg = "";
 
@@ -60,11 +76,11 @@
                   if(isset($_FILES['image'])){
                     	$image = $_FILES['image']['name'];
                       $userID = $_SESSION['userid'];
-                    	// image file directory
+                    	//image file directory
                     	$target = "img/".basename($image);
 
                     	$sql = "INSERT INTO images (imgName, userID) VALUES ('$image', '$userID')";
-                    	// execute query
+                      //execute query
                       mysqli_query($conn, $sql);
 
                       	if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
@@ -90,7 +106,9 @@
                       }
                 }
       }
+      */
  ?>
+
           </div>
           <div class="main__individual-info">
             <?php
@@ -111,6 +129,9 @@
             mysqli_close($conn);
             ?>
           </div>
+          <div class="editButtonWrapper">
+            <button type="button" name="edit">Edit profile</button>
+          </div>
         </div>
       </div>
     </div>
@@ -118,13 +139,7 @@
 
 
 
-  <header class="header" id="header">
-  	<div class="container">
-  		<h1>What a good day to start travel!</h1>
-  		<h3>Isn't it?</h3>
-  		<p>We are always happy to see you again. We will service you in high level everytime and everywhere!</p>
-  	</div>
-  </header>
+
 
 
 		<!--Following data fields were empty!

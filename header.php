@@ -28,13 +28,10 @@ session_start();
     <div class="container">
     <div class="bottom">
       <p>
-
+        <i class="fa fa-envelope"></i> <a target="_blank" href="mailto: mail@example.com">mail@example.com</a>
       </p>
       <p>
-        <i class="fa fa-envelope"></i> help@example.com
-      </p>
-      <p>
-        <i class="fa fa-phone"></i> +7 (777) 777 77 77
+        <i class="fa fa-phone"></i> <a href="tel: +7 (777) 777 77 77">+7 (777) 777 77 77</a>
       </p>
     </div>
     <div class="nav-left">
