@@ -107,7 +107,9 @@
   display: block;
 }
 .main .closeButtonWrapper button {
-  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
   border: 1px solid transparent;
   border-radius: 5px;
   background-color: transparent;
@@ -116,6 +118,8 @@
 .main .popupContentWrapper {
   padding: 2vh;
   display: block;
+  width: 70%;
+  margin: 0 auto;
 }
 .main .popupContentWrapper .popupTextWrapper {
   display: block;

@@ -75,10 +75,10 @@
        <div class="card1">
          <a>
            <div class="top">
-             <h3>Title h3</h3>
+             <h3>Japan</h3>
            </div>
            <div class="bottom">
-             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quos.</p>
+             <p>One of the best country with high economics in Asia</p>
            </div>
          </a>
        </div>
@@ -87,21 +87,26 @@
            <div class="popupContentWrapper">
              <div class="popupTextWrapper">
                <h2>
-                 Some text to test
-                 <br>
-                 <i>Small description</i>
+                 Japan <i>(second name Nippon)</i>
                </h2>
-               <h5>Title</h5>
                <p>
-                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                 Japan (Japanese: 日本, Nippon [ɲippoꜜɴ] (About this soundlisten) or Nihon [ɲihoꜜɴ] (About this soundlisten)) is an island country in East Asia, located in the northwest Pacific Ocean. It is bordered on the west by the Sea of Japan, and extends from the Sea of Okhotsk in the north toward the East China Sea and Taiwan in the south. Part of the Ring of Fire, Japan spans an archipelago of 6852 islands covering 377,975 square kilometers (145,937 sq mi); the five main islands are Hokkaido, Honshu, Shikoku, Kyushu, and Okinawa. Tokyo is Japan's capital and largest city; other major cities include Yokohama, Osaka, Nagoya, Sapporo, Fukuoka, Kobe, and Kyoto.
                </p>
-               <h5>Title</h5>
                <p>
-                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                 Japan is the eleventh-most populous country in the world, as well as one of the most densely populated and urbanized. About three-fourths of the country's terrain is mountainous, concentrating its population of 125.36 million on narrow coastal plains. Japan is divided into 47 administrative prefectures and eight traditional regions. The Greater Tokyo Area is the most populous metropolitan area in the world, with more than 37.4 million residents.</p>
+               <h5>Languages</h5>
+               <p>
+                 Japanese writing uses kanji (Chinese characters) and two sets of kana (syllabaries based on cursive script and radical of kanji), as well as the Latin alphabet and Arabic numerals.[239] English instruction was made mandatory in Japanese elementary schools in 2020.[240]
                 </p>
-                <h5>Title</h5>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  Besides Japanese, the Ryukyuan languages (Amami, Kunigami, Okinawan, Miyako, Yaeyama, Yonaguni), part of the Japonic language family, are spoken in the Ryukyu Islands chain.[241] Few children learn these languages,[242] but local governments have sought to increase awareness of the traditional languages.[243] The Ainu language, which is a language isolate, is moribund, with only a few native speakers remaining as of 2014.[244]
+                </p>
+                <h5>Customs and holidays</h5>
+                <p>
+                  Ishin-denshin (以心伝心) is a Japanese idiom which denotes a form of interpersonal communication through unspoken mutual understanding.[286] Isagiyosa (潔さ) is a virtue of the capability of accepting death with composure. Cherry blossoms are a symbol of isagiyosa in the sense of embracing the transience of the world.[287] Hansei (反省) is a central idea in Japanese culture, meaning to acknowledge one's own mistake and to pledge improvement. Kotodama (言霊) refers to the Japanese belief that mystical powers dwell in words and names.[288]
+                </p>
+                <p>
+                  Officially, Japan has 16 national, government-recognized holidays. Public holidays in Japan are regulated by the Public Holiday Law (国民の祝日に関する法律, Kokumin no Shukujitsu ni Kansuru Hōritsu) of 1948.[289] Beginning in 2000, Japan implemented the Happy Monday System, which moved a number of national holidays to Monday in order to obtain a long weekend.[290] The national holidays in Japan are New Year's Day on January 1, Coming of Age Day on the second Monday of January, National Foundation Day on February 11, The Emperor's Birthday on February 23, Vernal Equinox Day on March 20 or 21, Shōwa Day on April 29, Constitution Memorial Day on May 3, Greenery Day on May 4, Children's Day on May 5, Marine Day on the third Monday of July, Mountain Day on August 11, Respect for the Aged Day on the third Monday of September, Autumnal Equinox on September 23 or 24, Health and Sports Day on the second Monday of October, Culture Day on November 3, and Labor Thanksgiving Day on November 23.[291]
                 </p>
              </div>
              <h5>Photo Gallery</h5>

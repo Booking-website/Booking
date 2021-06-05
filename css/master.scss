@@ -126,7 +126,9 @@
 
 
     button{
-      width: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
       @include border__radius($color: transparent);
       @include bcc__c(transparent, $allButtonBcc);
     }
@@ -134,6 +136,8 @@
   .popupContentWrapper{
     padding: 2vh;
     display: block;
+    width: $container-width;
+    margin: 0 auto;
 
     .popupTextWrapper{
       display: block;
