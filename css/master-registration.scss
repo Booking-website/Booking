@@ -3,8 +3,9 @@
 body {
   background: url("../img/plane-wing.jpg") no-repeat center top / cover;
 }
-//Main
 
+
+//Main
 .main {
   display: flex;
   text-align: center;
@@ -26,8 +27,6 @@ body {
     .loginButton,
     .registerButton {
       grid-column: 1 / 3;
-
-      &:hover {}
     }
 
     input {
@@ -41,9 +40,6 @@ body {
       margin-top: 10px;
       margin-bottom: 10px;
     }
-
-    div,
-    input {}
 
     h1 {
       margin: 20px 0;
@@ -83,12 +79,6 @@ body {
     }
   }
 
-  main {
-    form {
-      grid-template-columns: 1fr;
-    }
-  }
-
   .main {
     .container {
       form {
@@ -97,6 +87,9 @@ body {
           grid-gap: 10px;
         }
       }
+    }
+    form {
+      grid-template-columns: 1fr;
     }
   }
 }

@@ -1,11 +1,13 @@
 <?php
-     include_once 'header.php';
- ?>
+  include_once 'header.php';
+?>
+
 <head>
-  <link rel="stylesheet" href="./css/master-registration.css">
-  <!-- meta icon -->
+  <!-- Style -->
+  <link rel="stylesheet" href="../css/master-registration.css">
   <title>Sigh Up</title>
 </head>
+
 <main class="main" id="main">
   <div class="container">
     <h1>Registration</h1>
@@ -22,26 +24,22 @@
       if (isset($_GET["error"])) {
         if ($_GET["error"] == ["emptyinput"]) {
           echo "<p>Fill in all fields!</p>";
-        }
-        else if ($_GET["error"] == "invalidemail") {
+        } else if ($_GET["error"] == "invalidemail") {
           echo "<p>Invalid EMAIL!</p>";
-        }
-        else if ($_GET["error"] == "passwordsdontmatch") {
+        } else if ($_GET["error"] == "passwordsdontmatch") {
           echo "<p>Passwords don't match!</p>";
-        }
-        else if ($_GET["error"] == "stmtfailed") {
+        } else if ($_GET["error"] == "stmtfailed") {
           echo "<p>Something went wrong! Please try again</p>";
-        }
-        else if ($_GET["error"] == "emailtaken") {
+        } else if ($_GET["error"] == "emailtaken") {
           echo "<p>You have account with that email!</p>";
-        }
-        else if ($_GET["error"] == "none") {
+        } else if ($_GET["error"] == "none") {
           echo "<p>You have signed up!</p>";
         }
       }
-     ?>
+    ?>
   </div>
 </main>
+
 <?php
-     include_once 'footer.php';
- ?>
+  include_once 'footer.php';
+?>

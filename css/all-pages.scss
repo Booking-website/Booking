@@ -1,36 +1,36 @@
 @import "./main-vars.scss";
-@import "./nav-footer.css";
+@import "./nav-footer.scss";
 
 :root {
   background-color: $background_color;
 }
 
+
 // Scrollbar
 ::-webkit-scrollbar {
-    width: 8px;
+  width: 8px;
 }
-
 /* Track */
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
 }
-
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background: $allButtonBcc;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: $allButtonBcc;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
+
 ::-webkit-scrollbar-thumb:hover {
   -webkit-box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.3);
 }
-::-webkit-scrollbar-thumb:window-inactive {
-  background: rgb(100, 100, 100);
-}
 
+::-webkit-scrollbar-thumb:window-inactive {
+  background: $allButtonBcc;
+}
 
 
 body {
@@ -49,16 +49,12 @@ h4 {
   margin: 0;
 }
 
-p {
-  // padding: 2px 0;
-}
-
 a {
   cursor: pointer;
   text-decoration: none;
 }
 
-a.disabled{
+a.disabled {
   color: rgb(140, 140, 140) !important;
   cursor: not-allowed;
 }
@@ -75,8 +71,9 @@ a.disabled{
 .rotate180 {
   transform: rotate(180deg);
 }
-// Input, select, Form
 
+
+// Input, select, Form
 form {
   input,
   select {
@@ -87,7 +84,7 @@ form {
   }
 }
 
-button {
+button, input[type="submit"] {
   @include bcc__c($allButtonBcc, $allButtonColor);
   cursor: pointer;
   text-align: center;
@@ -99,20 +96,9 @@ button {
     transform: $scale-animation;
   }
 }
-input[type="submit"]{
-  @include bcc__c($allButtonBcc, $allButtonColor);
-  cursor: pointer;
-  text-align: center;
-  border: none;
-  border-radius: 10px;
-  padding: 10px 40px;
 
-  &:hover {
-    transform: $scale-animation;
-  }
-}
+
 // Go to top button
-
 main {
   position: relative;
 }
@@ -133,8 +119,9 @@ main {
     color: $goTopBtnI-bcc;
   }
 }
-// Class: table
 
+
+// Class: table
 .table {
   width: 100%;
   border: $table_border;
@@ -179,19 +166,10 @@ main {
 }
 
 
-
-
-
-
-@media screen and (max-width: 768px) {
-
-}
 @media screen and (max-width: 425px) {
   body {
     font-size: 3vw;
   }
-
-
 
   .container {
     width: 85vw;

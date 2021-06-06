@@ -1,5 +1,4 @@
 <?php
-
  if (isset($_POST["submit"])) {
 
    $fname = $_POST["fname"];
@@ -29,8 +28,7 @@
      exit();
    }
    createUser($conn, $fname, $lname, $phone, $email, $pwd);
-  }
- else {
+  } else {
    header("location: ../signup.php");
    exit();
  }

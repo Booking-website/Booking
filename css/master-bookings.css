@@ -84,7 +84,8 @@
   -webkit-appearance: none;
   margin: 0;
 }
-.main .main__bank-card-dropdown .front form .card-number, .main .main__bank-card-dropdown .front form .card-date {
+.main .main__bank-card-dropdown .front form .card-date,
+.main .main__bank-card-dropdown .front form .card-number {
   margin-bottom: 2%;
 }
 .main .main__bank-card-dropdown .front form .card-number {

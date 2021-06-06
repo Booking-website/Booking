@@ -8,34 +8,34 @@
   padding: 15% 0;
   text-align: center;
 
-  h1{
+  h1 {
     font-size: 4vw;
   }
-  h3{
+
+  h3 {
     font-size: 3.5vw;
   }
-  p{
+
+  p {
     font-size: 2.5vw;
   }
 }
 
-
-.main{
-  .container{
+.main {
+  .container {
     padding: 5% 0;
   }
 
-  form{
+  form {
     overflow-y: hidden;
     padding: 2% 0;
   }
 
   .main__bank-card-dropdown {
     display: none;
-    h3{
+
+    h3 {
       margin: 5% 0;
-    }
-    .wrap {
     }
 
     .card {
@@ -66,20 +66,19 @@
       border-radius: 10px;
       padding: 5%;
 
-      form{
-        input{
+      form {
+        input {
           font-size: 1vw;
           height: 2vw;
         }
       }
 
-
-      i.fa.fa-angle-double-right{
+      i.fa.fa-angle-double-right {
         position: absolute;
         bottom: 4%;
         right: 4%;
 
-        &:hover{
+        &:hover {
           transform: $scale-animation;
         }
       }
@@ -100,21 +99,22 @@
           margin: 0;
         }
 
-
-        .card-number, .card-date{
+        .card-date,
+        .card-number {
           margin-bottom: 2%;
         }
 
         .card-number {
           display: flex;
 
-          input{
+          input {
             text-align: center;
             width: 100%;
             margin-right: 2%;
             margin-bottom: 0;
           }
-          &:last-child{
+
+          &:last-child {
             margin-right: 0;
           }
         }
@@ -125,15 +125,16 @@
           align-items: center;
           text-align: center;
 
-          input{
+          input {
             width: 100%;
             margin: 0 2%;
-            &:nth-child(4){
+
+            &:nth-child(4) {
               margin-right: 0;
             }
           }
 
-          .fa-slash{
+          .fa-slash {
             transform: rotateX(180deg);
           }
 
@@ -151,10 +152,11 @@
         .name-surname {
           display: flex;
 
-          input{
+          input {
             width: 100%;
-            &:nth-child(1){
-            margin-right: 4%;
+
+            &:nth-child(1) {
+              margin-right: 4%;
             }
           }
         }
@@ -169,9 +171,6 @@
         input::-webkit-outer-spin-button {
           -webkit-appearance: none;
           margin: 0;
-        }
-        .card-cvv {
-
         }
       }
     }

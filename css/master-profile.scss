@@ -1,11 +1,12 @@
-@import "./main-vars.scss"; // Main
+@import "./main-vars.scss";
 
 
-
+// Main
 .main {
-  .container{
+  .container {
     padding: 5% 0;
   }
+
   .main__info {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -25,13 +26,15 @@
       margin: 0;
     }
 
-    li{
+    li {
       margin: 10% 0;
     }
+
     li + li {
       padding-top: 5%;
     }
-    li:hover{
+
+    li:hover {
       transform: $scale-animation;
     }
   }
@@ -48,22 +51,23 @@
     text-align: center;
     align-items: center;
 
-    i.fa-user-circle{
+    i.fa-user-circle {
       font-size: 25vw;
       margin: 2% 0;
-      // object-fit: contain;
     }
 
-    div.uploadImage{
+    div.uploadImage {
       padding: 5% 0;
     }
-    label[for="uploadImageInput"]{
+
+    label[for="uploadImageInput"] {
       cursor: pointer;
       @include bcc__c(transparent, $allButtonBcc);
       @include border__radius($color: $allButtonBcc, $rad: 8px);
       padding: 2%;
     }
-    input#uploadImageInput{
+
+    input#uploadImageInput {
       display: none;
       margin-bottom: 1%;
     }
@@ -87,54 +91,35 @@
     text-align: center;
   }
 
-  .editButtonWrapper{
+  .editButtonWrapper {
     margin: 2% 3%;
     float: right;
-    button{
+
+    button {
       @include bcc__c($color: $allButtonBcc);
       @include border__radius($color: transparent);
     }
   }
 }
-
-
-
-
-
-
-
-
-@media screen and (max-width: 1440px) {
-  .header {}
-}
-@media screen and (max-width: 1024px) {
-  .nav {
-    &-left {
-      .logo {}
-    }
-  }
-}
 @media screen and (max-width: 768px) {
   .main {
-    div {
-
-    }
-    .main__info{
+    .main__info {
       grid-template-columns: 1fr;
-      grid-template-areas:
-      "sidebar"
-      "profile";
+      grid-template-areas: "sidebar" "profile";
     }
-    .main__sidebar{
+
+    .main__sidebar {
       padding: 3% 0;
-      li{
+
+      li {
         margin: 3% 0;
       }
     }
-    .main__bank-card-dropdown{
-      .front{
-        form{
-          input{
+
+    .main__bank-card-dropdown {
+      .front {
+        form {
+          input {
             height: 1vw;
           }
         }
@@ -142,38 +127,3 @@
     }
   }
 }
-// @media screen and (max-width: 425px) {
-//   body {
-//     font-size: 3.5vw;
-//   }
-//
-//   .nav {
-//     .container {
-//       display: block;
-//
-//       .nav-left {
-//         align-items: center;
-//
-//         .logo {
-//           max-height: 50px;
-//           object-fit: contain;
-//         }
-//       }
-//
-//       .menu {
-//         text-align: center;
-//         padding: 10px;
-//       }
-//     }
-//
-//     &-left {
-//       .logo {
-//         width: auto;
-//       }
-//     }
-//   }
-//
-//   .container {
-//     width: 85vw;
-//   }
-// }
