@@ -359,7 +359,7 @@ include_once '../php/header.php';
           </div>
           <div class="bottom">
             <p>
-              Conference calls, to-do lists and, of course, soccer practice.  Busy lives and packed schedules call for trips that   are headache free. Our goal is to provide stress-free travel every time you and your family book with us so that you can spend less time worrying and more time building memories. To that end, we’ll help you find and build your perfect trip, plus offer transparent pricing and verifiable reviews, and 24/7 guaranteed customer support before, during, and after your vacation.
+              Busy lives and packed schedules call for trips that are headache free. Our goal is to provide stress-free travel every time you and your family book with us. To that end, we’ll help you find and build your perfect trip, and 24/7 guaranteed customer support before, during, and after your vacation.
             </p>
           </div>
         </a>

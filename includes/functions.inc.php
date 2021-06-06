@@ -37,7 +37,7 @@ function emailExists($conn, $email, $phone) {
   $sql = "SELECT * FROM users WHERE email = ? OR phoneNumber = ?;";
   $stmt = mysqli_stmt_init($conn);
   if (!mysqli_stmt_prepare($stmt, $sql)) {
-    header("location: ../signup.php?error=stmtfailed");
+    header("location: ../php/signup.php?error=stmtfailed");
     exit();
   }
 
@@ -59,7 +59,7 @@ function createUser($conn, $fname, $lname, $phone, $email, $pwd) {
   $sql = "INSERT INTO users (fname, lname, email, phoneNumber, userPwd) VALUES (?, ?, ?, ?, ?);";
   $stmt = mysqli_stmt_init($conn);
   if (!mysqli_stmt_prepare($stmt, $sql)) {
-    header("location: ../signup.php?error=stmtfailed");
+    header("location: ../php/signup.php?error=stmtfailed");
     exit();
   }
 
@@ -68,7 +68,7 @@ function createUser($conn, $fname, $lname, $phone, $email, $pwd) {
   mysqli_stmt_bind_param($stmt, "sssss", $fname, $lname, $email, $phone, $hashedPwd);
   mysqli_stmt_execute($stmt);
   mysqli_stmt_close($stmt);
-  header("location: ../signup.php?error=none");
+  header("location: ../php/signup.php?error=none");
   exit();
 }
 
@@ -86,7 +86,7 @@ function loginUser($conn, $username, $pwd) {
   $usernameExists = emailExists($conn, $username, $username);
 
   if ($usernameExists === false) {
-    header("location: ../login.php?error=wronglogin");
+    header("location: ../php/login.php?error=wronglogin");
     exit();
   }
 
@@ -94,7 +94,7 @@ function loginUser($conn, $username, $pwd) {
   $checkPwd = password_verify($pwd, $pwdHashed);
 
   if ($checkPwd === false) {
-    header("location: ../login.php?error=wrongpwd");
+    header("location: ../php/login.php?error=wrongpwd");
     exit();
   }
   else if ($checkPwd === true) {

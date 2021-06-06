@@ -1,5 +1,5 @@
 <?php
-  include_once 'header.php';
+  include_once './header.php';
 ?>
 
 <head>
@@ -11,7 +11,7 @@
 <main class="main" id="main">
   <div class="container">
     <h1>Registration</h1>
-    <form action="includes/signup.inc.php" method="post">
+    <form action="../includes/signup.inc.php" method="post">
       <input type="text" name="fname" placeholder="First name">
       <input type="text" name="lname" placeholder="Last name">
       <input type="tel" name="tel" value="+7" placeholder="Telephone number">
@@ -41,5 +41,5 @@
 </main>
 
 <?php
-  include_once 'footer.php';
+  include_once './footer.php';
 ?>
