@@ -34,15 +34,19 @@
 			if(mysqli_stmt_num_rows($stmt)==0) {
 				echo "<h3><center>No upcoming trips!</center></h3>";
 			} else {
-				echo "<table class='table' cellpadding=\"10\"";
-				echo "<tr><th>TicketID</th>
-				<th>Date of Reservation</th>
-				<th>FlightID.</th>
-				<th>From city</th>
-        <th>To city</th>
-        <th>Departure date</th>
-				<th>Class</th>
-				</tr>";
+				echo "
+					<div class=\"tableWrapper\">
+						<table class='table' cellpadding=\"10\"
+							<tr>
+								<th>TicketID</th>
+								<th>Date of Reservation</th>
+								<th>FlightID.</th>
+								<th>From city</th>
+				        <th>To city</th>
+				        <th>Departure date</th>
+								<th>Class</th>
+							</tr>
+				";
 
 				while(mysqli_stmt_fetch($stmt)) {
     			echo "<tr>
@@ -55,7 +59,11 @@
 					<td>".$class."</td>
     			</tr>";
     		}
-    		echo "</table> <br>";
+    		echo "
+						</table>
+					</div>
+					<br>
+				";
 			}
 			mysqli_stmt_close($stmt);
 			mysqli_close($conn);

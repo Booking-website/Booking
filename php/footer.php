@@ -9,13 +9,13 @@
       </div>
     </div>
     <div class="links">
-      <a href="#">
+      <a href="./index.php" class="footerLogo">
         <img src="../img/logo.png"/>
       </a>
-      <a href="#">Our partners</a>
-      <a href="#">Need help?</a>
-      <a href="#">Donate</a>
-      <a href="#">About us</a>
+      <a>Our partners</a>
+      <a class="sendMessage">Need help?</a>
+      <a class="donate">Donate</a>
+      <a class="about">About us</a>
       <a href="#" class="disabled">Future updates</a>
     </div>
     <div class="legal">
@@ -23,13 +23,6 @@
     </div>
   </div>
 </footer>
-
-
-<!-- Scroll Reveal -->
-<script src="https://unpkg.com/scrollreveal"></script>
-<script>
-  ScrollReveal({ reset: true });
-</script>
 
 <!-- JQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

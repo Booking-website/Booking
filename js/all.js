@@ -3,4 +3,6 @@ $(document).ready(()=>{
   $("a.disabled").click( e => {
     e.preventDefault();
   });
+
+
 })

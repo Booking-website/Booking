@@ -21,7 +21,7 @@
   margin: 0;
 }
 .main .main__sidebar li {
-  margin: 10% 0;
+  margin: 5% 0;
 }
 .main .main__sidebar li + li {
   padding-top: 5%;

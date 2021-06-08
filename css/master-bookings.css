@@ -19,8 +19,8 @@
 .main .container {
   padding: 5% 0;
 }
-.main form {
-  overflow-y: hidden;
+.main form, .main .tableWrapper {
+  overflow-x: scroll;
   padding: 2% 0;
 }
 .main .main__bank-card-dropdown {

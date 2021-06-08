@@ -83,7 +83,7 @@
           ?>
         </div>
         <div class="editButtonWrapper">
-          <button type="button" name="edit">Edit profile</button>
+          <button type="button" name="edit" class="editProfileButton">Edit profile</button>
         </div>
       </div>
     </div>
@@ -94,3 +94,5 @@
 <?php
   include_once 'footer.php';
 ?>
+<!-- Own JS -->
+<script src="../js/profile.js"></script>

@@ -94,8 +94,8 @@
     overflow: hidden;
     z-index: 100;
     background-color: #f2f2f2;
-    @include border__radius($color: $allButtonBcc);
-    box-shadow: 0 0 10px rgb(54, 54, 54);
+    @include border__radius($width: 2px, $color: $allButtonBcc);
+    // box-shadow: 0 0 10px rgb(54, 54, 54);
   }
 
   .popupWrapper {
@@ -121,7 +121,7 @@
   }
 
   .popupContentWrapper {
-    padding: 2vh;
+    padding: 3vh;
     display: block;
     width: $container-width;
     margin: 0 auto;
@@ -133,8 +133,8 @@
     .popupGalleryWrapper {
       display: flex;
       overflow-x: scroll;
-      width: 95%;
-      margin: 0 auto;
+      height: 20vh;
+      padding: 1% 0;
     }
 
     h2 {
@@ -212,7 +212,6 @@
 
     .part1,
     .part2,
-    .part3,
     .part4 {
       .card,
       .card1,
@@ -233,6 +232,17 @@
       .card3:hover,
       .card:hover {
         transform: $scale-animation;
+      }
+    }
+
+    .part3{
+      .card{
+        a{
+          cursor: default;
+          .top{
+            padding-top: 30%;
+          }
+        }
       }
     }
 
@@ -402,6 +412,7 @@
         display: flex;
 
         .text {
+          margin: auto;
           padding: 4%;
           width: 66%;
         }

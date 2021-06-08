@@ -8,12 +8,11 @@ body {
 //Main
 .main {
   display: flex;
-  text-align: center;
+  justify-content: center;
   align-items: center;
-  height: 80vh;
 
   .container {
-    margin-top: 50px;
+    margin: 25vw 0;
     background-color: rgba(255, 255, 255, .6);
     border-radius: 5px;
     padding: 20px 30px;
@@ -60,36 +59,14 @@ body {
     }
   }
 }
-@media screen and (max-width: 425px) {
-  .nav {
-    .container {
-      display: block;
-
-      .nav-left {
-        align-items: center;
-
-        .logo {
-          object-fit: contain;
-        }
-      }
-
-      .menu {
-        text-align: center;
-      }
-    }
-  }
-
-  .main {
-    .container {
-      form {
-        div {
-          grid-template-columns: 1fr 5fr;
-          grid-gap: 10px;
-        }
-      }
-    }
-    form {
+@media screen and (max-width: 768px) {
+  .main{
+    form{
       grid-template-columns: 1fr;
+
+      .registerButton, .loginButton{
+        grid-column: auto;
+      }
     }
   }
 }

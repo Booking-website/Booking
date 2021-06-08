@@ -26,8 +26,8 @@
     padding: 5% 0;
   }
 
-  form {
-    overflow-y: hidden;
+  form, .tableWrapper {
+    overflow-x: scroll;
     padding: 2% 0;
   }
 

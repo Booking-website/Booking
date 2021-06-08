@@ -62,41 +62,51 @@
             mysqli_stmt_store_result($stmt);
 
             if(mysqli_stmt_num_rows($stmt)==0) {
-              echo "<h3><i class=\"fa fa-times\"></i> Sorry, no flights are available!</h3>
-              <p>
-        				<a href=\"./index.php\"><i class=\"fa fa-home\"></i> Go Home</a>
-        			</p>";
+              echo "
+                <h3>
+                  <i class=\"fa fa-times\"></i> Sorry, no flights are available!
+                </h3>
+                <p>
+          				<a href=\"./index.php\"><i class=\"fa fa-home\"></i> Go Home</a>
+          			</p>
+              ";
             } else {
-              echo "<form class=\"availableFlightsForm\" action=\"passenger.details.php\" method=\"post\">";
-              echo "<table class = \"table\" cellpadding=\"10\">";
-              echo "<tr><th>Flight No.</th>
-              <th>Origin</th>
-              <th>Destination</th>
-              <th>Departure Date</th>
-              <th>Departure Time</th>
-              <th>Arrival Date</th>
-              <th>Arrival Time</th>
-              <th>Price (Economy)</th>
-              <th>Select</th>
-              </tr>";
+              echo "
+              <form class=\"availableFlightsForm\" action=\"passenger.details.php\" method=\"post\">
+                <table class = \"table\" cellpadding=\"10\">
+                  <tr><th>Flight No.</th>
+                    <th>Origin</th>
+                    <th>Destination</th>
+                    <th>Departure Date</th>
+                    <th>Departure Time</th>
+                    <th>Arrival Date</th>
+                    <th>Arrival Time</th>
+                    <th>Price (Economy)</th>
+                    <th>Select</th>
+                  </tr>
+              ";
 
               while(mysqli_stmt_fetch($stmt)) {
-                    echo "<tr>
+                echo "
+                  <tr>
                     <td>".$flightID."</td>
                     <td>".$from_city."</td>
-                <td>".$to_city."</td>
-                <td>".$departure_date."</td>
-                <td>".$departure_time."</td>
-                <td>".$arrival_date."</td>
-                <td>".$arrival_time."</td>
-                <td>&#x20b9; ".$price_economy."</td>
-                <td><input type=\"radio\" name=\"select_flight\" value=\"".$flightID."\"></td>
-                    </tr>";
+                    <td>".$to_city."</td>
+                    <td>".$departure_date."</td>
+                    <td>".$departure_time."</td>
+                    <td>".$arrival_date."</td>
+                    <td>".$arrival_time."</td>
+                    <td>&#x20b9; ".$price_economy."</td>
+                    <td><input type=\"radio\" name=\"select_flight\" value=\"".$flightID."\"></td>
+                  </tr>
+                ";
               }
 
-              echo "</table> <br>";
-              echo "<input type=\"submit\" value=\"Select Flight\" name=\"Select\">";
-              echo "</form>";
+              echo "
+                </table><br>
+                <input type=\"submit\" value=\"Select Flight\" name=\"Select\">
+              </form>
+              ";
             }
           } else if($class="business") {
             $query="SELECT flightID,from_city,to_city,departure_date,departure_time,arrival_date,arrival_time,price_business FROM flights where from_city=? and to_city=? and departure_date=? and seats_business>=? ORDER BY departure_time";
@@ -109,18 +119,21 @@
             if(mysqli_stmt_num_rows($stmt)==0) {
               echo "<h3>No flights are available !</h3>";
             } else {
-              echo "<form action=\"passenger.details.php\" method=\"post\">";
-              echo "<table class = 'table availableFlights' cellpadding=\"10\">";
-              echo "<tr><th>Flight No.</th>
-              <th>Origin</th>
-              <th>Destination</th>
-              <th>Departure Date</th>
-              <th>Departure Time</th>
-              <th>Arrival Date</th>
-              <th>Arrival Time</th>
-              <th>Price (Business)</th>
-              <th>Select</th>
-              </tr>";
+              echo "
+                <form action=\"passenger.details.php\" method=\"post\">
+                  <table class = 'table availableFlights' cellpadding=\"10\">
+                    <tr>
+                      <th>Flight No.</th>
+                      <th>Origin</th>
+                      <th>Destination</th>
+                      <th>Departure Date</th>
+                      <th>Departure Time</th>
+                      <th>Arrival Date</th>
+                      <th>Arrival Time</th>
+                      <th>Price (Business)</th>
+                      <th>Select</th>
+                    </tr>
+              ";
 
               while(mysqli_stmt_fetch($stmt)) {
                 echo "<tr>
@@ -136,9 +149,11 @@
                 </tr>";
               }
 
-              echo "</table> <br>";
-              echo "<input type=\"submit\" value=\"Select Flight\" name=\"Select\">";
-              echo "</form>";
+              echo "
+                </table> <br>
+                <input type=\"submit\" value=\"Select Flight\" name=\"Select\">
+              </form>
+              ";
             }
           }
 
