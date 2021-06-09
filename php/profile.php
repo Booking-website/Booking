@@ -44,11 +44,58 @@
       <div class="main__profile-info">
         <div class="main__profile-img-wrapper">
           <i class="fa fa-user-circle"></i>
-          <form method="POST" action="profile.php">
+
+
+
+          <?php
+            $msg = "";
+
+            // If upload button is clicked ...
+            if (isset($_POST['upload'])) {
+
+              $filename = $_FILES["uploadfile"]["name"];
+              $tempname = $_FILES["uploadfile"]["tmp_name"];
+              $folder = "../img/profileImg/".$filename;
+
+              $db = mysqli_connect("localhost", "root", "", "avia-tickets");
+
+
+              $userId = "SELECT count(*), userID FROM users WHERE userID=?";
+              $stmt=mysqli_prepare($db,$userId);
+              mysqli_stmt_bind_param($stmt,"s",$_SESSION['userid']);
+              mysqli_stmt_execute($stmt);
+              mysqli_stmt_bind_result($stmt,$cnt,$userID);
+              mysqli_stmt_fetch($stmt);
+
+                  // TODO:
+                  // 1. Can't send send to DB
+                  // 2. Show as img in profile
+                  // Get all the submitted data from the form
+                  $query = "INSERT INTO profileimg VALUES ('$userId', '$filename')";
+
+                  // Execute query
+                  mysqli_query($db, $query);
+
+                  // Now let's move the uploaded image into the folder: image
+                  if (move_uploaded_file($tempname, $folder))  {
+                      $msg = "Image uploaded successfully";
+                  }else{
+                      $msg = "Failed to upload image";
+                }
+            }
+            $result = mysqli_query($db, "SELECT * FROM `profileimg`");
+
+          ?>
+          <img src="<?php echo $data['Filename']; ?>">
+
+
+
+
+          <form method="POST" action="profile.php" enctype="multipart/form-data">
               <input type="hidden" name="size" value="1000000">
             <div class="uploadImage">
               <label for="uploadImageInput">Upload Image</label>
-              <input type="file" name="image" id="uploadImageInput">
+              <input type="file" name="uploadfile" id="uploadImageInput">
             </div>
             <div>
               <button type="submit" name="upload">POST</button>
