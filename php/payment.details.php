@@ -100,6 +100,7 @@
 				<div class="wrap">
 					<div class="card">
 						<div class="front">
+							<h3 class="bankName"><i class="fa fa-university"></i>BestBank</h3>
 							<form class="bank-card" action="" method="post">
 								<div class="card-number">
 									<input type="number" class="card-number card-number1" name="card-number1" value="" maxlength="4" min="1000" max="9999" placeholder="XXXX" required>

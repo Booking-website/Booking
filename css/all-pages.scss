@@ -12,16 +12,16 @@
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
+  -webkit-box-shadow: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
+  -webkit-border-radius: 0;
+  border-radius: 0;
   background: $allButtonBcc;
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -37,9 +37,9 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Arial", sans-serif;
+  font-weight: 500;
   font-size: $body_font-size;
   overflow-x: hidden;
-  width: 100vw;
 }
 
 h1,
@@ -165,12 +165,15 @@ main {
   border-radius: 0 8px 8px 0;
 }
 
-
+@media screen and (max-width: 768px) {
+  body{
+    font-size: 1.6vw;
+  }
+}
 @media screen and (max-width: 425px) {
   body {
-    font-size: 3vw;
+    font-size: 2.5vw;
   }
-
   .container {
     width: 85vw;
   }

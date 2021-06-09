@@ -76,9 +76,8 @@
   overflow: hidden;
   z-index: 100;
   background-color: #f2f2f2;
-  border: 1px solid #005aeb;
+  border: 2px solid #005aeb;
   border-radius: 5px;
-  box-shadow: 0 0 10px #363636;
 }
 .main .popupWrapper {
   display: block;
@@ -103,9 +102,9 @@
   color: #005aeb;
 }
 .main .popupContentWrapper {
-  padding: 2vh;
+  padding: 3vh;
   display: block;
-  width: 70%;
+  width: 70vw;
   margin: 0 auto;
 }
 .main .popupContentWrapper .popupTextWrapper {
@@ -114,8 +113,8 @@
 .main .popupContentWrapper .popupGalleryWrapper {
   display: flex;
   overflow-x: scroll;
-  width: 95%;
-  margin: 0 auto;
+  height: 20vh;
+  padding: 1% 0;
 }
 .main .popupContentWrapper h2 {
   text-align: center;
@@ -197,10 +196,6 @@
 .main div .part2 .card1,
 .main div .part2 .card2,
 .main div .part2 .card3,
-.main div .part3 .card,
-.main div .part3 .card1,
-.main div .part3 .card2,
-.main div .part3 .card3,
 .main div .part4 .card,
 .main div .part4 .card1,
 .main div .part4 .card2,
@@ -216,10 +211,6 @@
 .main div .part2 .card1 a .top,
 .main div .part2 .card2 a .top,
 .main div .part2 .card3 a .top,
-.main div .part3 .card a .top,
-.main div .part3 .card1 a .top,
-.main div .part3 .card2 a .top,
-.main div .part3 .card3 a .top,
 .main div .part4 .card a .top,
 .main div .part4 .card1 a .top,
 .main div .part4 .card2 a .top,
@@ -234,15 +225,17 @@
 .main div .part2 .card2:hover,
 .main div .part2 .card3:hover,
 .main div .part2 .card:hover,
-.main div .part3 .card1:hover,
-.main div .part3 .card2:hover,
-.main div .part3 .card3:hover,
-.main div .part3 .card:hover,
 .main div .part4 .card1:hover,
 .main div .part4 .card2:hover,
 .main div .part4 .card3:hover,
 .main div .part4 .card:hover {
   transform: scale3d(0.95, 0.95, 0.95);
+}
+.main div .part3 .card a {
+  cursor: default;
+}
+.main div .part3 .card a .top {
+  padding-top: 30%;
 }
 .main div .part1,
 .main div .part2,
@@ -398,6 +391,7 @@
   display: flex;
 }
 .main div .part5 .right .text {
+  margin: auto;
   padding: 4%;
   width: 66%;
 }

@@ -26,9 +26,13 @@
     padding: 5% 0;
   }
 
-  form {
-    overflow-y: hidden;
+  form, .tableWrapper {
+    overflow-x: scroll;
     padding: 2% 0;
+  }
+
+  .main__bank-card-dropdown, .main__bank-card-dropdown input{
+    font-family: 'Iceland', cursive;
   }
 
   .main__bank-card-dropdown {
@@ -67,9 +71,32 @@
       padding: 5%;
 
       form {
+        overflow: visible;
+
+        ::placeholder {
+          color: #e8e8e8;
+          opacity: 1;
+        }
+
+        :-ms-input-placeholder {
+          color: #e8e8e8;
+        }
+
+        ::-ms-input-placeholder {
+          color: #e8e8e8;
+        }
+
         input {
+          text-align: center;
           font-size: 1vw;
           height: 2vw;
+          background-color: transparent;
+          border: none;
+          color: #fff;
+
+          &:focus{
+            outline: 0.5px inset #f2f2f2;
+          }
         }
       }
 
@@ -85,7 +112,15 @@
     }
 
     .front {
+      position: relative;
       transform: rotateY(0deg);
+
+      .bankName{
+        text-align: center;
+        position: absolute;
+        top: 0;
+        font-size: $body_font-size + 0.5vw;
+      }
 
       .bank-card {
         justify-content: center;
