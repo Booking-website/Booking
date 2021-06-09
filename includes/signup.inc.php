@@ -31,4 +31,14 @@
   } else {
    header("location: ../php/signup.php");
    exit();
+
+   // $sql = "SELECT * FROM user WHERE userID = '$id'";
+   // $result = mysqli_query($conn, $sql);
+   // if (mysqli_num_rows($result) > 0){
+   //   while($row = mysqli_fetch_assoc($result)){
+   //     $id = $row['userID'];
+   //     $sql = "INSERT INTO profileImg (userid, status) VALUES ('$id', 1)";
+   //     header("location: profile.php");
+   //   }
+   // }
  }

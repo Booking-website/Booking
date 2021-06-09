@@ -46,27 +46,31 @@
 					if($cnt!=1) {
 						mysqli_close($conn);
 						header("location: cancel.booked.tickets.php?msg=failed");
-					} else if($class=='economy') {
+					}
+					$query="UPDATE tickets SET booking_status='CANCELED' WHERE ticketID=? and userID=?";
+					$stmt=mysqli_prepare($conn,$query);
+					mysqli_stmt_bind_param($stmt,"ss",$ticketID,$userID);
+					mysqli_stmt_execute($stmt);
+					$affected_rows=mysqli_stmt_affected_rows($stmt);
+					mysqli_stmt_close($stmt);
+					if($affected_rows==1)
+					{
+					 if($class=='economy') {
             $query="UPDATE flights SET seats_economy=seats_economy+1 WHERE flightID=?";
             $stmt=mysqli_prepare($conn,$query);
             mysqli_stmt_bind_param($stmt,"s", $flightID);
             mysqli_stmt_execute($stmt);
-            $affected_rows=mysqli_stmt_affected_rows($stmt);
+            $affected_rows_1=mysqli_stmt_affected_rows($stmt);
             mysqli_stmt_close($stmt);
           } else if($class=='business') {
             $query="UPDATE flights SET seats_business=seats_business+1 WHERE flightID=?";
             $stmt=mysqli_prepare($conn,$query);
             mysqli_stmt_bind_param($stmt,"s", $flightID);
             mysqli_stmt_execute($stmt);
-            $affected_rows=mysqli_stmt_affected_rows($stmt);
+            $affected_rows_1=mysqli_stmt_affected_rows($stmt);
             mysqli_stmt_close($stmt);
           }
-					if($affected_rows==1) {
-            $query="DELETE FROM tickets WHERE ticketID=? and userID=?";
-  					$stmt=mysqli_prepare($conn,$query);
-  					mysqli_stmt_bind_param($stmt,"ss",$ticketID,$userID);
-  					mysqli_stmt_execute($stmt);
-  					mysqli_stmt_close($stmt);
+					if($affected_rows_1==1) {
             echo "
 							<h3>Cancelled successfully!</h3>
 							<p>
@@ -75,7 +79,8 @@
 								</a>
 							</p>
 						";
-					} else {
+					}
+				} else {
 						echo "Submit Error";
 						echo mysqli_error();
 						header("location: ./cancel.booked.tickets.php?msg=failed");

@@ -42,19 +42,27 @@
       </div>
 
       <div class="main__profile-info">
-        <div class="main__profile-img-wrapper">
-          <i class="fa fa-user-circle"></i>
-          <form method="POST" action="profile.php">
-              <input type="hidden" name="size" value="1000000">
-            <div class="uploadImage">
-              <label for="uploadImageInput">Upload Image</label>
-              <input type="file" name="image" id="uploadImageInput">
-            </div>
-            <div>
-              <button type="submit" name="upload">POST</button>
-            </div>
-          </form>
-        </div>
+      <?php
+      include_once '../includes/dbh.inc.php';
+
+          $id = $_SESSION['userid'];
+          $sqlImg = "SELECT * FROM profileImg WHERE userid = '$id'";
+          $resultImg = mysqli_query($conn, $sqlImg);
+          while ($rowImg = mysqli_fetch_assoc($resultImg)){
+            echo "<div class='main__profile-img-wrapper'>";
+            if ($rowImg['status'] == 0) {
+              echo "<img src = '../img/profile".$id.".jpg' style ='height:200px' />";
+            } else {
+              echo "<img src = '../img/default-profile-photo.jpg' style ='height:200px' />";
+            }
+          }
+       ?>
+       <form action="upload.php" method="post"
+enctype="multipart/form-data">
+           <input type="file" name="file">
+           <button type='submit' name='submit'>POST</button>
+       </form>
+     </div>
         <div class="main__individual-info">
           <?php
             include_once '../includes/dbh.inc.php';
