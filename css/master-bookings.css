@@ -23,6 +23,9 @@
   overflow-x: scroll;
   padding: 2% 0;
 }
+.main .main__bank-card-dropdown, .main .main__bank-card-dropdown input {
+  font-family: "Iceland", cursive;
+}
 .main .main__bank-card-dropdown {
   display: none;
 }
@@ -57,10 +60,35 @@
   border-radius: 10px;
   padding: 5%;
 }
+.main .main__bank-card-dropdown .back form,
+.main .main__bank-card-dropdown .front form {
+  overflow: visible;
+}
+.main .main__bank-card-dropdown .back form ::placeholder,
+.main .main__bank-card-dropdown .front form ::placeholder {
+  color: #e8e8e8;
+  opacity: 1;
+}
+.main .main__bank-card-dropdown .back form :-ms-input-placeholder,
+.main .main__bank-card-dropdown .front form :-ms-input-placeholder {
+  color: #e8e8e8;
+}
+.main .main__bank-card-dropdown .back form ::-ms-input-placeholder,
+.main .main__bank-card-dropdown .front form ::-ms-input-placeholder {
+  color: #e8e8e8;
+}
 .main .main__bank-card-dropdown .back form input,
 .main .main__bank-card-dropdown .front form input {
+  text-align: center;
   font-size: 1vw;
   height: 2vw;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+.main .main__bank-card-dropdown .back form input:focus,
+.main .main__bank-card-dropdown .front form input:focus {
+  outline: 0.5px inset #f2f2f2;
 }
 .main .main__bank-card-dropdown .back i.fa.fa-angle-double-right,
 .main .main__bank-card-dropdown .front i.fa.fa-angle-double-right {
@@ -73,7 +101,14 @@
   transform: scale3d(0.95, 0.95, 0.95);
 }
 .main .main__bank-card-dropdown .front {
+  position: relative;
   transform: rotateY(0deg);
+}
+.main .main__bank-card-dropdown .front .bankName {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  font-size: 1.5vw;
 }
 .main .main__bank-card-dropdown .front .bank-card {
   justify-content: center;
