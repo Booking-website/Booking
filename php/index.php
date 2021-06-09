@@ -292,7 +292,7 @@ include_once '../php/header.php';
           </div>
           <div class="bottom">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.   Tenetur, quos.
+              From the bluff, Ho'okipa is a great spot to stop and watch some of the best surfing in Maui.
             </p>
           </div>
         </a>
