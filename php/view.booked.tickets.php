@@ -34,6 +34,7 @@
 			if(mysqli_stmt_num_rows($stmt)==0) {
 				echo "<h3><center>No upcoming trips!</center></h3>";
 			} else {
+				echo "<div class=\"tableWrapper\">";
 				echo "<table class='table' cellpadding=\"10\"";
 				echo "<tr><th>TicketID</th>
 				<th>Date of Reservation</th>
@@ -58,6 +59,7 @@
     			</tr>";
     		}
     		echo "</table> <br>";
+				echo "</div>";
 			}
 			mysqli_stmt_close($stmt);
 			mysqli_close($conn);
