@@ -302,11 +302,9 @@ include_once '../php/header.php';
           <div class="popupContentWrapper">
             <div class="popupTextWrapper">
               <h2>
-                Some text to test
-                <br>
-                <i>Small description</i>
+                Road to Hana
               </h2>
-              <h4>Title</h4>
+              <h4>Hana overview</h4>
               <p>
                 To do this iconic Maui day trip right you’ll need 10 to 12 hours (or better yet, an overnight stay in Hana so you can really take your time driving there and back), making it most suitable for older kids. The world-renowned, 52-mile Hana Highway connects Kahului with the town of Hana along a twisty road dotted with 59 (mostly one-lane) bridges and often a lot of crowds. But patience is rewarded with an endless array of Mother Nature’s finest offerings, including the black sand beach at Waiʻanapanapa State Park, the Ka’Eleku Caverns (aka the Hana Lava Tube), the stunning, 80-foot Wailua Falls, and Ohe’o Gulch, site of the Seven Sacred Pools—actually dozens of freshwater pools fed by waterfalls. Be sure to stop at at least one of the many roadside stands selling fresh, tropical fruit and banana bread, and download an app or audio guide to customize the trip to your family’s taste.
               </p>
@@ -478,7 +476,7 @@ include_once '../php/header.php';
                 <h2>
                   Pacific Coast Highway <i>California</i>
                 </h2>
-                <h4>Why we recomend?/h5>
+                <h4>Why we recomend?</h4>
                 <p>
                   This one’s for you, weary parents. This stretch of Highway 1 running up and down the California coastline is an incredibly popular road trip for its breathtaking scenery—just the thing to indulge your tired selves in while your little ones snooze in the back seat. Tackle all, part or—really—as much as you can knowing that this is typically a difficult age for traveling with kids. Buckle in your infant for a midday nap during a drive along the soaring cliffs in Big Sur, or take advantage of the car-accessible beaches and dune areas at Pismo Beach. From late October through February, you can also take your tots to the Eucalyptus-tree filled Pismo Beach Monarch Butterfly Grove, where more than 10,000 of the butterflies migrate each year. Treat your toddler to a visit to the Elephant Seal Rookery at San Piedras Beach in San Simeon, where as many as 17,000 of the adorable, big-nosed creatures head during migration season. If you’re brave enough to give the entire 656-mile north to south trip a try with a toddler, dangle a visit to either Disneyland or Legoland as a reward at the end, once the parks safely reopen.
                 </p>

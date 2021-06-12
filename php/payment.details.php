@@ -103,10 +103,10 @@
 							<h3 class="bankName"><i class="fa fa-university"></i>BestBank</h3>
 							<form class="bank-card" action="" method="post">
 								<div class="card-number">
-									<input type="number" class="card-number card-number1" name="card-number1" value="" maxlength="4" min="1000" max="9999" placeholder="XXXX" required>
-									<input type="number" class="card-number card-number2"  name="card-number2" value="" maxlength="4" min="1000" max="9999" placeholder="XXXX" required>
-									<input type="number" class="card-number card-number3"  name="card-number3" value="" maxlength="4" min="1000" max="9999" placeholder="XXXX" required>
-									<input type="number" class="card-number card-number4"  name="card-number4" value="" maxlength="4" min="1000" max="9999" placeholder="XXXX" required>
+									<input type="number" id="card-number1" class="card-number card-number1" name="card-number1" value="" maxlength="4" min="1000" max="9999" placeholder="XXXX" required>
+									<input type="number" id="card-number2" class="card-number card-number2"  name="card-number2" value="" maxlength="4" min="1000" max="9999" placeholder="XXXX" required>
+									<input type="number" id="card-number3" class="card-number card-number3"  name="card-number3" value="" maxlength="4" min="1000" max="9999" placeholder="XXXX" required>
+									<input type="number" id="card-number4" class="card-number card-number4"  name="card-number4" value="" maxlength="4" min="1000" max="9999" placeholder="XXXX" required>
 								</div>
 								<div class="card-date">
 									<span class="valid">Valid thru</span>

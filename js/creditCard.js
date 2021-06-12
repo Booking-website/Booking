@@ -1,4 +1,4 @@
-$(document).ready(()=>{
+// $(document).ready(()=>{
   // Credit card
   $("input#bank_card").click(()=>{
     document.getElementById("bank_card").setAttribute("checked", "checked");
@@ -26,9 +26,14 @@ $(document).ready(()=>{
     $('.back').css("transform", "rotateY(180deg)");
   });
 
-  $("input.card-number").keyup(()=>{
-    if (this.value.length > 4) {
-      this.value = this.value.slice(0, 4);
+  // $("#card-number1").keyup(()=>{
+  //   if (this.value.length > 4) {
+  //     this.value = this.value.slice(0, 4);
+  //   }
+  // });
+  $("#card-number1").on('input', () => {
+    if ($(this).val().length > 4) {
+      $(this).val() = this.value.slice(0, 4);
     }
   });
   $("input.card-date1").keyup(()=>{
@@ -55,4 +60,4 @@ $(document).ready(()=>{
       this.value = this.value.slice(0, 3);
     }
   });
-})
+// })
