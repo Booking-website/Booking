@@ -12,7 +12,7 @@
       <a href="./index.php" class="footerLogo">
         <img src="../img/logo.png"/>
       </a>
-      <a>Our partners</a>
+      <a class="disabled">Our partners</a>
       <a class="sendMessage">Need help?</a>
       <a class="donate">Donate</a>
       <a class="about">About us</a>
