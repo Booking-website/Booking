@@ -13,7 +13,7 @@
 				<td class="admin_func"><a href="admin_view_booked_tickets.php"><i class="fa fa-plane" aria-hidden="true"></i> View List of Booked Tickets for a Flight</a>
 				</td>
 			</tr>
-			<tr>
+			<tr> 
 				<td class="admin_func"><a href="add_flight_details.php"><i class="fa fa-plane" aria-hidden="true"></i> Add Flight Schedule Details</a>
 				</td>
 			</tr>
