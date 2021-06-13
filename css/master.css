@@ -168,8 +168,8 @@
 }
 .main div .top {
   background-color: transparent;
-  color: #fff;
-  text-shadow: 0 0 3px black;
+  color: #f2f2f2;
+  text-shadow: 0 0 2px #005aeb;
   text-align: right;
   align-items: flex-end;
   border-top-left-radius: 10px;
@@ -315,7 +315,7 @@
   grid-area: p3_card;
 }
 .main div .part3 .card .top {
-  background: url("../img/long.jpg") no-repeat center top/cover;
+  background: url("../img/cardImgs/travelSafe.jpg") no-repeat center top/cover;
 }
 .main div .part4 {
   grid-template-areas: "p4_card1 p4_card2 p4_card3";

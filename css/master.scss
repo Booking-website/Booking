@@ -188,8 +188,8 @@
     }
 
     .top {
-      @include bcc__c($color: #fff);
-      text-shadow: 0 0 3px rgb(0, 0, 0);
+      @include bcc__c($color: $allButtonColor);
+      text-shadow: 0 0 2px $allButtonBcc;
       text-align: right;
       align-items: flex-end;
       border-top-left-radius: 10px;
@@ -326,7 +326,7 @@
 
         .top {
           // padding: 30% 0 0 0;
-          background: url("../img/long.jpg") no-repeat center top / cover;
+          background: url("../img/cardImgs/travelSafe.jpg") no-repeat center top / cover;
         }
       }
     }
