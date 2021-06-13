@@ -637,7 +637,31 @@ include_once '../php/header.php';
           </a>
         </div>
       </div>
-      <div class="reviews">
+
+
+      <?php
+      include_once '../includes/dbh.inc.php';
+
+      $sql = "SELECT reviews.text, users.fname, users.lname, reviews.date_of_review FROM reviews INNER JOIN users ON reviews.userID = users.userID ORDER BY  date_of_review";
+      $stmt=mysqli_prepare($conn,$sql);
+      mysqli_stmt_execute($stmt);
+      mysqli_stmt_bind_result($stmt,$text,$fname,$lname,$date_of_review);
+      mysqli_stmt_store_result($stmt);
+
+      while (mysqli_stmt_fetch($stmt)) {
+        echo "   <div class='reviews'>
+            <div class='allReviews'>
+              <div class='reviewMessage'>
+                <h3><i class='fa fa-circle'></i>".$fname. " ". $lname. "</h3>
+                <p>".$text."
+                </p>".$date_of_review."
+              </div>";
+      }
+      if (mysqli_stmt_num_rows($stmt)==0) {
+        echo "Leave review first!";
+      }
+      ?>
+      <!-- <div class="reviews">
         <div class="allReviews">
           <div class="reviewMessage">
             <h3><i class="fa fa-circle"></i> Name</h3>
@@ -657,9 +681,9 @@ include_once '../php/header.php';
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </div>
-        </div>
+        </div> -->
         <div class="leaveReview">
-          <form action="index.html" method="post">
+          <form action="index.php" method="post">
             <textarea name="leaveReview" rows="8" cols="10" maxlength="250" placeholder="Your comment..."></textarea>
             <button type="sendReview" name="sendReview">Publish</button>
           </form>
@@ -667,6 +691,30 @@ include_once '../php/header.php';
       </div>
     </div>
   </div>
+
+  <?php
+  include_once '../includes/dbh.inc.php';
+  if (isset($_POST['sendReview'])) {
+    $review = $_POST['leaveReview'];
+    $userID = $_SESSION['userid'];
+    $date_of_review=date("Y-m-d");
+
+    $sql = "INSERT INTO reviews (text, userID, date_of_review) VALUES (?, ?, ?);";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+      header("location: ../php/index.php?error=stmtfailed");
+      exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "sss", $review, $userID, $date_of_review);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+
+    exit();
+  }
+
+   ?>
+
   <button class="goTopBtn" type="goTop" name="goTop">
     <i class="fa fa-chevron-up"></i>
   </button>
