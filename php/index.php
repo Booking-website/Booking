@@ -637,6 +637,20 @@ include_once '../php/header.php';
           </a>
         </div>
       </div>
+      <div class="reviews">
+        <div class="allReviews">
+          <div class="reviewMessage">
+            <h3><i class="fa fa-circle"></i> Name</h3>
+            <p>Message</p>
+          </div>
+        </div>
+        <div class="leaveReview">
+          <form action="index.html" method="post">
+            <textarea name="leaveReview" rows="8" cols="10" maxlength="250" placeholder="Your comment..."></textarea>
+            <button type="sendReview" name="sendReview">Publish</button>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
   <button class="goTopBtn" type="goTop" name="goTop">

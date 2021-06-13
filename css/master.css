@@ -403,6 +403,26 @@
 .main div .part5 .right .qr_code img {
   width: 100%;
 }
+.main .reviews {
+  display: block;
+  padding: 5% 0;
+}
+.main .reviews h3 {
+  padding: 2% 0;
+}
+.main .reviews i.fa-circle {
+  color: #005aeb;
+}
+.main .reviews .reviewMessage {
+  display: block;
+  margin: 2% 0;
+  border-bottom: 1px solid #000;
+}
+.main .reviews .leaveReview textarea {
+  resize: none;
+  width: 100%;
+  margin: 2% 0;
+}
 
 @media screen and (min-width: 2560px) {
   .header .flights .one-way form .searchButton,
