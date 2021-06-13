@@ -37,6 +37,25 @@
     li:hover {
       transform: $scale-animation;
     }
+
+    i.fa-user-circle{
+     font-size: 25vw;
+     margin: 2% 0;
+    }
+
+    div.uploadImage{
+      padding: 5% 0;
+    }
+
+    label[for="uploadImageInput"]{
+      cursor: pointer;
+      @include bcc__c(transparent, $allButtonBcc);
+      @include border__radius($color: $allButtonBcc, $rad: 8px);
+      padding: 2%;
+    }
+    input#uploadImageInput{
+      display: none;
+    }
   }
 
   .main__profile-info {
@@ -44,12 +63,11 @@
     background-color: $profile-cards-bcc;
     grid-area: profile;
     padding: 1% 0;
-  }
 
-  .main__profile-img-wrapper {
-    padding: 5% 0;
-    text-align: center;
-    align-items: center;
+    form{
+      text-align: center;
+      padding: 5% 0;
+    }
 
     i.fa-user-circle {
       font-size: 25vw;
@@ -71,6 +89,12 @@
       display: none;
       margin-bottom: 1%;
     }
+  }
+
+  .main__profile-img-wrapper {
+    padding: 5% 0;
+    text-align: center;
+    align-items: center;
   }
 
   .main__profile-img {

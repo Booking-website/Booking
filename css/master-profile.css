@@ -29,6 +29,24 @@
 .main .main__sidebar li:hover {
   transform: scale3d(0.95, 0.95, 0.95);
 }
+.main .main__sidebar i.fa-user-circle {
+  font-size: 25vw;
+  margin: 2% 0;
+}
+.main .main__sidebar div.uploadImage {
+  padding: 5% 0;
+}
+.main .main__sidebar label[for=uploadImageInput] {
+  cursor: pointer;
+  background-color: transparent;
+  color: #005aeb;
+  border: 1px solid #005aeb;
+  border-radius: 8px;
+  padding: 2%;
+}
+.main .main__sidebar input#uploadImageInput {
+  display: none;
+}
 .main .main__profile-info {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
@@ -37,19 +55,18 @@
   grid-area: profile;
   padding: 1% 0;
 }
-.main .main__profile-img-wrapper {
-  padding: 5% 0;
+.main .main__profile-info form {
   text-align: center;
-  align-items: center;
+  padding: 5% 0;
 }
-.main .main__profile-img-wrapper i.fa-user-circle {
+.main .main__profile-info i.fa-user-circle {
   font-size: 25vw;
   margin: 2% 0;
 }
-.main .main__profile-img-wrapper div.uploadImage {
+.main .main__profile-info div.uploadImage {
   padding: 5% 0;
 }
-.main .main__profile-img-wrapper label[for=uploadImageInput] {
+.main .main__profile-info label[for=uploadImageInput] {
   cursor: pointer;
   background-color: transparent;
   color: #005aeb;
@@ -57,9 +74,14 @@
   border-radius: 8px;
   padding: 2%;
 }
-.main .main__profile-img-wrapper input#uploadImageInput {
+.main .main__profile-info input#uploadImageInput {
   display: none;
   margin-bottom: 1%;
+}
+.main .main__profile-img-wrapper {
+  padding: 5% 0;
+  text-align: center;
+  align-items: center;
 }
 .main .main__profile-img {
   display: inline-block;

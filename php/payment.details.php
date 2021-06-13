@@ -96,7 +96,6 @@
 		</form>
 		<div class="main__bank-card">
 			<div class="main__bank-card-dropdown">
-				<h3>My bank card</h3>
 				<div class="wrap">
 					<div class="card">
 						<div class="front">

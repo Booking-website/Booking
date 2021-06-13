@@ -57,42 +57,43 @@
             }
           }
        ?>
-       <form action="upload.php" method="post"
-enctype="multipart/form-data">
-           <input type="file" name="file">
-           <button type='submit' name='submit'>POST</button>
+       <form action="upload.php" method="post" enctype="multipart/form-data">
+            <label for="uploadImageInput">Upload Image</label>
+            <input type="file" name="file" id="uploadImageInput">
+            <!-- <input type="file" name="file"> -->
+            <button type='submit' name='submit'>POST</button>
        </form>
-     </div>
-        <div class="main__individual-info">
-          <?php
-            include_once '../includes/dbh.inc.php';
-            $query="SELECT count(*), fname, lname, email, phoneNumber FROM users WHERE userID=?";
-            $stmt=mysqli_prepare($conn,$query);
-            mysqli_stmt_bind_param($stmt,"s",$_SESSION['userid']);
-            mysqli_stmt_execute($stmt);
-            mysqli_stmt_bind_result($stmt,$cnt,$fname,$lname,$email,$phoneNumber);
-            mysqli_stmt_fetch($stmt);
+       <div class="main__individual-info">
+         <?php
+         include_once '../includes/dbh.inc.php';
+         $query="SELECT count(*), fname, lname, email, phoneNumber FROM users WHERE userID=?";
+         $stmt=mysqli_prepare($conn,$query);
+         mysqli_stmt_bind_param($stmt,"s",$_SESSION['userid']);
+         mysqli_stmt_execute($stmt);
+         mysqli_stmt_bind_result($stmt,$cnt,$fname,$lname,$email,$phoneNumber);
+         mysqli_stmt_fetch($stmt);
 
-            if($cnt==1) {
-              echo "
-                <h4>".$fname. " " .$lname."</h4>
-                <br>
-                <h4>
-                  <a href=\"tel: ".$phoneNumber."\">".$phoneNumber."</a>
-                </h4>
-                <br>
-                <h4>
-                  <a href=\"mailto: ".$email."\">".$email."</a>
-                </h4>
-              ";
-            }
-            mysqli_stmt_close($stmt);
-            mysqli_close($conn);
-          ?>
-        </div>
-        <div class="editButtonWrapper">
-          <button type="button" name="edit" class="editProfileButton">Edit profile</button>
-        </div>
+         if($cnt==1) {
+           echo "
+           <h4>".$fname. " " .$lname."</h4>
+           <br>
+           <h4>
+           <a href=\"tel: ".$phoneNumber."\">".$phoneNumber."</a>
+           </h4>
+           <br>
+           <h4>
+           <a href=\"mailto: ".$email."\">".$email."</a>
+           </h4>
+           ";
+         }
+         mysqli_stmt_close($stmt);
+         mysqli_close($conn);
+         ?>
+       </div>
+       <div class="editButtonWrapper">
+         <button type="button" name="edit" class="editProfileButton">Edit profile</button>
+       </div>
+     </div>
       </div>
     </div>
   </div>
