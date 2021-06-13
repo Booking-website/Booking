@@ -10,15 +10,15 @@ include_once '../php/header.php';
 
  <!--
    TODO LIST:
-   3. Realize bank card, update/onchange send mb;
-   7. Finish footer links;
    8. ADD EVERYWHERE HEADER AND FOOTER;
 
    1. Wrap all form except button.searchButton in div to make it's display grid better for button;//
    2. Create some pages for cards and link them together, to make content;
+   3. Realize bank card, update/onchange send mb;
    4. Make design for Profile page;//
    5. Finish JS function to make correct date in date in main page;//
    6. Finish 5th card in main page//
+   7. Finish footer links;
  -->
 
 
@@ -114,8 +114,10 @@ include_once '../php/header.php';
             </div>
             <h4>Photo Gallery</h4>
             <div class="popupGalleryWrapper">
-              <img src="../img/panoramPhoto1.jfif" alt="">
-              <img src="../img/panoramPhoto1.jfif" alt="">
+              <img src="../img/cardImgs/nur1.jpg" alt="">
+              <img src="../img/cardImgs/nur2.jpg" alt="">
+              <img src="../img/cardImgs/nur3.jfif" alt="">
+              <img src="../img/cardImgs/nur4.jfif" alt="">
             </div>
           </div>
           <div class="closeButtonWrapper">
@@ -180,8 +182,9 @@ include_once '../php/header.php';
             </div>
             <h4>Photo Gallery</h4>
             <div class="popupGalleryWrapper">
-              <img src="../img/panoramPhoto1.jfif" alt="">
-              <img src="../img/panoramPhoto1.jfif" alt="">
+              <img src="../img/cardImgs/alma1.jpg" alt="">
+              <img src="../img/cardImgs/alma2.jpg" alt="">
+              <img src="../img/cardImgs/alma3.jpg" alt="">
             </div>
           </div>
           <div class="closeButtonWrapper">
@@ -227,8 +230,11 @@ include_once '../php/header.php';
             </div>
             <h4>Photo Gallery</h4>
             <div class="popupGalleryWrapper">
-              <img src="../img/panoramPhoto1.jfif" alt="">
-              <img src="../img/panoramPhoto1.jfif" alt="">
+              <img src="../img/cardImgs/taraz1.jpg" alt="">
+              <img src="../img/cardImgs/taraz2.jpg" alt="">
+              <img src="../img/cardImgs/taraz3.jpg" alt="">
+              <img src="../img/cardImgs/taraz4.jpg" alt="">
+              <img src="../img/cardImgs/taraz5.jpg" alt="">
             </div>
           </div>
           <div class="closeButtonWrapper">
@@ -276,8 +282,11 @@ include_once '../php/header.php';
             </div>
             <h4>Photo Gallery</h4>
             <div class="popupGalleryWrapper">
-              <img src="../img/panoramPhoto1.jfif" alt="">
-              <img src="../img/panoramPhoto1.jfif" alt="">
+              <img src="../img/cardImgs/hamil1.jpg" alt="">
+              <img src="../img/cardImgs/hamil2.jpg" alt="">
+              <img src="../img/cardImgs/hamil3.jpg" alt="">
+              <img src="../img/cardImgs/hamil4.jpg" alt="">
+              <img src="../img/cardImgs/hamil5.jpg" alt="">
             </div>
           </div>
           <div class="closeButtonWrapper">
@@ -331,8 +340,11 @@ include_once '../php/header.php';
             </div>
             <h4>Photo Gallery</h4>
             <div class="popupGalleryWrapper">
-              <img src="../img/panoramPhoto1.jfif" alt="">
-              <img src="../img/panoramPhoto1.jfif" alt="">
+              <img src="../img/cardImgs/hana1.jpg" alt="">
+              <img src="../img/cardImgs/hana2.jpg" alt="">
+              <img src="../img/cardImgs/hana3.jpg" alt="">
+              <img src="../img/cardImgs/hana4.jpg" alt="">
+              <img src="../img/cardImgs/hana5.jpg" alt="">
             </div>
           </div>
           <div class="closeButtonWrapper">
@@ -372,11 +384,21 @@ include_once '../php/header.php';
               <p>
                 Are you looking for an exciting job with thrilling perks? Apply now to join our team, gain valuable work experience, and make friendships that will last a lifetime!
               </p>
+              <h4>Pitsburg PA</h4>
+              <p>
+                A trip to Kennywood promises unforgettable family fun! Enjoy a unique mix of classic rides and modern thrills, including seven roller coasters, two kiddie areas, and several attractions that cannot be found anywhere else. Celebrating over 120 years of innovation and connection to the community, Kennywood continues to be an icon for each generation.
+              </p>
+              <p>
+                Sandcastle, set along a quarter-mile boardwalk that overlooks the Monongahela River and its beautiful wooded hillside, delivers a unique vacation experience without leaving the city. With sixteen high-thrill waterslides, two full-sized pools, two children's areas, and a Lazy River, Sandcastle has summer fun for everyone!
+              </p>
             </div>
             <h4>Photo Gallery</h4>
             <div class="popupGalleryWrapper">
-              <img src="../img/panoramPhoto1.jfif" alt="">
-              <img src="../img/panoramPhoto1.jfif" alt="">
+              <img src="../img/cardImgs/park1.png" alt="">
+              <img src="../img/cardImgs/park2.png" alt="">
+              <img src="../img/cardImgs/park3.jpg" alt="">
+              <img src="../img/cardImgs/park4.jpg" alt="">
+              <img src="../img/cardImgs/park5.jpg" alt="">
             </div>
           </div>
           <div class="closeButtonWrapper">
@@ -448,8 +470,12 @@ include_once '../php/header.php';
             </div>
               <h4>Photo Gallery</h4>
               <div class="popupGalleryWrapper">
-                <img src="../img/panoramPhoto1.jfif" alt="">
-                <img src="../img/panoramPhoto1.jfif" alt="">
+                <img src="../img/cardImgs/jp1.jpg" alt="">
+                <img src="../img/cardImgs/jp2.jpg" alt="">
+                <img src="../img/cardImgs/jp3.jfif" alt="">
+                <img src="../img/cardImgs/jp4.jpeg" alt="">
+                <img src="../img/cardImgs/jp5.jpg" alt="">
+                <img src="../img/cardImgs/jp6.jpg" alt="">
               </div>
             </div>
             <div class="closeButtonWrapper">
@@ -487,11 +513,31 @@ include_once '../php/header.php';
                 <p>
                   Before you get started on your road trip, some helpful tips: Without stopping, it takes approximately 10 hours to drive the entire length of the Pacific Coast Highway, but on this route, it’s recommended to take your time to see the sights and stay overnight along the way, stretching your vacation out to at least six days. Thanks to California’s mild weather, you can drive the Pacific Coast Highway at any time of year. The best weather is expected from late spring through fall, with the busiest travel season in July and August.
                 </p>
+                <h4>Felton and Santa Cruz</h4>
+                <p>
+                  As you wind your way from San Francisco to Santa Cruz, make a brief stop at Devil’s Slide, a 2-kilometer (1.3-mile) stretch of land that was once a piece of Highway One, but is now a scenic walking path in Pacifica. If you had any doubts about your PCH trip, they’ll be washed away by sweeping ocean views as you slalom past seaside outposts. Before hitting surfer-centric Santa Cruz, stop in nearby Felton, a drowsy mountain town nestled among Redwood trees. Refresh at watering hole Monty’s Log Cabin (its rustic appearance lives up to its name) which offers a sunny back patio. Then pop by The Bigfoot Discovery Museum to learn all about California’s favorite cryptid. Finally, make your way to Santa Cruz, a friendly beach town with a university, gorgeous redwood trees and waves that surfers from all over flock to ride. Founded in 1907, the Santa Cruz Boardwalk boasts old-fashioned roller coasters (with Pacific Ocean views!), an arcade and the distinct scent of sea air, cotton candy and hot dogs. (Fun fact: Scenes of the '80s classic film “The Lost Boys" were shot here.)
+                </p>
+                <h4>Cambria</h4>
+                <p>
+                  On the way into Cambria, stop at the Piedras Blancas Friends of the Elephant Seal rookery, where crowds of the bulbous-nosed pinnipeds rest, mate and fight. (But don’t get too close, these creatures can weigh over 4,000 kilograms or 8,000 pounds.) Continue to the charming seaside village, home to rocky shorelines, bluffs and tide pools teeming with sea life. Get a generous slab of warm ollaberry pie with vanilla ice cream at Cambria mainstay, Linn’s Restaurant.
+                </p>
+                <h4>Morrp Bay</h4>
+                <p>
+                  Your chances of encountering California’s diverse fauna are high in Morro Bay, a small city on (surprise!) a large bay and estuary. At Morro Bay State Park, you may see any number of wild animals including blue herons, monarch butterflies, hummingbirds and – yes – adorable, fluffy sea otters. The park offers trails, a small museum and picnic benches, making it a perfect road trip stop for when you’re feeling peckish and need to stretch your legs.
+                </p>
+                <h4>San Luis Obispo</h4>
+                <p>
+                  Cruise down the PCH to mellow college town San Luis Obispo, nicknamed SLO, where you can tour quirky attractions such as the colorful Bubblegum Alley. Before you go, be sure to sample local wines at one of more than 30 nearby wineries, or take a hike to the nearby Point San Luis Lighthouse for fresh air and stunning views. While the town has many great places to stay, the delightfully gaudy Madonna Inn offers themed rooms like Caveman and Showboat. You don’t need to stay there to enjoy the outrageous interior, which features Western murals, ornate chandeliers, flocked wallpaper – and pink, pink and more pink. Order a slice of (pink) cake at the counter and soak up the atmosphere.
+                </p>
               </div>
               <h4>Photo Gallery</h4>
               <div class="popupGalleryWrapper">
-                <img src="../img/panoramPhoto1.jfif" alt="">
-                <img src="../img/panoramPhoto1.jfif" alt="">
+                <img src="../img/cardImgs/pasif1.jpg" alt="">
+                <img src="../img/cardImgs/pasif2.jpg" alt="">
+                <img src="../img/cardImgs/pasif3.jpg" alt="">
+                <img src="../img/cardImgs/pasif4.jpg" alt="">
+                <img src="../img/cardImgs/pasif5.jpg" alt="">
+                <img src="../img/cardImgs/pasif6.jpg" alt="">
               </div>
             </div>
             <div class="closeButtonWrapper">
@@ -530,11 +576,22 @@ include_once '../php/header.php';
                 <p>
                   Since the 1950s the Overseas Highway has been refurbished into a main coastal highway between the cities of Miami and Key West,[3] offering travelers an exotic roadway through a tropical savanna environment and access to the largest area of coral reefs on the U.S. mainland. Many exotic animals such as the American Alligator, American Crocodile and Key Deer inhabit the tropical islands of the Florida Keys.
                 </p>
+                <h4>Los Olivos and Solvang</h4>
+                <p>
+                  Perhaps you didn’t plan to stop in Denmark on your way down the coast, but here you are. Founded by Danish pioneers in 1911, Solvang is Denmark in miniature and home to many Danish bakeries. Wander among traditional architecture and check out faithful reproductions of Copenhagen's Little Mermaid statue and Round Tower, as well as homages to Hans Christian Andersen. A short drive from Solvang, you will find the rustically charming town of Los Olivos surrounded by expansive wineries in the Santa Ynez Valley. Make time for tastings at wineries like Demetria for lush roses with views of the rolling hills.
+                </p>
+                <h4>Santa Barbara</h4>
+                <p>
+                  Santa Barbara is the perfect embodiment of California’s two personalities: Beachy casual meets glitz. (Oprah owns an estate here.) This is a city filled with adobe homes, Spanish Colonial Revival architecture and mansions. Shop and explore the city’s unpretentious arts district known as the Funk Zone after taking in the city’s colonial history at the Old Mission Santa Barbara. Get a scoop of Churros Con Leche or Boysenberry Rose Milk Jam ice cream at McConnell’s Fine Ice Creams and enjoy fresh seafood and ocean views at Enterprise Fish Co. where you can sup on $1.50 oysters during happy hour. If you’re feeling adventurous, cut 20 minutes inland to Cold Spring Tavern, a bar and restaurant established in 1886 as a stagecoach stop. Then take advantage of the balmy weather and catch a movie at the Westwind Drive-In.
+                </p>
               </div>
               <h4>Photo Gallery</h4>
               <div class="popupGalleryWrapper">
-                <img src="../img/panoramPhoto1.jfif" alt="">
-                <img src="../img/panoramPhoto1.jfif" alt="">
+                <img src="../img/cardImgs/highway1.jpg" alt="">
+                <img src="../img/cardImgs/highway2.jfif" alt="">
+                <img src="../img/cardImgs/highway3.jpg" alt="">
+                <img src="../img/cardImgs/highway4.jpg" alt="">
+                <img src="../img/cardImgs/highway5.jpg" alt="">
               </div>
             </div>
             <div class="closeButtonWrapper">
