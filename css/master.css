@@ -410,6 +410,9 @@
 .main .reviews h3 {
   padding: 2% 0;
 }
+.main .reviews p {
+  line-height: 130%;
+}
 .main .reviews i.fa-circle {
   color: #005aeb;
 }
