@@ -414,6 +414,7 @@
   line-height: 130%;
 }
 .main .reviews i.fa-circle {
+  font-size: 100%;
   color: #005aeb;
 }
 .main .reviews .reviewMessage {
