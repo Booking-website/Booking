@@ -416,6 +416,7 @@
 .main .reviews i.fa-circle {
   font-size: 100%;
   color: #005aeb;
+  margin-right: 5px;
 }
 .main .reviews .reviewMessage {
   display: block;
