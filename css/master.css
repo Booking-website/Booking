@@ -419,9 +419,18 @@
   border-bottom: 1px solid #000;
 }
 .main .reviews .leaveReview textarea {
+  box-sizing: border-box;
   resize: none;
   width: 100%;
   margin: 2% 0;
+  border: 0.5px solid #ccc;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  color: #999;
+  padding: 2%;
+}
+.main .reviews .leaveReview textarea:focus {
+  outline: none;
 }
 
 @media screen and (min-width: 2560px) {
